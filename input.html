@@ -19,10 +19,10 @@
     <div class="container-fluid">
         <ul class="nav nav-tabs nav-fill">
             <li class="nav-item">
-                <a class="nav-link active" href="#">ADVICE</a>
+                <a class="nav-link" href="index.html">ADVICE</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="input.html">INPUT</a>
+                <a class="nav-link active" href="#">INPUT</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="overview.html">OVERVIEW</a>
@@ -48,8 +48,8 @@
             <thead>
                 <tr>
                     <th scope="col"></th>
-                    <th scope="col">Amount of pieces <br>to be placed:</th>
-                    <th scope="col">Amount of pieces <br>to be baked today:</th>
+                    <th scope="col">Amount of pieces <br>that were baked:</th>
+                    <th scope="col">Amount of pieces <br>that were left:</th>
 
                 </tr>
             </thead>
@@ -58,7 +58,7 @@
                     <tr>
                         <th scope="row">Donker Meergranen</th>
                         <td>
-                            <input class="breadamountview" type="text" name="firstname" value="0" readonly="readonly">
+                            <input class="breadamountview" type="number" min="0" name="firstname" value="0">
                         </td>
                         <td>
                             <input class="breadamountview" type="text" name="firstname" value="0" readonly="readonly">
@@ -159,7 +159,7 @@
         </table>
     </div>
     <footer>
-        <button type="button" class="btn btn-primary btn-lg btn-block">Weekly Overview</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block">Submit for today!</button>
     </footer>
 
 
