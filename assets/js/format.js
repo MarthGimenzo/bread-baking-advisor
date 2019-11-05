@@ -58,7 +58,7 @@ $(document).ready(function() {
         $("#dropdownMenuButton").text("Select a day")
     }
     
-    // Change active Dropdown Menu Item to current day of the week
+    // Change active Dropdown Menu Item to selected day
     $("#tuesday").on("click", function() {
         $("#tuesday").addClass("active");
         $("#wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
@@ -96,6 +96,3 @@ $(document).ready(function() {
         $("#dropdownMenuButton").text("Sunday")
     })
 })
-function changeDay() {
-    
-}
