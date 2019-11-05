@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="" type="text/css" />
     <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" charset="utf-8" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/format.js"></script>
     <title>Bread Baking Advisor</title>
 </head>
 
@@ -32,14 +34,14 @@
     <h2>What's the day of the week?</h2>
     <div class="container-fluid">
         <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select day</button>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Tuesday</a>
-                <a class="dropdown-item" href="#">Wednesday</a>
-                <a class="dropdown-item" href="#">Thursday</a>
-                <a class="dropdown-item" href="#">Friday</a>
-                <a class="dropdown-item" href="#">Saturday</a>
-                <a class="dropdown-item" href="#">Sunday</a>
+                <a id="tuesday" class="dropdown-item" href="#">Tuesday</a>
+                <a id="wednesday" class="dropdown-item" href="#">Wednesday</a>
+                <a id="thursday" class="dropdown-item" href="#">Thursday</a>
+                <a id="friday" class="dropdown-item" href="#">Friday</a>
+                <a id="saturday" class="dropdown-item" href="#">Saturday</a>
+                <a id="sunday" class="dropdown-item" href="#">Sunday</a>
             </div>
         </div>
     </div>
