@@ -1,0 +1,114 @@
+{
+    "breadtypes": [
+        {
+        "name": "Donker Meergranen",
+        "adviceTuesday": 8,
+        "adviceWednesday": 9,
+        "adviceThursday": 9,
+        "adviceFriday": 15,
+        "adviceSaturday": 20,
+        "adviceSunday": 12
+    },
+
+    {
+        "name": "Zonne Volkoren",
+        "adviceTuesday": 6,
+        "adviceWednesday": 5,
+        "adviceThursday": 5,
+        "adviceFriday": 8,
+        "adviceSaturday": 15,
+        "adviceSunday": 12
+    },
+
+    {
+        "name": "Wit",
+        "adviceTuesday": 3,
+        "adviceWednesday": 4,
+        "adviceThursday": 6,
+        "adviceFriday": 6,
+        "adviceSaturday": 8,
+        "adviceSunday": 4
+    },
+
+    {
+        "name": "Tarwe",
+        "adviceTuesday": 3,
+        "adviceWednesday": 3,
+        "adviceThursday": 4,
+        "adviceFriday": 5,
+        "adviceSaturday": 5,
+        "adviceSunday": 4
+    },
+
+    {
+        "name": "Volkoren",
+        "adviceTuesday": 4,
+        "adviceWednesday": 4,
+        "adviceThursday": 3,
+        "adviceFriday": 6,
+        "adviceSaturday": 8,
+        "adviceSunday": 6
+    },
+
+    {
+        "name": "Mais",
+        "adviceTuesday": 4,
+        "adviceWednesday": 4,
+        "adviceThursday": 3,
+        "adviceFriday": 6,
+        "adviceSaturday": 5,
+        "adviceSunday": 4
+    },
+
+    {
+        "name": "Wit Meerzaden",
+        "adviceTuesday": 3,
+        "adviceWednesday": 2,
+        "adviceThursday": 2,
+        "adviceFriday": 3,
+        "adviceSaturday": 4,
+        "adviceSunday": 4
+    },
+
+    {
+        "name": "Spelt",
+        "adviceTuesday": 3,
+        "adviceWednesday": 4,
+        "adviceThursday": 93,
+        "adviceFriday": 8,
+        "adviceSaturday": 7,
+        "adviceSunday": 6
+    },
+
+    {
+        "name": "Rogge Vijgen",
+        "adviceTuesday": 5,
+        "adviceWednesday": 6,
+        "adviceThursday": 5,
+        "adviceFriday": 8,
+        "adviceSaturday": 9,
+        "adviceSunday": 8
+    },
+
+    {
+        "name": "Rogge Rozijn",
+        "adviceTuesday": 3,
+        "adviceWednesday": 7,
+        "adviceThursday": 7,
+        "adviceFriday": 8,
+        "adviceSaturday": 5,
+        "adviceSunday": 5
+    },
+
+    {
+        "name": "Haver Pompoen",
+        "adviceTuesday": 3,
+        "adviceWednesday": 6,
+        "adviceThursday": 6,
+        "adviceFriday": 6,
+        "adviceSaturday": 9,
+        "adviceSunday": 6
+    }
+    
+    ]
+}
