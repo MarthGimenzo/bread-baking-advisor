@@ -1,5 +1,35 @@
-$(document).ready(function() {
-    
+const baseURL = "https://api.myjson.com/bins/omh2e";
+
+function getData(cb) {
+
+    var xhr = new XMLHttpRequest();
+
+
+    xhr.open("GET", baseURL)
+    xhr.send();
+
+    xhr.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            
+            cb(JSON.parse(this.responseText))
+            
+
+        }
+    };
+}
+
+getData(function(data) {
+        console.dir(data);
+        
+        $("#donkermeergranen_tobe_placed").val(data.breadtypes[0].adviceThursday);
+    })
+
+
+
+
+
+$(document).ready(function () {
+
     let activeDay = 0;
     determineDay();
     changeActiveDay();
@@ -19,7 +49,7 @@ $(document).ready(function() {
         weekday[6] = "Saturday";
 
         var today = weekday[d.getDay()];
-        
+
 
         // Change active Dropdown Menu Item to current day of the week
 
@@ -67,16 +97,17 @@ $(document).ready(function() {
 
         // Change active Dropdown Menu Item to selected day
 
-        $("#tuesday").on("click", function() {
+        $("#tuesday").on("click", function () {
             $("#tuesday").addClass("active");
             $("#wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 2;
             $("#dropdownMenuButton").text("Tuesday")
             changeActiveDay()
-            
+
+
 
         })
-        $("#wednesday").on("click", function() {
+        $("#wednesday").on("click", function () {
             $("#wednesday").addClass("active");
             $("#tuesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 3;
@@ -84,28 +115,28 @@ $(document).ready(function() {
             changeActiveDay()
 
         })
-        $("#thursday").on("click", function() {
+        $("#thursday").on("click", function () {
             $("#thursday").addClass("active");
             $("#tuesday, #wednesday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 4;
             $("#dropdownMenuButton").text("Thursday")
             changeActiveDay()
         })
-        $("#friday").on("click", function() {
+        $("#friday").on("click", function () {
             $("#friday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #saturday, #sunday").removeClass("active");
             activeDay = 5;
             $("#dropdownMenuButton").text("Friday")
             changeActiveDay()
         })
-        $("#saturday").on("click", function() {
+        $("#saturday").on("click", function () {
             $("#saturday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #sunday").removeClass("active");
             activeDay = 6;
             $("#dropdownMenuButton").text("Saturday")
             changeActiveDay()
         })
-        $("#sunday").on("click", function() {
+        $("#sunday").on("click", function () {
             $("#sunday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #saturday").removeClass("active");
             activeDay = 0;
@@ -113,15 +144,15 @@ $(document).ready(function() {
             changeActiveDay()
         })
     }
-    
-    
-    
+
+
+
     // Show current bread advice
     function changeActiveDay() {
 
 
         if (activeDay == 2) {
-            
+
             $("#donkermeergranen_tobe_placed").val(AdviceThursday.donkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(AdviceThursday.zonnevolkoren);
             $("#wit_tobe_placed").val(AdviceThursday.wit);
@@ -133,7 +164,7 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_placed").val(AdviceThursday.roggevijgen);
             $("#roggerozijn_tobe_placed").val(AdviceThursday.roggerozijn);
             $("#haverpompoen_tobe_placed").val(AdviceThursday.haverpompoen);
-            
+
             $("#donkermeergranen_tobe_baked").val(AdviceTuesday.donkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(AdviceTuesday.zonnevolkoren);
             $("#wit_tobe_baked").val(AdviceTuesday.wit);
@@ -145,10 +176,10 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_baked").val(AdviceTuesday.roggevijgen);
             $("#roggerozijn_tobe_baked").val(AdviceTuesday.roggerozijn);
             $("#haverpompoen_tobe_baked").val(AdviceTuesday.haverpompoen);
-            
+
         }
         if (activeDay == 3) {
-            
+
             $("#donkermeergranen_tobe_placed").val(AdviceFriday.donkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(AdviceFriday.zonnevolkoren);
             $("#wit_tobe_placed").val(AdviceFriday.wit);
@@ -160,7 +191,7 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_placed").val(AdviceFriday.roggevijgen);
             $("#roggerozijn_tobe_placed").val(AdviceFriday.roggerozijn);
             $("#haverpompoen_tobe_placed").val(AdviceFriday.haverpompoen);
-            
+
             $("#donkermeergranen_tobe_baked").val(AdviceWednesday.donkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(AdviceWednesday.zonnevolkoren);
             $("#wit_tobe_baked").val(AdviceWednesday.wit);
@@ -172,10 +203,10 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_baked").val(AdviceWednesday.roggevijgen);
             $("#roggerozijn_tobe_baked").val(AdviceWednesday.roggerozijn);
             $("#haverpompoen_tobe_baked").val(AdviceWednesday.haverpompoen);
-            
+
         }
         if (activeDay == 4) {
-            
+
             $("#donkermeergranen_tobe_placed").val(AdviceSaturday.donkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(AdviceSaturday.zonnevolkoren);
             $("#wit_tobe_placed").val(AdviceSaturday.wit);
@@ -187,7 +218,7 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_placed").val(AdviceSaturday.roggevijgen);
             $("#roggerozijn_tobe_placed").val(AdviceSaturday.roggerozijn);
             $("#haverpompoen_tobe_placed").val(AdviceSaturday.haverpompoen);
-            
+
             $("#donkermeergranen_tobe_baked").val(AdviceThursday.donkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(AdviceThursday.zonnevolkoren);
             $("#wit_tobe_baked").val(AdviceThursday.wit);
@@ -199,10 +230,10 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_baked").val(AdviceThursday.roggevijgen);
             $("#roggerozijn_tobe_baked").val(AdviceThursday.roggerozijn);
             $("#haverpompoen_tobe_baked").val(AdviceThursday.haverpompoen);
-            
+
         }
         if (activeDay == 5) {
-            
+
             $("#donkermeergranen_tobe_placed").val(AdviceSunday.donkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(AdviceSunday.zonnevolkoren);
             $("#wit_tobe_placed").val(AdviceSunday.wit);
@@ -214,7 +245,7 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_placed").val(AdviceSunday.roggevijgen);
             $("#roggerozijn_tobe_placed").val(AdviceSunday.roggerozijn);
             $("#haverpompoen_tobe_placed").val(AdviceSunday.haverpompoen);
-            
+
             $("#donkermeergranen_tobe_baked").val(AdviceFriday.donkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(AdviceFriday.zonnevolkoren);
             $("#wit_tobe_baked").val(AdviceFriday.wit);
@@ -226,10 +257,10 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_baked").val(AdviceFriday.roggevijgen);
             $("#roggerozijn_tobe_baked").val(AdviceFriday.roggerozijn);
             $("#haverpompoen_tobe_baked").val(AdviceFriday.haverpompoen);
-            
+
         }
         if (activeDay == 6) {
-            
+
             $("#donkermeergranen_tobe_placed").val(AdviceTuesday.donkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(AdviceTuesday.zonnevolkoren);
             $("#wit_tobe_placed").val(AdviceTuesday.wit);
@@ -241,7 +272,7 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_placed").val(AdviceTuesday.roggevijgen);
             $("#roggerozijn_tobe_placed").val(AdviceTuesday.roggerozijn);
             $("#haverpompoen_tobe_placed").val(AdviceTuesday.haverpompoen);
-            
+
             $("#donkermeergranen_tobe_baked").val(AdviceSaturday.donkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(AdviceSaturday.zonnevolkoren);
             $("#wit_tobe_baked").val(AdviceSaturday.wit);
@@ -253,10 +284,10 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_baked").val(AdviceSaturday.roggevijgen);
             $("#roggerozijn_tobe_baked").val(AdviceSaturday.roggerozijn);
             $("#haverpompoen_tobe_baked").val(AdviceSaturday.haverpompoen);
-            
+
         }
         if (activeDay == 0) {
-            
+
             $("#donkermeergranen_tobe_placed").val(AdviceWednesday.donkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(AdviceWednesday.zonnevolkoren);
             $("#wit_tobe_placed").val(AdviceWednesday.wit);
@@ -268,7 +299,7 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_placed").val(AdviceWednesday.roggevijgen);
             $("#roggerozijn_tobe_placed").val(AdviceWednesday.roggerozijn);
             $("#haverpompoen_tobe_placed").val(AdviceWednesday.haverpompoen);
-            
+
             $("#donkermeergranen_tobe_baked").val(AdviceSunday.donkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(AdviceSunday.zonnevolkoren);
             $("#wit_tobe_baked").val(AdviceSunday.wit);
@@ -280,10 +311,10 @@ $(document).ready(function() {
             $("#roggevijgen_tobe_baked").val(AdviceSunday.roggevijgen);
             $("#roggerozijn_tobe_baked").val(AdviceSunday.roggerozijn);
             $("#haverpompoen_tobe_baked").val(AdviceSunday.haverpompoen);
-            
+
         }
 
     }
+
     
-    console.log(activeDay);
 })
