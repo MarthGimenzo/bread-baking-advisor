@@ -1,4 +1,32 @@
-const baseURL = "https://api.myjson.com/bins/omh2e";
+$(document).ready(function () {
+
+let adviceFridayDonkermeergranen
+let adviceFridayZonnevolkoren
+let adviceFridayWit
+let adviceFridayTarwe
+let adviceFridayVolkoren
+let adviceFridayMais
+let adviceFridayWitmeerzaden
+let adviceFridaySpelt
+let adviceFridayRoggevijgen
+let adviceFridayRoggerozijn
+let adviceFridayHaverpompoen
+
+let adviceSundayDonkermeergranen
+let adviceSundayZonnevolkoren
+let adviceSundayWit
+let adviceSundayTarwe
+let adviceSundayVolkoren
+let adviceSundayMais
+let adviceSundayWitmeerzaden
+let adviceSundaySpelt
+let adviceSundayRoggevijgen
+let adviceSundayRoggerozijn
+let adviceSundayHaverpompoen
+
+    // Load data from API
+    
+const baseURL = "https://api.myjson.com/bins/tdrt6";
 
 function getData(cb) {
 
@@ -19,16 +47,16 @@ function getData(cb) {
 }
 
 getData(function(data) {
-        console.dir(data);
         
-        $("#donkermeergranen_tobe_placed").val(data.breadtypes[0].adviceThursday);
+        adviceSundayDonkermeergranen = data.breadtypes[0].inputWeek2Sunday;
+        console.log(adviceSundayDonkermeergranen);
     })
 
 
 
 
 
-$(document).ready(function () {
+
 
     let activeDay = 0;
     determineDay();
@@ -180,7 +208,7 @@ $(document).ready(function () {
         }
         if (activeDay == 3) {
 
-            $("#donkermeergranen_tobe_placed").val(AdviceFriday.donkermeergranen);
+            $("#donkermeergranen_tobe_placed").val(AdviceFridayDonkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(AdviceFriday.zonnevolkoren);
             $("#wit_tobe_placed").val(AdviceFriday.wit);
             $("#tarwe_tobe_placed").val(AdviceFriday.tarwe);
@@ -234,29 +262,29 @@ $(document).ready(function () {
         }
         if (activeDay == 5) {
 
-            $("#donkermeergranen_tobe_placed").val(AdviceSunday.donkermeergranen);
-            $("#zonnevolkoren_tobe_placed").val(AdviceSunday.zonnevolkoren);
-            $("#wit_tobe_placed").val(AdviceSunday.wit);
-            $("#tarwe_tobe_placed").val(AdviceSunday.tarwe);
-            $("#volkoren_tobe_placed").val(AdviceSunday.volkoren);
-            $("#mais_tobe_placed").val(AdviceSunday.mais);
-            $("#witmeerzaden_tobe_placed").val(AdviceSunday.witmeerzaden);
-            $("#spelt_tobe_placed").val(AdviceSunday.spelt);
-            $("#roggevijgen_tobe_placed").val(AdviceSunday.roggevijgen);
-            $("#roggerozijn_tobe_placed").val(AdviceSunday.roggerozijn);
-            $("#haverpompoen_tobe_placed").val(AdviceSunday.haverpompoen);
+            $("#donkermeergranen_tobe_placed").val(adviceSundayDonkermeergranen);
+            $("#zonnevolkoren_tobe_placed").val(adviceSundayZonnevolkoren);
+            $("#wit_tobe_placed").val(adviceSundayWit);
+            $("#tarwe_tobe_placed").val(adviceSundayTarwe);
+            $("#volkoren_tobe_placed").val(adviceSundayVolkoren);
+            $("#mais_tobe_placed").val(adviceSundayMais);
+            $("#witmeerzaden_tobe_placed").val(adviceSundayWitmeerzaden);
+            $("#spelt_tobe_placed").val(adviceSundaySpelt);
+            $("#roggevijgen_tobe_placed").val(adviceSundayRoggevijgen);
+            $("#roggerozijn_tobe_placed").val(adviceSundayRoggerozijn);
+            $("#haverpompoen_tobe_placed").val(adviceSundayHaverpompoen);
 
-            $("#donkermeergranen_tobe_baked").val(AdviceFriday.donkermeergranen);
-            $("#zonnevolkoren_tobe_baked").val(AdviceFriday.zonnevolkoren);
-            $("#wit_tobe_baked").val(AdviceFriday.wit);
-            $("#tarwe_tobe_baked").val(AdviceFriday.tarwe);
-            $("#volkoren_tobe_baked").val(AdviceFriday.volkoren);
-            $("#mais_tobe_baked").val(AdviceFriday.mais);
-            $("#witmeerzaden_tobe_baked").val(AdviceFriday.witmeerzaden);
-            $("#spelt_tobe_baked").val(AdviceFriday.spelt);
-            $("#roggevijgen_tobe_baked").val(AdviceFriday.roggevijgen);
-            $("#roggerozijn_tobe_baked").val(AdviceFriday.roggerozijn);
-            $("#haverpompoen_tobe_baked").val(AdviceFriday.haverpompoen);
+            $("#donkermeergranen_tobe_baked").val(adviceFridayDonkermeergranen);
+            $("#zonnevolkoren_tobe_baked").val(adviceFridayZonnevolkoren);
+            $("#wit_tobe_baked").val(adviceFridayWit);
+            $("#tarwe_tobe_baked").val(adviceFridayTarwe);
+            $("#volkoren_tobe_baked").val(adviceFridayVolkoren);
+            $("#mais_tobe_baked").val(adviceFridayMais);
+            $("#witmeerzaden_tobe_baked").val(adviceFridayWitmeerzaden);
+            $("#spelt_tobe_baked").val(adviceFridaySpelt);
+            $("#roggevijgen_tobe_baked").val(adviceFridayRoggevijgen);
+            $("#roggerozijn_tobe_baked").val(adviceFridayRoggerozijn);
+            $("#haverpompoen_tobe_baked").val(adviceFridayHaverpompoen);
 
         }
         if (activeDay == 6) {
