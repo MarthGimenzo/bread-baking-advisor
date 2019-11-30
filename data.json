@@ -55,7 +55,9 @@
       "adviceWeek1Sunday": 11,
       "adviceWeek2Sunday": 8,
       "adviceWeek3Sunday": 11,
-      "adviceWeek4Sunday": 11
+      "adviceWeek4Sunday": 11,
+      "saveDateTuesday": 0,
+      "saveDateWednesday": 0
     },
     {
       "name": "Zonne Volkoren",

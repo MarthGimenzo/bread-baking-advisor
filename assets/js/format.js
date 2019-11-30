@@ -549,11 +549,215 @@ $(document).ready(function () {
 
     $("#submit").on("click", function () {
         
+        checkcorrectvalues1 = (document.getElementById("donkermeergranen_tobe_baked").value) - (document.getElementById("donkermeergranen_input").value);
+        checkcorrectvalues2 = (document.getElementById("zonnevolkoren_tobe_baked").value) - (document.getElementById("zonnevolkoren_input").value);
+        checkcorrectvalues3 = (document.getElementById("wit_tobe_baked").value) - (document.getElementById("wit_input").value);
+        checkcorrectvalues4 = (document.getElementById("tarwe_tobe_baked").value) - (document.getElementById("tarwe_input").value);
+        checkcorrectvalues5 = (document.getElementById("volkoren_tobe_baked").value) - (document.getElementById("volkoren_input").value);
+        checkcorrectvalues6 = (document.getElementById("mais_tobe_baked").value) - (document.getElementById("mais_input").value);
+        checkcorrectvalues7 = (document.getElementById("witmeerzaden_tobe_baked").value) - (document.getElementById("witmeerzaden_input").value);
+        checkcorrectvalues8 = (document.getElementById("spelt_tobe_baked").value) - (document.getElementById("spelt_input").value);
+        checkcorrectvalues9 = (document.getElementById("roggevijgen_tobe_baked").value) - (document.getElementById("roggevijgen_input").value);
+        checkcorrectvalues10 = (document.getElementById("roggerozijn_tobe_baked").value) - (document.getElementById("roggerozijn_input").value);
+        checkcorrectvalues11 = (document.getElementById("haverpompoen_tobe_baked").value) - (document.getElementById("haverpompoen_input").value);
+
+        
+        if (checkcorrectvalues1 < 0 || checkcorrectvalues2 < 0 || checkcorrectvalues3 < 0 || checkcorrectvalues4 < 0 || checkcorrectvalues5 < 0 || checkcorrectvalues6 < 0 || checkcorrectvalues7 < 0 || checkcorrectvalues8 < 0 || checkcorrectvalues9 < 0 || checkcorrectvalues10 < 0 || checkcorrectvalues11 < 0){
+            alert("The value of leftover bread can't be higher than the amount of baked bread")}
+        else if( (document.getElementById("donkermeergranen_input").value) < 0 || (document.getElementById("zonnevolkoren_input").value) < 0 || (document.getElementById("wit_input").value) < 0 ||
+        (document.getElementById("tarwe_input").value) < 0 || (document.getElementById("volkoren_input").value) < 0 || (document.getElementById("mais_input").value) < 0 || (document.getElementById("witmeerzaden_input").value) < 0 ||
+        (document.getElementById("spelt_input").value) < 0 || (document.getElementById("roggevijgen_input").value) < 0 || (document.getElementById("roggerozijn_input").value) < 0 || (document.getElementById("haverpompoen_input").value) < 0){
+            alert("The value of leftover bread should be at least 0")}
+        else if( (document.getElementById("donkermeergranen_input").value) === "" || (document.getElementById("zonnevolkoren_input").value) === "" || (document.getElementById("wit_input").value) === "" ||
+        (document.getElementById("tarwe_input").value) === "" || (document.getElementById("volkoren_input").value) === "" || (document.getElementById("mais_input").value) === "" || (document.getElementById("witmeerzaden_input").value) === "" ||
+        (document.getElementById("spelt_input").value) === "" || (document.getElementById("roggevijgen_input").value) === "" || (document.getElementById("roggerozijn_input").value) === "" || (document.getElementById("haverpompoen_input").value) === ""){
+            alert("The value of leftover bread should contain a value")}
+        else {
+            var answer = window.confirm("Are you sure this data is correct? This can't be changed later!")
+            if (answer) {
+                console.log("Juiste data ingevoerd")
+            sendValidData()
+}
+            else {
+               
+}
+            
+        
+        };
+            
+        
+
+                   
+        
+        
+
+
+
+
+
+
+        function sendValidData() {
+
+        if (activeDay == 2) {
+            
+            
+            newData.breadtypes[0].newInputTuesday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
+            newData.breadtypes[1].newInputTuesday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
+            newData.breadtypes[2].newInputTuesday = parseInt(document.getElementById("wit_tobe_baked").value) - parseInt(document.getElementById("wit_input").value);
+            newData.breadtypes[3].newInputTuesday = parseInt(document.getElementById("tarwe_tobe_baked").value) - parseInt(document.getElementById("tarwe_input").value);
+            newData.breadtypes[4].newInputTuesday = parseInt(document.getElementById("volkoren_tobe_baked").value) - parseInt(document.getElementById("volkoren_input").value);
+            newData.breadtypes[5].newInputTuesday = parseInt(document.getElementById("mais_tobe_baked").value) - parseInt(document.getElementById("mais_input").value);
+            newData.breadtypes[6].newInputTuesday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) - parseInt(document.getElementById("witmeerzaden_input").value);
+            newData.breadtypes[7].newInputTuesday = parseInt(document.getElementById("spelt_tobe_baked").value) - parseInt(document.getElementById("spelt_input").value);
+            newData.breadtypes[8].newInputTuesday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) - parseInt(document.getElementById("roggevijgen_input").value);
+            newData.breadtypes[9].newInputTuesday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) - parseInt(document.getElementById("roggerozijn_input").value);
+            newData.breadtypes[10].newInputTuesday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) - parseInt(document.getElementById("haverpompoen_input").value);
+
+            $.each(newData.breadtypes, function (index, breadtype) {
+                
+                this.inputWeek1Tuesday = this.inputWeek2Tuesday;
+                this.inputWeek2Tuesday = this.inputWeek3Tuesday;
+                this.inputWeek3Tuesday = this.inputWeek4Tuesday;
+                this.inputWeek4Tuesday = this.newInputTuesday;
+
+            });
+
+        }
+
+        if (activeDay == 3) {
+            
+            
+            newData.breadtypes[0].newInputWednesday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
+            newData.breadtypes[1].newInputWednesday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
+            newData.breadtypes[2].newInputWednesday = parseInt(document.getElementById("wit_tobe_baked").value) - parseInt(document.getElementById("wit_input").value);
+            newData.breadtypes[3].newInputWednesday = parseInt(document.getElementById("tarwe_tobe_baked").value) - parseInt(document.getElementById("tarwe_input").value);
+            newData.breadtypes[4].newInputWednesday = parseInt(document.getElementById("volkoren_tobe_baked").value) - parseInt(document.getElementById("volkoren_input").value);
+            newData.breadtypes[5].newInputWednesday = parseInt(document.getElementById("mais_tobe_baked").value) - parseInt(document.getElementById("mais_input").value);
+            newData.breadtypes[6].newInputWednesday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) - parseInt(document.getElementById("witmeerzaden_input").value);
+            newData.breadtypes[7].newInputWednesday = parseInt(document.getElementById("spelt_tobe_baked").value) - parseInt(document.getElementById("spelt_input").value);
+            newData.breadtypes[8].newInputWednesday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) - parseInt(document.getElementById("roggevijgen_input").value);
+            newData.breadtypes[9].newInputWednesday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) - parseInt(document.getElementById("roggerozijn_input").value);
+            newData.breadtypes[10].newInputWednesday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) - parseInt(document.getElementById("haverpompoen_input").value);
+
+            $.each(newData.breadtypes, function (index, breadtype) {
+                
+                this.inputWeek1Wednesday = this.inputWeek2Wednesday;
+                this.inputWeek2Wednesday = this.inputWeek3Wednesday;
+                this.inputWeek3Wednesday = this.inputWeek4Wednesday;
+                this.inputWeek4Wednesday = this.newInputWednesday;
+
+            });
+        }
+
+        if (activeDay == 4) {
+            
+            
+            newData.breadtypes[0].newInputThursday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
+            newData.breadtypes[1].newInputThursday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
+            newData.breadtypes[2].newInputThursday = parseInt(document.getElementById("wit_tobe_baked").value) - parseInt(document.getElementById("wit_input").value);
+            newData.breadtypes[3].newInputThursday = parseInt(document.getElementById("tarwe_tobe_baked").value) - parseInt(document.getElementById("tarwe_input").value);
+            newData.breadtypes[4].newInputThursday = parseInt(document.getElementById("volkoren_tobe_baked").value) - parseInt(document.getElementById("volkoren_input").value);
+            newData.breadtypes[5].newInputThursday = parseInt(document.getElementById("mais_tobe_baked").value) - parseInt(document.getElementById("mais_input").value);
+            newData.breadtypes[6].newInputThursday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) - parseInt(document.getElementById("witmeerzaden_input").value);
+            newData.breadtypes[7].newInputThursday = parseInt(document.getElementById("spelt_tobe_baked").value) - parseInt(document.getElementById("spelt_input").value);
+            newData.breadtypes[8].newInputThursday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) - parseInt(document.getElementById("roggevijgen_input").value);
+            newData.breadtypes[9].newInputThursday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) - parseInt(document.getElementById("roggerozijn_input").value);
+            newData.breadtypes[10].newInputThursday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) - parseInt(document.getElementById("haverpompoen_input").value);
+
+            $.each(newData.breadtypes, function (index, breadtype) {
+                
+                this.inputWeek1Thursday = this.inputWeek2Thursday;
+                this.inputWeek2Thursday = this.inputWeek3Thursday;
+                this.inputWeek3Thursday = this.inputWeek4Thursday;
+                this.inputWeek4Thursday = this.newInputThursday;
+
+            });
+
+        }
+
+        if (activeDay == 5) {
+            
+            
+            newData.breadtypes[0].newInputFriday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
+            newData.breadtypes[1].newInputFriday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
+            newData.breadtypes[2].newInputFriday = parseInt(document.getElementById("wit_tobe_baked").value) - parseInt(document.getElementById("wit_input").value);
+            newData.breadtypes[3].newInputFriday = parseInt(document.getElementById("tarwe_tobe_baked").value) - parseInt(document.getElementById("tarwe_input").value);
+            newData.breadtypes[4].newInputFriday = parseInt(document.getElementById("volkoren_tobe_baked").value) - parseInt(document.getElementById("volkoren_input").value);
+            newData.breadtypes[5].newInputFriday = parseInt(document.getElementById("mais_tobe_baked").value) - parseInt(document.getElementById("mais_input").value);
+            newData.breadtypes[6].newInputFriday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) - parseInt(document.getElementById("witmeerzaden_input").value);
+            newData.breadtypes[7].newInputFriday = parseInt(document.getElementById("spelt_tobe_baked").value) - parseInt(document.getElementById("spelt_input").value);
+            newData.breadtypes[8].newInputFriday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) - parseInt(document.getElementById("roggevijgen_input").value);
+            newData.breadtypes[9].newInputFriday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) - parseInt(document.getElementById("roggerozijn_input").value);
+            newData.breadtypes[10].newInputFriday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) - parseInt(document.getElementById("haverpompoen_input").value);
+
+            $.each(newData.breadtypes, function (index, breadtype) {
+                
+                this.inputWeek1Friday = this.inputWeek2Friday;
+                this.inputWeek2Friday = this.inputWeek3Friday;
+                this.inputWeek3Friday = this.inputWeek4Friday;
+                this.inputWeek4Friday = this.newInputFriday;
+
+            });
+
+        }
+
         if (activeDay == 6) {
             
-            console.log(newData);
+            
             newData.breadtypes[0].newInputSaturday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
-            newData.breadtypes[0].newInputSaturday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
+            newData.breadtypes[1].newInputSaturday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
+            newData.breadtypes[2].newInputSaturday = parseInt(document.getElementById("wit_tobe_baked").value) - parseInt(document.getElementById("wit_input").value);
+            newData.breadtypes[3].newInputSaturday = parseInt(document.getElementById("tarwe_tobe_baked").value) - parseInt(document.getElementById("tarwe_input").value);
+            newData.breadtypes[4].newInputSaturday = parseInt(document.getElementById("volkoren_tobe_baked").value) - parseInt(document.getElementById("volkoren_input").value);
+            newData.breadtypes[5].newInputSaturday = parseInt(document.getElementById("mais_tobe_baked").value) - parseInt(document.getElementById("mais_input").value);
+            newData.breadtypes[6].newInputSaturday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) - parseInt(document.getElementById("witmeerzaden_input").value);
+            newData.breadtypes[7].newInputSaturday = parseInt(document.getElementById("spelt_tobe_baked").value) - parseInt(document.getElementById("spelt_input").value);
+            newData.breadtypes[8].newInputSaturday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) - parseInt(document.getElementById("roggevijgen_input").value);
+            newData.breadtypes[9].newInputSaturday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) - parseInt(document.getElementById("roggerozijn_input").value);
+            newData.breadtypes[10].newInputSaturday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) - parseInt(document.getElementById("haverpompoen_input").value);
+            
+
+            
+
+            $.each(newData.breadtypes, function (index, breadtype) {
+                
+           
+
+                this.inputWeek1Saturday = this.inputWeek2Saturday;
+                this.inputWeek2Saturday = this.inputWeek3Saturday;
+                this.inputWeek3Saturday = this.inputWeek4Saturday;
+                this.inputWeek4Saturday = this.newInputSaturday;
+
+            });
+
+
+
+
+        }
+
+        if (activeDay == 7) {
+            
+            
+            newData.breadtypes[0].newInputSunday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
+            newData.breadtypes[1].newInputSunday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
+            newData.breadtypes[2].newInputSunday = parseInt(document.getElementById("wit_tobe_baked").value) - parseInt(document.getElementById("wit_input").value);
+            newData.breadtypes[3].newInputSunday = parseInt(document.getElementById("tarwe_tobe_baked").value) - parseInt(document.getElementById("tarwe_input").value);
+            newData.breadtypes[4].newInputSunday = parseInt(document.getElementById("volkoren_tobe_baked").value) - parseInt(document.getElementById("volkoren_input").value);
+            newData.breadtypes[5].newInputSunday = parseInt(document.getElementById("mais_tobe_baked").value) - parseInt(document.getElementById("mais_input").value);
+            newData.breadtypes[6].newInputSunday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) - parseInt(document.getElementById("witmeerzaden_input").value);
+            newData.breadtypes[7].newInputSunday = parseInt(document.getElementById("spelt_tobe_baked").value) - parseInt(document.getElementById("spelt_input").value);
+            newData.breadtypes[8].newInputSunday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) - parseInt(document.getElementById("roggevijgen_input").value);
+            newData.breadtypes[9].newInputSunday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) - parseInt(document.getElementById("roggerozijn_input").value);
+            newData.breadtypes[10].newInputSunday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) - parseInt(document.getElementById("haverpompoen_input").value);
+
+            $.each(newData.breadtypes, function (index, breadtype) {
+                
+                this.inputWeek1Sunday = this.inputWeek2Sunday;
+                this.inputWeek2Sunday = this.inputWeek3Sunday;
+                this.inputWeek3Sunday = this.inputWeek4Sunday;
+                this.inputWeek4Sunday = this.newInputSunday;
+
+            });
         }
 
         // Send new Data
@@ -562,8 +766,17 @@ $(document).ready(function () {
         xhr.open("PUT", baseURL, true);
         xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
         xhr.onload = function () {
+            if (this.readyState == 4 && this.status == 200) {
+
+                newData = JSON.parse(newData)
+                console.log(newData)
+
+            }
+            
         }
         xhr.send(newData);
+        
+       }
         
     })
     
