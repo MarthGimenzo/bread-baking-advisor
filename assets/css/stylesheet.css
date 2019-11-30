@@ -29,18 +29,45 @@ h2 {
 }
 
 th {
-  font-size: 3vw;
+  font-size: 3.1vw;
   text-align: center;
+  margin: auto;
+  
+  
+  
   
 }
 
 td {
   text-align: center;
+  font-weight: 900;
 }
 
 input { 
     text-align: center; 
     vertical-align: middle;
+    font-weight: 900;
+}
+
+.total {
+    font-weight: bolder;
+    color: red;
+}
+
+#totalbol_placed {
+    color: red;
+}
+
+#totalbol_tobe_baked {
+    color: red;
+}
+
+#totallong_placed {
+    color: red;
+}
+
+#totallong_tobe_baked {
+    color: red;
 }
 
 .nav-link {
