@@ -1,101 +1,101 @@
 $(document).ready(function () {
 
-let adviceTuesdayDonkermeergranen
-let adviceTuesdayZonnevolkoren
-let adviceTuesdayWit
-let adviceTuesdayTarwe
-let adviceTuesdayVolkoren
-let adviceTuesdayMais
-let adviceTuesdayWitmeerzaden
-let adviceTuesdaySpelt
-let adviceTuesdayRoggevijgen
-let adviceTuesdayRoggerozijn
-let adviceTuesdayHaverpompoen         
+    let adviceTuesdayDonkermeergranen
+    let adviceTuesdayZonnevolkoren
+    let adviceTuesdayWit
+    let adviceTuesdayTarwe
+    let adviceTuesdayVolkoren
+    let adviceTuesdayMais
+    let adviceTuesdayWitmeerzaden
+    let adviceTuesdaySpelt
+    let adviceTuesdayRoggevijgen
+    let adviceTuesdayRoggerozijn
+    let adviceTuesdayHaverpompoen
 
-let adviceWednesdayDonkermeergranen
-let adviceWednesdayZonnevolkoren
-let adviceWednesdayWit
-let adviceWednesdayTarwe
-let adviceWednesdayVolkoren
-let adviceWednesdayMais
-let adviceWednesdayWitmeerzaden
-let adviceWednesdaySpelt
-let adviceWednesdayRoggevijgen
-let adviceWednesdayRoggerozijn
-let adviceWednesdayHaverpompoen        
+    let adviceWednesdayDonkermeergranen
+    let adviceWednesdayZonnevolkoren
+    let adviceWednesdayWit
+    let adviceWednesdayTarwe
+    let adviceWednesdayVolkoren
+    let adviceWednesdayMais
+    let adviceWednesdayWitmeerzaden
+    let adviceWednesdaySpelt
+    let adviceWednesdayRoggevijgen
+    let adviceWednesdayRoggerozijn
+    let adviceWednesdayHaverpompoen
 
-let adviceThursdayDonkermeergranen
-let adviceThursdayZonnevolkoren
-let adviceThursdayWit
-let adviceThursdayTarwe
-let adviceThursdayVolkoren
-let adviceThursdayMais
-let adviceThursdayWitmeerzaden
-let adviceThursdaySpelt
-let adviceThursdayRoggevijgen
-let adviceThursdayRoggerozijn
-let adviceThursdayHaverpompoen    
+    let adviceThursdayDonkermeergranen
+    let adviceThursdayZonnevolkoren
+    let adviceThursdayWit
+    let adviceThursdayTarwe
+    let adviceThursdayVolkoren
+    let adviceThursdayMais
+    let adviceThursdayWitmeerzaden
+    let adviceThursdaySpelt
+    let adviceThursdayRoggevijgen
+    let adviceThursdayRoggerozijn
+    let adviceThursdayHaverpompoen
 
-let adviceFridayDonkermeergranen
-let adviceFridayZonnevolkoren
-let adviceFridayWit
-let adviceFridayTarwe
-let adviceFridayVolkoren
-let adviceFridayMais
-let adviceFridayWitmeerzaden
-let adviceFridaySpelt
-let adviceFridayRoggevijgen
-let adviceFridayRoggerozijn
-let adviceFridayHaverpompoen
+    let adviceFridayDonkermeergranen
+    let adviceFridayZonnevolkoren
+    let adviceFridayWit
+    let adviceFridayTarwe
+    let adviceFridayVolkoren
+    let adviceFridayMais
+    let adviceFridayWitmeerzaden
+    let adviceFridaySpelt
+    let adviceFridayRoggevijgen
+    let adviceFridayRoggerozijn
+    let adviceFridayHaverpompoen
 
-let adviceSaturdayDonkermeergranen
-let adviceSaturdayZonnevolkoren
-let adviceSaturdayyWit
-let adviceSaturdayTarwe
-let adviceSaturdayVolkoren
-let adviceSaturdayMais
-let adviceSaturdayWitmeerzaden
-let adviceSaturdaySpelt
-let adviceSaturdayRoggevijgen
-let adviceSaturdayRoggerozijn
-let adviceSaturdayHaverpompoen
+    let adviceSaturdayDonkermeergranen
+    let adviceSaturdayZonnevolkoren
+    let adviceSaturdayyWit
+    let adviceSaturdayTarwe
+    let adviceSaturdayVolkoren
+    let adviceSaturdayMais
+    let adviceSaturdayWitmeerzaden
+    let adviceSaturdaySpelt
+    let adviceSaturdayRoggevijgen
+    let adviceSaturdayRoggerozijn
+    let adviceSaturdayHaverpompoen
 
-let adviceSundayDonkermeergranen
-let adviceSundayZonnevolkoren
-let adviceSundayWit
-let adviceSundayTarwe
-let adviceSundayVolkoren
-let adviceSundayMais
-let adviceSundayWitmeerzaden
-let adviceSundaySpelt
-let adviceSundayRoggevijgen
-let adviceSundayRoggerozijn
-let adviceSundayHaverpompoen
+    let adviceSundayDonkermeergranen
+    let adviceSundayZonnevolkoren
+    let adviceSundayWit
+    let adviceSundayTarwe
+    let adviceSundayVolkoren
+    let adviceSundayMais
+    let adviceSundayWitmeerzaden
+    let adviceSundaySpelt
+    let adviceSundayRoggevijgen
+    let adviceSundayRoggerozijn
+    let adviceSundayHaverpompoen
 
     // Load data from API
-    
-const baseURL = "https://api.myjson.com/bins/gmmpy";
 
-function getData(cb) {
+    const baseURL = "https://api.myjson.com/bins/gmmpy";
 
-    var xhr = new XMLHttpRequest();
+    function getData(cb) {
+
+        var xhr = new XMLHttpRequest();
 
 
-    xhr.open("GET", baseURL)
-    xhr.send();
+        xhr.open("GET", baseURL)
+        xhr.send();
 
-    xhr.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            
-            cb(JSON.parse(this.responseText))
-            
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
 
-        }
-    };
-}
+                cb(JSON.parse(this.responseText))
 
-getData(function(data) {
-        
+
+            }
+        };
+    }
+
+    getData(function (data) {
+
         adviceTuesdayDonkermeergranen = Math.round((data.breadtypes[0].adviceWeek1Tuesday + data.breadtypes[0].adviceWeek2Tuesday + data.breadtypes[0].adviceWeek3Tuesday + data.breadtypes[0].adviceWeek4Tuesday) / 4);
         adviceTuesdayZonnevolkoren = Math.round((data.breadtypes[1].adviceWeek1Tuesday + data.breadtypes[1].adviceWeek2Tuesday + data.breadtypes[1].adviceWeek3Tuesday + data.breadtypes[1].adviceWeek4Tuesday) / 4);
         adviceTuesdayWit = Math.round((data.breadtypes[2].adviceWeek1Tuesday + data.breadtypes[2].adviceWeek2Tuesday + data.breadtypes[2].adviceWeek3Tuesday + data.breadtypes[2].adviceWeek4Tuesday) / 4);
@@ -155,7 +155,7 @@ getData(function(data) {
         adviceSaturdayRoggevijgen = Math.round((data.breadtypes[8].adviceWeek1Saturday + data.breadtypes[8].adviceWeek2Saturday + data.breadtypes[8].adviceWeek3Saturday + data.breadtypes[8].adviceWeek4Saturday) / 4);
         adviceSaturdayRoggerozijn = Math.round((data.breadtypes[9].adviceWeek1Saturday + data.breadtypes[9].adviceWeek2Saturday + data.breadtypes[9].adviceWeek3Saturday + data.breadtypes[9].adviceWeek4Saturday) / 4);
         adviceSaturdayHaverpompoen = Math.round((data.breadtypes[10].adviceWeek1Saturday + data.breadtypes[10].adviceWeek2Saturday + data.breadtypes[10].adviceWeek3Saturday + data.breadtypes[10].adviceWeek4Saturday) / 4);
-        
+
         adviceSundayDonkermeergranen = Math.round((data.breadtypes[0].adviceWeek1Sunday + data.breadtypes[0].adviceWeek2Sunday + data.breadtypes[0].adviceWeek3Sunday + data.breadtypes[0].adviceWeek4Sunday) / 4);
         adviceSundayZonnevolkoren = Math.round((data.breadtypes[1].adviceWeek1Sunday + data.breadtypes[1].adviceWeek2Sunday + data.breadtypes[1].adviceWeek3Sunday + data.breadtypes[1].adviceWeek4Sunday) / 4);
         adviceSundayWit = Math.round((data.breadtypes[2].adviceWeek1Sunday + data.breadtypes[2].adviceWeek2Sunday + data.breadtypes[2].adviceWeek3Sunday + data.breadtypes[2].adviceWeek4Sunday) / 4);
@@ -179,7 +179,7 @@ getData(function(data) {
 
     let activeDay = 0;
     determineDay();
-    
+
 
     // Determine day of the week
 
@@ -307,10 +307,17 @@ getData(function(data) {
             $("#volkoren_tobe_placed").val(adviceThursdayVolkoren);
             $("#mais_tobe_placed").val(adviceThursdayMais);
             $("#witmeerzaden_tobe_placed").val(adviceThursdayWitmeerzaden);
+
+            adviceTotalPlacedLong = adviceThursdayDonkermeergranen + adviceThursdayZonnevolkoren + adviceThursdayWit + adviceThursdayTarwe + adviceThursdayVolkoren + adviceThursdayMais + adviceThursdayWitmeerzaden;
+            $("#totallong_placed").val(adviceTotalPlacedLong);
+
             $("#spelt_tobe_placed").val(adviceThursdaySpelt);
             $("#roggevijgen_tobe_placed").val(adviceThursdayRoggevijgen);
             $("#roggerozijn_tobe_placed").val(adviceThursdayRoggerozijn);
             $("#haverpompoen_tobe_placed").val(adviceThursdayHaverpompoen);
+
+            adviceTotalPlacedBol = adviceThursdaySpelt + adviceThursdayRoggevijgen + adviceThursdayRoggerozijn + adviceThursdayHaverpompoen;
+            $("#totalbol_placed").val(adviceTotalPlacedBol);
 
             $("#donkermeergranen_tobe_baked").val(adviceTuesdayDonkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(adviceTuesdayZonnevolkoren);
@@ -319,10 +326,17 @@ getData(function(data) {
             $("#volkoren_tobe_baked").val(adviceTuesdayVolkoren);
             $("#mais_tobe_baked").val(adviceTuesdayMais);
             $("#witmeerzaden_tobe_baked").val(adviceTuesdayWitmeerzaden);
+
+            adviceTotalBakedLong = adviceTuesdayDonkermeergranen + adviceTuesdayZonnevolkoren + adviceTuesdayWit + adviceTuesdayTarwe + adviceTuesdayVolkoren + adviceTuesdayMais + adviceTuesdayWitmeerzaden;
+            $("#totallong_tobe_baked").val(adviceTotalBakedLong);
+
             $("#spelt_tobe_baked").val(adviceTuesdaySpelt);
             $("#roggevijgen_tobe_baked").val(adviceTuesdayRoggevijgen);
             $("#roggerozijn_tobe_baked").val(adviceTuesdayRoggerozijn);
             $("#haverpompoen_tobe_baked").val(adviceTuesdayHaverpompoen);
+
+            adviceTotalBakedBol = adviceTuesdaySpelt + adviceTuesdayRoggevijgen + adviceTuesdayRoggerozijn + adviceTuesdayHaverpompoen;
+            $("#totalbol_tobe_baked").val(adviceTotalBakedBol);
 
         }
         if (activeDay == 3) {
@@ -334,10 +348,17 @@ getData(function(data) {
             $("#volkoren_tobe_placed").val(adviceFridayVolkoren);
             $("#mais_tobe_placed").val(adviceFridayMais);
             $("#witmeerzaden_tobe_placed").val(adviceFridayWitmeerzaden);
+
+            adviceTotalPlacedLong = adviceFridayDonkermeergranen + adviceFridayZonnevolkoren + adviceFridayWit + adviceFridayTarwe + adviceFridayVolkoren + adviceFridayMais + adviceFridayWitmeerzaden;
+            $("#totallong_placed").val(adviceTotalPlacedLong);
+
             $("#spelt_tobe_placed").val(adviceFridaySpelt);
             $("#roggevijgen_tobe_placed").val(adviceFridayRoggevijgen);
             $("#roggerozijn_tobe_placed").val(adviceFridayRoggerozijn);
             $("#haverpompoen_tobe_placed").val(adviceFridayHaverpompoen);
+
+            adviceTotalPlacedBol = adviceFridaySpelt + adviceFridayRoggevijgen + adviceFridayRoggerozijn + adviceFridayHaverpompoen;
+            $("#totalbol_placed").val(adviceTotalPlacedBol);
 
             $("#donkermeergranen_tobe_baked").val(adviceWednesdayDonkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(adviceWednesdayZonnevolkoren);
@@ -346,10 +367,17 @@ getData(function(data) {
             $("#volkoren_tobe_baked").val(adviceWednesdayVolkoren);
             $("#mais_tobe_baked").val(adviceWednesdayMais);
             $("#witmeerzaden_tobe_baked").val(adviceWednesdayWitmeerzaden);
+
+            adviceTotalBakedLong = adviceWednesdayDonkermeergranen + adviceWednesdayZonnevolkoren + adviceWednesdayWit + adviceWednesdayTarwe + adviceWednesdayVolkoren + adviceWednesdayMais + adviceWednesdayWitmeerzaden;
+            $("#totallong_tobe_baked").val(adviceTotalBakedLong);
+
             $("#spelt_tobe_baked").val(adviceWednesdaySpelt);
             $("#roggevijgen_tobe_baked").val(adviceWednesdayRoggevijgen);
             $("#roggerozijn_tobe_baked").val(adviceWednesdayRoggerozijn);
             $("#haverpompoen_tobe_baked").val(adviceWednesdayHaverpompoen);
+
+            adviceTotalBakedBol = adviceWednesdaySpelt + adviceWednesdayRoggevijgen + adviceWednesdayRoggerozijn + adviceWednesdayHaverpompoen;
+            $("#totalbol_tobe_baked").val(adviceTotalBakedBol);
 
         }
         if (activeDay == 4) {
@@ -361,10 +389,17 @@ getData(function(data) {
             $("#volkoren_tobe_placed").val(adviceSaturdayVolkoren);
             $("#mais_tobe_placed").val(adviceSaturdayMais);
             $("#witmeerzaden_tobe_placed").val(adviceSaturdayWitmeerzaden);
+
+            adviceTotalPlacedLong = adviceSaturdayDonkermeergranen + adviceSaturdayZonnevolkoren + adviceSaturdayWit + adviceSaturdayTarwe + adviceSaturdayVolkoren + adviceSaturdayMais + adviceSaturdayWitmeerzaden;
+            $("#totallong_placed").val(adviceTotalPlacedLong);
+
             $("#spelt_tobe_placed").val(adviceSaturdaySpelt);
             $("#roggevijgen_tobe_placed").val(adviceSaturdayRoggevijgen);
             $("#roggerozijn_tobe_placed").val(adviceSaturdayRoggerozijn);
             $("#haverpompoen_tobe_placed").val(adviceSaturdayHaverpompoen);
+
+            adviceTotalPlacedBol = adviceSaturdaySpelt + adviceSaturdayRoggevijgen + adviceSaturdayRoggerozijn + adviceSaturdayHaverpompoen;
+            $("#totalbol_placed").val(adviceTotalPlacedBol);
 
             $("#donkermeergranen_tobe_baked").val(adviceThursdayDonkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(adviceThursdayZonnevolkoren);
@@ -373,10 +408,17 @@ getData(function(data) {
             $("#volkoren_tobe_baked").val(adviceThursdayVolkoren);
             $("#mais_tobe_baked").val(adviceThursdayMais);
             $("#witmeerzaden_tobe_baked").val(adviceThursdayWitmeerzaden);
+
+            adviceTotalBakedLong = adviceThursdayDonkermeergranen + adviceThursdayZonnevolkoren + adviceThursdayWit + adviceThursdayTarwe + adviceThursdayVolkoren + adviceThursdayMais + adviceThursdayWitmeerzaden;
+            $("#totallong_tobe_baked").val(adviceTotalBakedLong);
+
             $("#spelt_tobe_baked").val(adviceThursdaySpelt);
             $("#roggevijgen_tobe_baked").val(adviceThursdayRoggevijgen);
             $("#roggerozijn_tobe_baked").val(adviceThursdayRoggerozijn);
             $("#haverpompoen_tobe_baked").val(adviceThursdayHaverpompoen);
+
+            adviceTotalBakedBol = adviceThursdaySpelt + adviceThursdayRoggevijgen + adviceThursdayRoggerozijn + adviceThursdayHaverpompoen;
+            $("#totalbol_tobe_baked").val(adviceTotalBakedBol);
 
         }
         if (activeDay == 5) {
@@ -388,10 +430,17 @@ getData(function(data) {
             $("#volkoren_tobe_placed").val(adviceSundayVolkoren);
             $("#mais_tobe_placed").val(adviceSundayMais);
             $("#witmeerzaden_tobe_placed").val(adviceSundayWitmeerzaden);
+
+            adviceTotalPlacedLong = adviceSundayDonkermeergranen + adviceSundayZonnevolkoren + adviceSundayWit + adviceSundayTarwe + adviceSundayVolkoren + adviceSundayMais + adviceSundayWitmeerzaden;
+            $("#totallong_placed").val(adviceTotalPlacedLong);
+
             $("#spelt_tobe_placed").val(adviceSundaySpelt);
             $("#roggevijgen_tobe_placed").val(adviceSundayRoggevijgen);
             $("#roggerozijn_tobe_placed").val(adviceSundayRoggerozijn);
             $("#haverpompoen_tobe_placed").val(adviceSundayHaverpompoen);
+
+            adviceTotalPlacedBol = adviceSundaySpelt + adviceSundayRoggevijgen + adviceSundayRoggerozijn + adviceSundayHaverpompoen;
+            $("#totalbol_placed").val(adviceTotalPlacedBol);
 
             $("#donkermeergranen_tobe_baked").val(adviceFridayDonkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(adviceFridayZonnevolkoren);
@@ -400,10 +449,17 @@ getData(function(data) {
             $("#volkoren_tobe_baked").val(adviceFridayVolkoren);
             $("#mais_tobe_baked").val(adviceFridayMais);
             $("#witmeerzaden_tobe_baked").val(adviceFridayWitmeerzaden);
+
+            adviceTotalBakedLong = adviceFridayDonkermeergranen + adviceFridayZonnevolkoren + adviceFridayWit + adviceFridayTarwe + adviceFridayVolkoren + adviceFridayMais + adviceFridayWitmeerzaden;
+            $("#totallong_tobe_baked").val(adviceTotalBakedLong);
+
             $("#spelt_tobe_baked").val(adviceFridaySpelt);
             $("#roggevijgen_tobe_baked").val(adviceFridayRoggevijgen);
             $("#roggerozijn_tobe_baked").val(adviceFridayRoggerozijn);
             $("#haverpompoen_tobe_baked").val(adviceFridayHaverpompoen);
+
+            adviceTotalBakedBol = adviceFridaySpelt + adviceFridayRoggevijgen + adviceFridayRoggerozijn + adviceFridayHaverpompoen;
+            $("#totalbol_tobe_baked").val(adviceTotalBakedBol);
 
         }
         if (activeDay == 6) {
@@ -415,10 +471,17 @@ getData(function(data) {
             $("#volkoren_tobe_placed").val(adviceTuesdayVolkoren);
             $("#mais_tobe_placed").val(adviceTuesdayMais);
             $("#witmeerzaden_tobe_placed").val(adviceTuesdayWitmeerzaden);
+
+            adviceTotalPlacedLong = adviceTuesdayDonkermeergranen + adviceTuesdayZonnevolkoren + adviceTuesdayWit + adviceTuesdayTarwe + adviceTuesdayVolkoren + adviceTuesdayMais + adviceTuesdayWitmeerzaden;
+            $("#totallong_placed").val(adviceTotalPlacedLong);
+
             $("#spelt_tobe_placed").val(adviceTuesdaySpelt);
             $("#roggevijgen_tobe_placed").val(adviceTuesdayRoggevijgen);
             $("#roggerozijn_tobe_placed").val(adviceTuesdayRoggerozijn);
             $("#haverpompoen_tobe_placed").val(adviceTuesdayHaverpompoen);
+
+            adviceTotalPlacedBol = adviceTuesdaySpelt + adviceTuesdayRoggevijgen + adviceTuesdayRoggerozijn + adviceTuesdayHaverpompoen;
+            $("#totalbol_placed").val(adviceTotalPlacedBol);
 
             $("#donkermeergranen_tobe_baked").val(adviceSaturdayDonkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(adviceSaturdayZonnevolkoren);
@@ -427,10 +490,17 @@ getData(function(data) {
             $("#volkoren_tobe_baked").val(adviceSaturdayVolkoren);
             $("#mais_tobe_baked").val(adviceSaturdayMais);
             $("#witmeerzaden_tobe_baked").val(adviceSaturdayWitmeerzaden);
+
+            adviceTotalBakedLong = adviceSaturdayDonkermeergranen + adviceSaturdayZonnevolkoren + adviceSaturdayWit + adviceSaturdayTarwe + adviceSaturdayVolkoren + adviceSaturdayMais + adviceSaturdayWitmeerzaden;
+            $("#totallong_tobe_baked").val(adviceTotalBakedLong);
+
             $("#spelt_tobe_baked").val(adviceSaturdaySpelt);
             $("#roggevijgen_tobe_baked").val(adviceSaturdayRoggevijgen);
             $("#roggerozijn_tobe_baked").val(adviceSaturdayRoggerozijn);
             $("#haverpompoen_tobe_baked").val(adviceSaturdayHaverpompoen);
+
+            adviceTotalBakedBol = adviceSaturdaySpelt + adviceSaturdayRoggevijgen + adviceSaturdayRoggerozijn + adviceSaturdayHaverpompoen;
+            $("#totalbol_tobe_baked").val(adviceTotalBakedBol);
 
         }
         if (activeDay == 0) {
@@ -442,10 +512,17 @@ getData(function(data) {
             $("#volkoren_tobe_placed").val(adviceWednesdayVolkoren);
             $("#mais_tobe_placed").val(adviceWednesdayMais);
             $("#witmeerzaden_tobe_placed").val(adviceWednesdayWitmeerzaden);
+
+            adviceTotalPlacedLong = adviceWednesdayDonkermeergranen + adviceWednesdayZonnevolkoren + adviceWednesdayWit + adviceWednesdayTarwe + adviceWednesdayVolkoren + adviceWednesdayMais + adviceWednesdayWitmeerzaden;
+            $("#totallong_placed").val(adviceTotalPlacedLong);
+
             $("#spelt_tobe_placed").val(adviceWednesdaySpelt);
             $("#roggevijgen_tobe_placed").val(adviceWednesdayRoggevijgen);
             $("#roggerozijn_tobe_placed").val(adviceWednesdayRoggerozijn);
             $("#haverpompoen_tobe_placed").val(adviceWednesdayHaverpompoen);
+
+            adviceTotalPlacedBol = adviceWednesdaySpelt + adviceTuesdayRoggevijgen + adviceTuesdayRoggerozijn + adviceTuesdayHaverpompoen;
+            $("#totalbol_placed").val(adviceTotalPlacedBol);
 
             $("#donkermeergranen_tobe_baked").val(adviceSundayDonkermeergranen);
             $("#zonnevolkoren_tobe_baked").val(adviceSundayZonnevolkoren);
@@ -454,14 +531,21 @@ getData(function(data) {
             $("#volkoren_tobe_baked").val(adviceSundayVolkoren);
             $("#mais_tobe_baked").val(adviceSundayMais);
             $("#witmeerzaden_tobe_baked").val(adviceSundayWitmeerzaden);
+
+            adviceTotalBakedLong = adviceSundayDonkermeergranen + adviceSundayZonnevolkoren + adviceSundayWit + adviceSundayTarwe + adviceSundayVolkoren + adviceSundayMais + adviceSundayWitmeerzaden;
+            $("#totallong_tobe_baked").val(adviceTotalBakedLong);
+
             $("#spelt_tobe_baked").val(adviceSundaySpelt);
             $("#roggevijgen_tobe_baked").val(adviceSundayRoggevijgen);
             $("#roggerozijn_tobe_baked").val(adviceSundayRoggerozijn);
             $("#haverpompoen_tobe_baked").val(adviceSundayHaverpompoen);
 
+            adviceTotalBakedBol = adviceSundaySpelt + adviceSundayRoggevijgen + adviceSundayRoggerozijn + adviceSundayHaverpompoen;
+            $("#totalbol_tobe_baked").val(adviceTotalBakedBol);
+
         }
 
     }
 
-    
+
 })
