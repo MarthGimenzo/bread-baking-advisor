@@ -74,7 +74,7 @@ $(document).ready(function () {
 
     // Load data from API
 
-    const baseURL = "https://api.myjson.com/bins/gmmpy";
+    const baseURL = "https://api.myjson.com/bins/uobcm";
 
     function getData(cb) {
 
@@ -88,7 +88,7 @@ $(document).ready(function () {
             if (this.readyState == 4 && this.status == 200) {
 
                 cb(JSON.parse(this.responseText))
-
+                newData = JSON.parse(this.responseText)
 
             }
         };
@@ -547,5 +547,25 @@ $(document).ready(function () {
 
     }
 
+    $("#submit").on("click", function () {
+        
+        if (activeDay == 6) {
+            
+            console.log(newData);
+            newData.breadtypes[0].newInputSaturday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
+            newData.breadtypes[0].newInputSaturday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
+        }
+
+        // Send new Data
+        newData = JSON.stringify(newData);
+        var xhr = new XMLHttpRequest();
+        xhr.open("PUT", baseURL, true);
+        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+        xhr.onload = function () {
+        }
+        xhr.send(newData);
+        
+    })
+    
 
 })
