@@ -1,0 +1,5 @@
+console.log(data.breadtypes[0].adviceWeek1Sunday)
+console.log(data.breadtypes[0].adviceWeek2Sunday)
+console.log(data.breadtypes[0].adviceWeek3Sunday)
+console.log(data.breadtypes[0].adviceWeek4Sunday)
+console.log(adviceSundayDonkermeergranen)
