@@ -5,6 +5,22 @@ $(document).ready(function () {
 
     const constantAdder = 1
 
+    let areadySubmitted
+
+    let viewDateTuesday
+    let viewDateWednesday
+    let viewDateThursday
+    let viewDateFriday
+    let viewDateSaturday
+    let viewDateSunday
+
+    let newToday
+    let newDay
+    let newMonth
+    let newYear
+
+    let newData
+
     let adviceTuesdayDonkermeergranen
     let adviceTuesdayZonnevolkoren
     let adviceTuesdayWit
@@ -55,7 +71,7 @@ $(document).ready(function () {
 
     let adviceSaturdayDonkermeergranen
     let adviceSaturdayZonnevolkoren
-    let adviceSaturdayyWit
+    let adviceSaturdayWit
     let adviceSaturdayTarwe
     let adviceSaturdayVolkoren
     let adviceSaturdayMais
@@ -79,7 +95,7 @@ $(document).ready(function () {
 
     // Load data from API
 
-    const baseURL = "https://api.myjson.com/bins/156fh0";
+    const baseURL = "https://api.myjson.com/bins/193agk";
 
     function getData(cb) {
 
@@ -109,7 +125,7 @@ $(document).ready(function () {
                     adviceTuesdayRoggevijgen = Math.round((newData.breadtypes[8].adviceWeek1Tuesday + newData.breadtypes[8].adviceWeek2Tuesday + newData.breadtypes[8].adviceWeek3Tuesday + newData.breadtypes[8].adviceWeek4Tuesday) / 4);
                     adviceTuesdayRoggerozijn = Math.round((newData.breadtypes[9].adviceWeek1Tuesday + newData.breadtypes[9].adviceWeek2Tuesday + newData.breadtypes[9].adviceWeek3Tuesday + newData.breadtypes[9].adviceWeek4Tuesday) / 4);
                     adviceTuesdayHaverpompoen = Math.round((newData.breadtypes[10].adviceWeek1Tuesday + newData.breadtypes[10].adviceWeek2Tuesday + newData.breadtypes[10].adviceWeek3Tuesday + newData.breadtypes[10].adviceWeek4Tuesday) / 4);
-                    
+
                     adviceWednesdayDonkermeergranen = Math.round((newData.breadtypes[0].adviceWeek1Wednesday + newData.breadtypes[0].adviceWeek2Wednesday + newData.breadtypes[0].adviceWeek3Wednesday + newData.breadtypes[0].adviceWeek4Wednesday) / 4);
                     adviceWednesdayZonnevolkoren = Math.round((newData.breadtypes[1].adviceWeek1Wednesday + newData.breadtypes[1].adviceWeek2Wednesday + newData.breadtypes[1].adviceWeek3Wednesday + newData.breadtypes[1].adviceWeek4Wednesday) / 4);
                     adviceWednesdayWit = Math.round((newData.breadtypes[2].adviceWeek1Wednesday + newData.breadtypes[2].adviceWeek2Wednesday + newData.breadtypes[2].adviceWeek3Wednesday + newData.breadtypes[2].adviceWeek4Wednesday) / 4);
@@ -121,7 +137,7 @@ $(document).ready(function () {
                     adviceWednesdayRoggevijgen = Math.round((newData.breadtypes[8].adviceWeek1Wednesday + newData.breadtypes[8].adviceWeek2Wednesday + newData.breadtypes[8].adviceWeek3Wednesday + newData.breadtypes[8].adviceWeek4Wednesday) / 4);
                     adviceWednesdayRoggerozijn = Math.round((newData.breadtypes[9].adviceWeek1Wednesday + newData.breadtypes[9].adviceWeek2Wednesday + newData.breadtypes[9].adviceWeek3Wednesday + newData.breadtypes[9].adviceWeek4Wednesday) / 4);
                     adviceWednesdayHaverpompoen = Math.round((newData.breadtypes[10].adviceWeek1Wednesday + newData.breadtypes[10].adviceWeek2Wednesday + newData.breadtypes[10].adviceWeek3Wednesday + newData.breadtypes[10].adviceWeek4Wednesday) / 4);
-                    
+
                     adviceThursdayDonkermeergranen = Math.round((newData.breadtypes[0].adviceWeek1Thursday + newData.breadtypes[0].adviceWeek2Thursday + newData.breadtypes[0].adviceWeek3Thursday + newData.breadtypes[0].adviceWeek4Thursday) / 4);
                     adviceThursdayZonnevolkoren = Math.round((newData.breadtypes[1].adviceWeek1Thursday + newData.breadtypes[1].adviceWeek2Thursday + newData.breadtypes[1].adviceWeek3Thursday + newData.breadtypes[1].adviceWeek4Thursday) / 4);
                     adviceThursdayWit = Math.round((newData.breadtypes[2].adviceWeek1Thursday + newData.breadtypes[2].adviceWeek2Thursday + newData.breadtypes[2].adviceWeek3Thursday + newData.breadtypes[2].adviceWeek4Thursday) / 4);
@@ -133,7 +149,7 @@ $(document).ready(function () {
                     adviceThursdayRoggevijgen = Math.round((newData.breadtypes[8].adviceWeek1Thursday + newData.breadtypes[8].adviceWeek2Thursday + newData.breadtypes[8].adviceWeek3Thursday + newData.breadtypes[8].adviceWeek4Thursday) / 4);
                     adviceThursdayRoggerozijn = Math.round((newData.breadtypes[9].adviceWeek1Thursday + newData.breadtypes[9].adviceWeek2Thursday + newData.breadtypes[9].adviceWeek3Thursday + newData.breadtypes[9].adviceWeek4Thursday) / 4);
                     adviceThursdayHaverpompoen = Math.round((newData.breadtypes[10].adviceWeek1Thursday + newData.breadtypes[10].adviceWeek2Thursday + newData.breadtypes[10].adviceWeek3Thursday + newData.breadtypes[10].adviceWeek4Thursday) / 4);
-                    
+
                     adviceFridayDonkermeergranen = Math.round((newData.breadtypes[0].adviceWeek1Friday + newData.breadtypes[0].adviceWeek2Friday + newData.breadtypes[0].adviceWeek3Friday + newData.breadtypes[0].adviceWeek4Friday) / 4);
                     adviceFridayZonnevolkoren = Math.round((newData.breadtypes[1].adviceWeek1Friday + newData.breadtypes[1].adviceWeek2Friday + newData.breadtypes[1].adviceWeek3Friday + newData.breadtypes[1].adviceWeek4Friday) / 4);
                     adviceFridayWit = Math.round((newData.breadtypes[2].adviceWeek1Friday + newData.breadtypes[2].adviceWeek2Friday + newData.breadtypes[2].adviceWeek3Friday + newData.breadtypes[2].adviceWeek4Friday) / 4);
@@ -145,7 +161,7 @@ $(document).ready(function () {
                     adviceFridayRoggevijgen = Math.round((newData.breadtypes[8].adviceWeek1Friday + newData.breadtypes[8].adviceWeek2Friday + newData.breadtypes[8].adviceWeek3Friday + newData.breadtypes[8].adviceWeek4Friday) / 4);
                     adviceFridayRoggerozijn = Math.round((newData.breadtypes[9].adviceWeek1Friday + newData.breadtypes[9].adviceWeek2Friday + newData.breadtypes[9].adviceWeek3Friday + newData.breadtypes[9].adviceWeek4Friday) / 4);
                     adviceFridayHaverpompoen = Math.round((newData.breadtypes[10].adviceWeek1Friday + newData.breadtypes[10].adviceWeek2Friday + newData.breadtypes[10].adviceWeek3Friday + newData.breadtypes[10].adviceWeek4Friday) / 4);
-                    
+
                     adviceSaturdayDonkermeergranen = Math.round((newData.breadtypes[0].adviceWeek1Saturday + newData.breadtypes[0].adviceWeek2Saturday + newData.breadtypes[0].adviceWeek3Saturday + newData.breadtypes[0].adviceWeek4Saturday) / 4);
                     adviceSaturdayZonnevolkoren = Math.round((newData.breadtypes[1].adviceWeek1Saturday + newData.breadtypes[1].adviceWeek2Saturday + newData.breadtypes[1].adviceWeek3Saturday + newData.breadtypes[1].adviceWeek4Saturday) / 4);
                     adviceSaturdayWit = Math.round((newData.breadtypes[2].adviceWeek1Saturday + newData.breadtypes[2].adviceWeek2Saturday + newData.breadtypes[2].adviceWeek3Saturday + newData.breadtypes[2].adviceWeek4Saturday) / 4);
@@ -157,7 +173,7 @@ $(document).ready(function () {
                     adviceSaturdayRoggevijgen = Math.round((newData.breadtypes[8].adviceWeek1Saturday + newData.breadtypes[8].adviceWeek2Saturday + newData.breadtypes[8].adviceWeek3Saturday + newData.breadtypes[8].adviceWeek4Saturday) / 4);
                     adviceSaturdayRoggerozijn = Math.round((newData.breadtypes[9].adviceWeek1Saturday + newData.breadtypes[9].adviceWeek2Saturday + newData.breadtypes[9].adviceWeek3Saturday + newData.breadtypes[9].adviceWeek4Saturday) / 4);
                     adviceSaturdayHaverpompoen = Math.round((newData.breadtypes[10].adviceWeek1Saturday + newData.breadtypes[10].adviceWeek2Saturday + newData.breadtypes[10].adviceWeek3Saturday + newData.breadtypes[10].adviceWeek4Saturday) / 4);
-                    
+
                     adviceSundayDonkermeergranen = Math.round((newData.breadtypes[0].adviceWeek1Sunday + newData.breadtypes[0].adviceWeek2Sunday + newData.breadtypes[0].adviceWeek3Sunday + newData.breadtypes[0].adviceWeek4Sunday) / 4);
                     adviceSundayZonnevolkoren = Math.round((newData.breadtypes[1].adviceWeek1Sunday + newData.breadtypes[1].adviceWeek2Sunday + newData.breadtypes[1].adviceWeek3Sunday + newData.breadtypes[1].adviceWeek4Sunday) / 4);
                     adviceSundayWit = Math.round((newData.breadtypes[2].adviceWeek1Sunday + newData.breadtypes[2].adviceWeek2Sunday + newData.breadtypes[2].adviceWeek3Sunday + newData.breadtypes[2].adviceWeek4Sunday) / 4);
@@ -170,6 +186,20 @@ $(document).ready(function () {
                     adviceSundayRoggerozijn = Math.round((newData.breadtypes[9].adviceWeek1Sunday + newData.breadtypes[9].adviceWeek2Sunday + newData.breadtypes[9].adviceWeek3Sunday + newData.breadtypes[9].adviceWeek4Sunday) / 4);
                     adviceSundayHaverpompoen = Math.round((newData.breadtypes[10].adviceWeek1Sunday + newData.breadtypes[10].adviceWeek2Sunday + newData.breadtypes[10].adviceWeek3Sunday + newData.breadtypes[10].adviceWeek4Sunday) / 4);
                     console.log("Averages are counted")
+                    console.log("Dates are loaded")
+                    viewDateTuesday = newData.breadtypes[0].saveDateTuesday
+                    viewDateWednesday = newData.breadtypes[0].saveDateWednesday
+                    viewDateThursday = newData.breadtypes[0].saveDateThursday
+                    viewDateFriday = newData.breadtypes[0].saveDateFriday
+                    viewDateSaturday = newData.breadtypes[0].saveDateSaturday
+                    viewDateSunday = newData.breadtypes[0].saveDateSunday
+
+                    newToday = new Date();
+                    newYear = newToday.getFullYear()
+                    newMonth = newToday.getMonth() + 1
+                    newDay = newToday.getDate()
+                    newToday = newDay.toString() + " / " + newMonth.toString() + " / " + newYear.toString()
+                    console.log(newToday)
                     changeActiveDay()
 
                 }
@@ -187,7 +217,7 @@ $(document).ready(function () {
     // Determine day of the week
 
     function determineDay() {
-        
+
         var d = new Date();
         var weekday = new Array(7);
         weekday[0] = "Sunday";
@@ -202,7 +232,7 @@ $(document).ready(function () {
         console.log("Current day is determined")
         console.log(weekday)
         console.log(today)
-        
+
         // Change active Dropdown Menu Item to current day of the week
         if (today == "Monday") {
             $("#tuesday").addClass("active");
@@ -306,8 +336,15 @@ $(document).ready(function () {
 
     function changeActiveDay() {
         console.log("View right amounts")
+        areadySubmitted = false
+        $("#submit").css("background-color", "#007bff").css("border-color", "#007bff").text("Submit for today!");
 
         if (activeDay == 2) {
+            $("#thisdate").text(viewDateTuesday)
+            if (newToday == viewDateTuesday) {
+                areadySubmitted = true
+                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+            }
 
             $("#donkermeergranen_tobe_placed").val(adviceThursdayDonkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(adviceThursdayZonnevolkoren);
@@ -349,6 +386,11 @@ $(document).ready(function () {
 
         }
         if (activeDay == 3) {
+            $("#thisdate").text(viewDateWednesday)
+            if (newToday == viewDateWednesday) {
+                areadySubmitted = true
+                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+            }
 
             $("#donkermeergranen_tobe_placed").val(adviceFridayDonkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(adviceFridayZonnevolkoren);
@@ -390,6 +432,11 @@ $(document).ready(function () {
 
         }
         if (activeDay == 4) {
+            $("#thisdate").text(viewDateThursday)
+            if (newToday == viewDateThursday) {
+                areadySubmitted = true
+                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+            }
 
             $("#donkermeergranen_tobe_placed").val(adviceSaturdayDonkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(adviceSaturdayZonnevolkoren);
@@ -431,6 +478,11 @@ $(document).ready(function () {
 
         }
         if (activeDay == 5) {
+            $("#thisdate").text(viewDateFriday)
+            if (newToday == viewDateFriday) {
+                areadySubmitted = true
+                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+            }
 
             $("#donkermeergranen_tobe_placed").val(adviceSundayDonkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(adviceSundayZonnevolkoren);
@@ -472,6 +524,11 @@ $(document).ready(function () {
 
         }
         if (activeDay == 6) {
+            $("#thisdate").text(viewDateSaturday)
+            if (newToday == viewDateSaturday) {
+                areadySubmitted = true
+                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+            }
 
             $("#donkermeergranen_tobe_placed").val(adviceTuesdayDonkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(adviceTuesdayZonnevolkoren);
@@ -513,6 +570,11 @@ $(document).ready(function () {
 
         }
         if (activeDay == 0) {
+            $("#thisdate").text(viewDateSunday)
+            if (newToday == viewDateSunday) {
+                areadySubmitted = true
+                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+            }
 
             $("#donkermeergranen_tobe_placed").val(adviceWednesdayDonkermeergranen);
             $("#zonnevolkoren_tobe_placed").val(adviceWednesdayZonnevolkoren);
@@ -587,23 +649,31 @@ $(document).ready(function () {
             alert("The value of leftover bread should contain a value")
         }
         else {
-            var answer = window.confirm("Are you sure this data is correct? This can't be changed later!")
-            if (answer) {
-                console.log("Juiste data ingevoerd")
-                sendValidData()
+            if (areadySubmitted == true) {
+                window.confirm("You have already submitted this data today!")
             }
             else {
+                var answer = window.confirm("Are you sure this data is correct? This can't be changed later!")
+                if (answer) {
+                    console.log("Juiste data ingevoerd")
+                    sendValidData()
+                }
+                else {
+
+                }
 
             }
-
 
         };
 
         function sendValidData() {
             console.log("sendValidData function invoked")
             console.log(activeDay)
-            if (activeDay == 2) {
 
+            console.log(typeof newData)
+
+            if (activeDay == 2) {
+                newData.breadtypes[0].saveDateTuesday = newToday
 
                 newData.breadtypes[0].newInputTuesday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
                 newData.breadtypes[1].newInputTuesday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -680,7 +750,7 @@ $(document).ready(function () {
             }
 
             if (activeDay == 3) {
-
+                newData.breadtypes[0].saveDateWednesday = newToday
 
                 newData.breadtypes[0].newInputWednesday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
                 newData.breadtypes[1].newInputWednesday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -755,7 +825,7 @@ $(document).ready(function () {
             }
 
             if (activeDay == 4) {
-
+                newData.breadtypes[0].saveDateThursday = newToday
 
                 newData.breadtypes[0].newInputThursday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
                 newData.breadtypes[1].newInputThursday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -831,7 +901,7 @@ $(document).ready(function () {
             }
 
             if (activeDay == 5) {
-
+                newData.breadtypes[0].saveDateFriday = newToday
 
                 newData.breadtypes[0].newInputFriday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
                 newData.breadtypes[1].newInputFriday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -907,7 +977,7 @@ $(document).ready(function () {
             }
 
             if (activeDay == 6) {
-
+                newData.breadtypes[0].saveDateSaturday = newToday
 
                 newData.breadtypes[0].newInputSaturday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
                 newData.breadtypes[1].newInputSaturday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -989,6 +1059,7 @@ $(document).ready(function () {
 
             if (activeDay == 0) {
                 console.log("Change Data")
+                newData.breadtypes[0].saveDateSunday = newToday
 
                 newData.breadtypes[0].newInputSunday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
                 newData.breadtypes[1].newInputSunday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -1014,8 +1085,8 @@ $(document).ready(function () {
                     this.adviceWeek3Sunday = this.adviceWeek4Sunday;
                     console.log("Weeks have shifted")
                 });
-                    console.log("Check how much bread")
-                    
+                console.log("Check how much bread")
+
                 if (parseInt(document.getElementById("donkermeergranen_input").value) == 0) {
                     newData.breadtypes[0].adviceWeek4Sunday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) + constantAdder
                 } else { newData.breadtypes[0].adviceWeek4Sunday = newData.breadtypes[0].newInputSunday }
@@ -1073,12 +1144,17 @@ $(document).ready(function () {
 
 
 
-                   
+
 
                     newData = JSON.parse(newData)
+
+
+
+
+                    console.log(newData.breadtypes[0].saveDateWednesday)
                     console.log(newData)
                     alert("Data succesfully stored! :)")
-                    // window.location.href = 'index.html'
+                    window.location.href = 'index.html'
 
 
                 }
