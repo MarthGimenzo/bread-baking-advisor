@@ -337,13 +337,13 @@ $(document).ready(function () {
     function changeActiveDay() {
         console.log("View right amounts")
         areadySubmitted = false
-        $("#submit").css("background-color", "#007bff").css("border-color", "#007bff").text("Submit for today!");
+        $("#submit").css("background-color", "#e68a2b").css("border-color", "#e68a2b").text("Submit for today!");
 
         if (activeDay == 2) {
             $("#thisdate").text(viewDateTuesday)
             if (newToday == viewDateTuesday) {
                 areadySubmitted = true
-                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceThursdayDonkermeergranen);
@@ -389,7 +389,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateWednesday)
             if (newToday == viewDateWednesday) {
                 areadySubmitted = true
-                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceFridayDonkermeergranen);
@@ -435,7 +435,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateThursday)
             if (newToday == viewDateThursday) {
                 areadySubmitted = true
-                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceSaturdayDonkermeergranen);
@@ -481,7 +481,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateFriday)
             if (newToday == viewDateFriday) {
                 areadySubmitted = true
-                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceSundayDonkermeergranen);
@@ -527,7 +527,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateSaturday)
             if (newToday == viewDateSaturday) {
                 areadySubmitted = true
-                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+                $("#submit").css("background-color", "r#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceTuesdayDonkermeergranen);
@@ -573,7 +573,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateSunday)
             if (newToday == viewDateSunday) {
                 areadySubmitted = true
-                $("#submit").css("background-color", "red").css("border-color", "red").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceWednesdayDonkermeergranen);

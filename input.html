@@ -21,7 +21,7 @@
 
 <body>
 
-	<h1>Bread Baking Advisor</h1>
+	<img id="logo" src="/assets/images/Breadbakingadvisor.png" alt="Bread Baking Advisor">
 	<div class="container-fluid">
 		<ul class="nav nav-tabs nav-fill">
 			<li class="nav-item">
@@ -35,153 +35,155 @@
 			</li>
 		</ul>
 	</div>
-	<h2>What's the day of the week?</h2>
-	<div class="container-fluid">
-		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a id="tuesday" class="dropdown-item" href="#">Tuesday</a>
-				<a id="wednesday" class="dropdown-item" href="#">Wednesday</a>
-				<a id="thursday" class="dropdown-item" href="#">Thursday</a>
-				<a id="friday" class="dropdown-item" href="#">Friday</a>
-				<a id="saturday" class="dropdown-item" href="#">Saturday</a>
-				<a id="sunday" class="dropdown-item" href="#">Sunday</a>
+	<div id="backgroundcolor">
+		<h2>What's the day of the week?</h2>
+		<div class="container-fluid">
+			<div class="dropdown">
+				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a id="tuesday" class="dropdown-item" href="#">Tuesday</a>
+					<a id="wednesday" class="dropdown-item" href="#">Wednesday</a>
+					<a id="thursday" class="dropdown-item" href="#">Thursday</a>
+					<a id="friday" class="dropdown-item" href="#">Friday</a>
+					<a id="saturday" class="dropdown-item" href="#">Saturday</a>
+					<a id="sunday" class="dropdown-item" href="#">Sunday</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<div class="container-fluid">
-		<table class="table table-sm">
-			<thead>
-				<tr>
-					<th scope="col"></th>
-					<th scope="col">Amount of pieces <br>that were baked:</th>
-					<th scope="col">Amount of pieces <br>that were left:</th>
+		<div class="container-fluid">
+			<table class="table table-sm">
+				<thead>
+					<tr>
+						<th scope="col"></th>
+						<th scope="col">Amount of pieces <br>that were baked:</th>
+						<th scope="col">Amount of pieces <br>that were left:</th>
 
-				</tr>
-			</thead>
-			<tbody>
-				<form action="/action_page.php">
-					<tr>
-						<th scope="row">Donker Meergranen</th>
-						<td>
-							<input id="donkermeergranen_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
-                        </td>
-						<td>
-							<input id="donkermeergranen_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
-                        </td>
 					</tr>
-					<tr>
-						<th scope="row">Zonne Volkoren</th>
-						<td>
-							<input id="zonnevolkoren_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+				</thead>
+				<tbody>
+					<form action="/action_page.php">
+						<tr>
+							<th scope="row">Donker Meergranen</th>
+							<td>
+								<input id="donkermeergranen_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="zonnevolkoren_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="donkermeergranen_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-					<tr>
-						<th scope="row">Wit</th>
-						<td>
-							<input id="wit_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+						</tr>
+						<tr>
+							<th scope="row">Zonne Volkoren</th>
+							<td>
+								<input id="zonnevolkoren_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="wit_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="zonnevolkoren_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-					<tr>
-						<th scope="row">Tarwe</th>
-						<td>
-							<input id="tarwe_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+						</tr>
+						<tr>
+							<th scope="row">Wit</th>
+							<td>
+								<input id="wit_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="tarwe_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="wit_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-					<tr>
-						<th scope="row">Volkoren</th>
-						<td>
-							<input id="volkoren_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+						</tr>
+						<tr>
+							<th scope="row">Tarwe</th>
+							<td>
+								<input id="tarwe_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="volkoren_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0"
+							<td>
+								<input id="tarwe_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+                        </td>
+						</tr>
+						<tr>
+							<th scope="row">Volkoren</th>
+							<td>
+								<input id="volkoren_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+                        </td>
+							<td>
+								<input id="volkoren_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0"
                     </tr>
                     <tr>
-						<th scope="row">Mais</th>
-						<td>
-							<input id="mais_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+							<th scope="row">Mais</th>
+							<td>
+								<input id="mais_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="mais_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="mais_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-					<tr>
-						<th scope="row">Wit Meerzaden</th>
-						<td>
-							<input id="witmeerzaden_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+						</tr>
+						<tr>
+							<th scope="row">Wit Meerzaden</th>
+							<td>
+								<input id="witmeerzaden_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="witmeerzaden_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="witmeerzaden_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-					<tr>
-						<th scope="row">Spelt</th>
-						<td>
-							<input id="spelt_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+						</tr>
+						<tr>
+							<th scope="row">Spelt</th>
+							<td>
+								<input id="spelt_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="spelt_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="spelt_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-					<tr>
-						<th scope="row">Rogge Vijgen</th>
-						<td>
-							<input id="roggevijgen_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+						</tr>
+						<tr>
+							<th scope="row">Rogge Vijgen</th>
+							<td>
+								<input id="roggevijgen_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="roggevijgen_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="roggevijgen_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-					<tr>
-						<th scope="row">Rogge Rozijn</th>
-						<td>
-							<input id="roggerozijn_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+						</tr>
+						<tr>
+							<th scope="row">Rogge Rozijn</th>
+							<td>
+								<input id="roggerozijn_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="roggerozijn_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="roggerozijn_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-					<tr>
-						<th scope="row">Haver Pompoen</th>
-						<td>
-							<input id="haverpompoen_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
+						</tr>
+						<tr>
+							<th scope="row">Haver Pompoen</th>
+							<td>
+								<input id="haverpompoen_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                         </td>
-						<td>
-							<input id="haverpompoen_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
+							<td>
+								<input id="haverpompoen_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                         </td>
-					</tr>
-				</form>
-			</tbody>
-		</table>
+						</tr>
+					</form>
+				</tbody>
+			</table>
+		</div>
+		<div>
+			Last date saved:
+		</div>
+		<div id="thisdate"> THIS DATE </div>
 	</div>
-    <div>
-    Last date saved: 
-    </div>
-    <div id="thisdate"> THIS DATE </div>
-	<footer>
-		<button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit for today!</button>
-	</footer>
+		<footer>
+			<button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit for today!</button>
+		</footer>
 
 
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+		</script>
 </body>
 
 </html>

@@ -2,71 +2,84 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="" type="text/css" />
-    <link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" charset="utf-8" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="" type="text/css" />
+	<link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" charset="utf-8" />
 
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js" integrity="sha256-cIcPwh2GcosI6bCl+ZAZt2j0Sk1QfgQ1ejEpjYOfa8g=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.1.5/dc.js" integrity="sha256-AxL1jsPAp9qMImTV2THtSehUDOmMEox/+VTDdEH9NKI=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.12.0/d3.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.js"
+		integrity="sha256-cIcPwh2GcosI6bCl+ZAZt2j0Sk1QfgQ1ejEpjYOfa8g=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/3.1.5/dc.js"
+		integrity="sha256-AxL1jsPAp9qMImTV2THtSehUDOmMEox/+VTDdEH9NKI=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    
-    
+	<script src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
-    <script type="module" src="assets/js/charts.js"></script>
-    <title>Bread Baking Advisor</title>
+
+
+	<script type="module" src="assets/js/charts.js"></script>
+	<title>Bread Baking Advisor</title>
 </head>
 
 <body>
 
-    <h1>Bread Baking Advisor</h1>
-    <div class="container-fluid">
-        <ul class="nav nav-tabs nav-fill">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">ADVICE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="input.html">INPUT</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="#">OVERVIEW</a>
-            </li>
-        </ul>
+	<img id="logo" src="/assets/images/Breadbakingadvisor.png" alt="Bread Baking Advisor">
+	<div class="container-fluid">
+		<ul class="nav nav-tabs nav-fill">
+			<li class="nav-item">
+				<a class="nav-link" href="index.html">ADVICE</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="input.html">INPUT</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link active" href="#">OVERVIEW</a>
+			</li>
+		</ul>
+	</div>
+	<div id="backgroundcolor">
+		<h2>Bread baked last 7 days:</h2>
+
+		<div>
+			<svg width="320" height="240"></svg>
+		</div>
+
+
+
+
+
+
+		<h2>Weekly order advice:</h2>
+
+		<h2>Bread consumed last 4 weeks:</h2>
+    <p><br><br><br><br><br><br><br></p>
     </div>
-    <h2>Bread baked last 7 days:</h2>
-    
-    <div>
-    <svg width="320" height="240"></svg>
-    </div>
-    
-         
-      
-  
+		<footer>
 
-
-    <h2>Weekly order advice:</h2>
-    
-    <h2>Bread consumed last 4 weeks:</h2>
-    <footer>
-        
-    </footer>
+		</footer>
 
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+		</script>
 </body>
 
 </html>

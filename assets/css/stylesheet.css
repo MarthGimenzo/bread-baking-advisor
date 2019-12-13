@@ -11,10 +11,46 @@
 
 html {
   height: 100%;
+  
 }
 
 body {
   font-family: 'traveling__typewriterregular', Arial, sans-serif;
+  background: url(/assets/images/backgroundbakingadvisor.png);
+  
+  background-size: 30%;
+  
+  
+}
+
+#backgroundcolor {
+    background-color: #fffcec;
+}
+
+.nav-tabs .nav-link.active {
+    color:  #e68a2b;
+    background-color: #fffcec;
+}
+
+a {
+    color:;
+    color: #6c757d;
+    
+}
+
+a:hover {
+    color: #b66b1f;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#logo {
+    width: 80%;
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
 }
 
 h1 {
@@ -26,6 +62,7 @@ h1 {
 h2 {
   font-size: 5vw;
   text-align: center;
+  padding-top: 6px;
 }
 
 th {
@@ -92,10 +129,45 @@ input {
   padding: .1rem;
 }
 
+.table {
+    
+    margin-bottom: 0;
+    
+}
+
 button {
   width: 90%;
 
+}
 
+.btn-primary {
+    color: #fff;
+    background-color: #e68a2b;
+    border-color: #e68a2b;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #b66b1f;
+    border-color: #b66b1f;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #e68a2b;
+    border-color: #e68a2b;
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #b66b1f;
+    border-color: #b66b1f;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #b66b1f;
+    border-color: #e68a2b;
 }
 
 .breadamountview {
