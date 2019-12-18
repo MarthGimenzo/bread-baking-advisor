@@ -1,121 +1,122 @@
 $(document).ready(function () {
 
     // Amount of bread that is added to the new advice when a breadtype is sold out
-    const constantAdder = 1
 
-    // Define BaseUrl
-    const baseURL = "https://api.myjson.com/bins/qgqvk";
+    const constantAdder = 1;
+
+    // Define BaseUrl to API
+
+    const baseURL = "https://api.myjson.com/bins/1gyuy4";
 
     // Define global variables
+
     let activeDay = 0;
     determineDay();
 
-    let areadySubmitted
+    let areadySubmitted;
 
-    let viewDateTuesday
-    let viewDateWednesday
-    let viewDateThursday
-    let viewDateFriday
-    let viewDateSaturday
-    let viewDateSunday
+    let viewDateTuesday;
+    let viewDateWednesday;
+    let viewDateThursday;
+    let viewDateFriday;
+    let viewDateSaturday;
+    let viewDateSunday;
 
-    let newToday
-    let newDay
-    let newMonth
-    let newYear
+    let newToday;
+    let newDay;
+    let newMonth;
+    let newYear;
 
-    let newData
+    let newData;
 
-    let adviceTuesdayDonkermeergranen
-    let adviceTuesdayZonnevolkoren
-    let adviceTuesdayWit
-    let adviceTuesdayTarwe
-    let adviceTuesdayVolkoren
-    let adviceTuesdayMais
-    let adviceTuesdayWitmeerzaden
-    let adviceTuesdaySpelt
-    let adviceTuesdayRoggevijgen
-    let adviceTuesdayRoggerozijn
-    let adviceTuesdayHaverpompoen
+    let adviceTuesdayDonkermeergranen;
+    let adviceTuesdayZonnevolkoren;
+    let adviceTuesdayWit;
+    let adviceTuesdayTarwe;
+    let adviceTuesdayVolkoren;
+    let adviceTuesdayMais;
+    let adviceTuesdayWitmeerzaden;
+    let adviceTuesdaySpelt;
+    let adviceTuesdayRoggevijgen;
+    let adviceTuesdayRoggerozijn;
+    let adviceTuesdayHaverpompoen;
 
-    let adviceWednesdayDonkermeergranen
-    let adviceWednesdayZonnevolkoren
-    let adviceWednesdayWit
-    let adviceWednesdayTarwe
-    let adviceWednesdayVolkoren
-    let adviceWednesdayMais
-    let adviceWednesdayWitmeerzaden
-    let adviceWednesdaySpelt
-    let adviceWednesdayRoggevijgen
-    let adviceWednesdayRoggerozijn
-    let adviceWednesdayHaverpompoen
+    let adviceWednesdayDonkermeergranen;
+    let adviceWednesdayZonnevolkoren;
+    let adviceWednesdayWit;
+    let adviceWednesdayTarwe;
+    let adviceWednesdayVolkoren;
+    let adviceWednesdayMais;
+    let adviceWednesdayWitmeerzaden;
+    let adviceWednesdaySpelt;
+    let adviceWednesdayRoggevijgen;
+    let adviceWednesdayRoggerozijn;
+    let adviceWednesdayHaverpompoen;
 
-    let adviceThursdayDonkermeergranen
-    let adviceThursdayZonnevolkoren
-    let adviceThursdayWit
-    let adviceThursdayTarwe
-    let adviceThursdayVolkoren
-    let adviceThursdayMais
-    let adviceThursdayWitmeerzaden
-    let adviceThursdaySpelt
-    let adviceThursdayRoggevijgen
-    let adviceThursdayRoggerozijn
-    let adviceThursdayHaverpompoen
+    let adviceThursdayDonkermeergranen;
+    let adviceThursdayZonnevolkoren;
+    let adviceThursdayWit;
+    let adviceThursdayTarwe;
+    let adviceThursdayVolkoren;
+    let adviceThursdayMais;
+    let adviceThursdayWitmeerzaden;
+    let adviceThursdaySpelt;
+    let adviceThursdayRoggevijgen;
+    let adviceThursdayRoggerozijn;
+    let adviceThursdayHaverpompoen;
 
-    let adviceFridayDonkermeergranen
-    let adviceFridayZonnevolkoren
-    let adviceFridayWit
-    let adviceFridayTarwe
-    let adviceFridayVolkoren
-    let adviceFridayMais
-    let adviceFridayWitmeerzaden
-    let adviceFridaySpelt
-    let adviceFridayRoggevijgen
-    let adviceFridayRoggerozijn
-    let adviceFridayHaverpompoen
+    let adviceFridayDonkermeergranen;
+    let adviceFridayZonnevolkoren;
+    let adviceFridayWit;
+    let adviceFridayTarwe;
+    let adviceFridayVolkoren;
+    let adviceFridayMais;
+    let adviceFridayWitmeerzaden;
+    let adviceFridaySpelt;
+    let adviceFridayRoggevijgen;
+    let adviceFridayRoggerozijn;
+    let adviceFridayHaverpompoen;
 
-    let adviceSaturdayDonkermeergranen
-    let adviceSaturdayZonnevolkoren
-    let adviceSaturdayWit
-    let adviceSaturdayTarwe
-    let adviceSaturdayVolkoren
-    let adviceSaturdayMais
-    let adviceSaturdayWitmeerzaden
-    let adviceSaturdaySpelt
-    let adviceSaturdayRoggevijgen
-    let adviceSaturdayRoggerozijn
-    let adviceSaturdayHaverpompoen
+    let adviceSaturdayDonkermeergranen;
+    let adviceSaturdayZonnevolkoren;
+    let adviceSaturdayWit;
+    let adviceSaturdayTarwe;
+    let adviceSaturdayVolkoren;
+    let adviceSaturdayMais;
+    let adviceSaturdayWitmeerzaden;
+    let adviceSaturdaySpelt;
+    let adviceSaturdayRoggevijgen;
+    let adviceSaturdayRoggerozijn;
+    let adviceSaturdayHaverpompoen;
 
-    let adviceSundayDonkermeergranen
-    let adviceSundayZonnevolkoren
-    let adviceSundayWit
-    let adviceSundayTarwe
-    let adviceSundayVolkoren
-    let adviceSundayMais
-    let adviceSundayWitmeerzaden
-    let adviceSundaySpelt
-    let adviceSundayRoggevijgen
-    let adviceSundayRoggerozijn
-    let adviceSundayHaverpompoen
+    let adviceSundayDonkermeergranen;
+    let adviceSundayZonnevolkoren;
+    let adviceSundayWit;
+    let adviceSundayTarwe;
+    let adviceSundayVolkoren;
+    let adviceSundayMais;
+    let adviceSundayWitmeerzaden;
+    let adviceSundaySpelt;
+    let adviceSundayRoggevijgen;
+    let adviceSundayRoggerozijn;
+    let adviceSundayHaverpompoen;
 
     // Load data from API
 
     function getData(cb) {
 
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", baseURL)
+        xhr.open("GET", baseURL);
         xhr.send();
 
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
 
-                cb(JSON.parse(this.responseText))
-                newData = JSON.parse(this.responseText)
-                console.log("Data is loaded and newData is defined")
+                cb(JSON.parse(this.responseText));
+                newData = JSON.parse(this.responseText);
+                console.log("Data is loaded and newData is defined");
                 countAverage();
                 defineDate();
-
-
 
             }
         };
@@ -657,12 +658,14 @@ $(document).ready(function () {
 
 
         if (checkcorrectvalues1 < 0 || checkcorrectvalues2 < 0 || checkcorrectvalues3 < 0 || checkcorrectvalues4 < 0 || checkcorrectvalues5 < 0 || checkcorrectvalues6 < 0 || checkcorrectvalues7 < 0 || checkcorrectvalues8 < 0 || checkcorrectvalues9 < 0 || checkcorrectvalues10 < 0 || checkcorrectvalues11 < 0) {
-            alert("The value of leftover bread can't be higher than the amount of baked bread")
+            $("#leftoverbreadcantbehigher").slideDown(100);
+            
         }
         else if ((document.getElementById("donkermeergranen_input").value) < 0 || (document.getElementById("zonnevolkoren_input").value) < 0 || (document.getElementById("wit_input").value) < 0 ||
             (document.getElementById("tarwe_input").value) < 0 || (document.getElementById("volkoren_input").value) < 0 || (document.getElementById("mais_input").value) < 0 || (document.getElementById("witmeerzaden_input").value) < 0 ||
             (document.getElementById("spelt_input").value) < 0 || (document.getElementById("roggevijgen_input").value) < 0 || (document.getElementById("roggerozijn_input").value) < 0 || (document.getElementById("haverpompoen_input").value) < 0) {
-            alert("The value of leftover bread should be at least 0")
+            $("#leftoverbreadcantbeminuszero").slideDown(100);
+            console.log("Left over bread minus 0 warning")
         }
         else if ((document.getElementById("donkermeergranen_input").value) === "" || (document.getElementById("zonnevolkoren_input").value) === "" || (document.getElementById("wit_input").value) === "" ||
             (document.getElementById("tarwe_input").value) === "" || (document.getElementById("volkoren_input").value) === "" || (document.getElementById("mais_input").value) === "" || (document.getElementById("witmeerzaden_input").value) === "" ||

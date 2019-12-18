@@ -15,7 +15,7 @@
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 
 	<script type="text/javascript" src="assets/js/format.js"></script>
-	
+
 
 	<title>Bread Baking Advisor</title>
 </head>
@@ -168,22 +168,29 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-2">
-					
+
 				</div>
 				<div class="col-4 datefont">
 					Last saved:
 				</div>
-                <div id="thisdate" class="col-4 datefont">
+				<div id="thisdate" class="col-4 datefont">
 					Loading...
 				</div>
 				<div class="col-2">
-					
+
 				</div>
 			</div>
 		</div>
-		
-		
+
+
 	</div>
+	<div id="leftoverbreadcantbehigher" class="alert alert-warning" display="none">
+		<strong>Huh?</strong> Leftover bread can't be more than baked bread.
+	</div>
+    <div id="leftoverbreadcantbeminuszero" class="alert alert-warning" display="none">
+		<strong>Less than 0?</strong> At least 0 breads will have been leftover, right? Please check your inputted data.
+	</div>
+
 	<footer>
 		<button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit for today!</button>
 	</footer>
