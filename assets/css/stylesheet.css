@@ -113,7 +113,11 @@ input {
   font-weight: bold;
 }
 
-
+.datefont {
+  font-size: 3.5vw;
+  text-align: center;
+  font-weight: bold;
+}
 
 
 
@@ -201,6 +205,7 @@ button {
 
   }
 }
+
 
 
 /* Activate dropdown menu */
