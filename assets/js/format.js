@@ -664,61 +664,12 @@ $(document).ready(function () {
         checkcorrectvalues10 = (document.getElementById("roggerozijn_tobe_baked").value) - (document.getElementById("roggerozijn_input").value);
         checkcorrectvalues11 = (document.getElementById("haverpompoen_tobe_baked").value) - (document.getElementById("haverpompoen_input").value);
 
+        leftInputDonkermeergranen = parseInt((document.getElementById("donkermeergranen_tobe_baked").value))
 
-
-        console.log(checkcorrectvalues1)
-        console.log(typeof checkcorrectvalues1)
-
-        // Check if leftover bread is not more than baked bread
-
-        if (checkcorrectvalues1 < 0 ||
-            checkcorrectvalues2 < 0 ||
-            checkcorrectvalues3 < 0 ||
-            checkcorrectvalues4 < 0 ||
-            checkcorrectvalues5 < 0 ||
-            checkcorrectvalues6 < 0 ||
-            checkcorrectvalues7 < 0 ||
-            checkcorrectvalues8 < 0 ||
-            checkcorrectvalues9 < 0 ||
-            checkcorrectvalues10 < 0 ||
-            checkcorrectvalues11 < 0) {
-
-            $("#leftoverbreadshouldbevalue").slideUp(100);
-            $("#leftoverbreadcantbeminuszero").slideUp(100);
-            $("#leftoverbreadinteger").slideUp(100);
-            $("#leftoverbreadforty").slideUp(100);
-
-            $("#leftoverbreadcantbehigher").slideDown(100);
-
-        }
-
-        // Check if leftover bread is not -0
-
-        else if ((document.getElementById("donkermeergranen_input").value) < 0 ||
-            (document.getElementById("zonnevolkoren_input").value) < 0 ||
-            (document.getElementById("wit_input").value) < 0 ||
-            (document.getElementById("tarwe_input").value) < 0 ||
-            (document.getElementById("volkoren_input").value) < 0 ||
-            (document.getElementById("mais_input").value) < 0 ||
-            (document.getElementById("witmeerzaden_input").value) < 0 ||
-            (document.getElementById("spelt_input").value) < 0 ||
-            (document.getElementById("roggevijgen_input").value) < 0 ||
-            (document.getElementById("roggerozijn_input").value) < 0 ||
-            (document.getElementById("haverpompoen_input").value) < 0) {
-
-            console.log("Left over bread minus 0 warning")
-            $("#leftoverbreadshouldbevalue").slideUp(100);
-            $("#leftoverbreadcantbehigher").slideUp(100);
-            $("#leftoverbreadinteger").slideUp(100);
-            $("#leftoverbreadforty").slideUp(100);
-
-            $("#leftoverbreadcantbeminuszero").slideDown(100);
-
-        }
 
         // Check if leftover bread is not empty
 
-        else if ((document.getElementById("donkermeergranen_input").value) === "" ||
+        if ((document.getElementById("donkermeergranen_input").value) === "" ||
             (document.getElementById("zonnevolkoren_input").value) === "" ||
             (document.getElementById("wit_input").value) === "" ||
             (document.getElementById("tarwe_input").value) === "" ||
@@ -762,30 +713,76 @@ $(document).ready(function () {
 
         }
 
+        // Check if leftover bread is not -0
 
+        else if ((document.getElementById("donkermeergranen_input").value) < 0 ||
+            (document.getElementById("zonnevolkoren_input").value) < 0 ||
+            (document.getElementById("wit_input").value) < 0 ||
+            (document.getElementById("tarwe_input").value) < 0 ||
+            (document.getElementById("volkoren_input").value) < 0 ||
+            (document.getElementById("mais_input").value) < 0 ||
+            (document.getElementById("witmeerzaden_input").value) < 0 ||
+            (document.getElementById("spelt_input").value) < 0 ||
+            (document.getElementById("roggevijgen_input").value) < 0 ||
+            (document.getElementById("roggerozijn_input").value) < 0 ||
+            (document.getElementById("haverpompoen_input").value) < 0) {
 
-        // Check if leftover bread is between 0 and 40
+            console.log("Left over bread minus 0 warning")
+            $("#leftoverbreadshouldbevalue").slideUp(100);
+            $("#leftoverbreadcantbehigher").slideUp(100);
+            $("#leftoverbreadinteger").slideUp(100);
+            $("#leftoverbreadforty").slideUp(100);
 
-        else if ((document.getElementById("donkermeergranen_input").value) >= 0 && (document.getElementById("donkermeergranen_input").value) <= 40 ||
-            (document.getElementById("zonnevolkoren_input").value) >= 0 && (document.getElementById("zonnevolkoren_input").value) <= 40 ||
-            (document.getElementById("wit_input").value) >= 0 && (document.getElementById("wit_input").value) <= 40 ||
-            (document.getElementById("tarwe_input").value) >= 0 && (document.getElementById("tarwe_input").value) <= 40 ||
-            (document.getElementById("volkoren_input").value) >= 0 && (document.getElementById("volkoren_input").value) <= 40 ||
-            (document.getElementById("mais_input").value) >= 0 && (document.getElementById("mais_input").value) <= 40 ||
-            (document.getElementById("witmeerzaden_input").value) >= 0 && (document.getElementById("witmeerzaden_input").value) <= 40 ||
-            (document.getElementById("spelt_input").value) >= 0 && (document.getElementById("spelt_input").value) <= 40 ||
-            (document.getElementById("roggevijgen_input").value) >= 0 && (document.getElementById("roggevijgen_input").value) <= 40 ||
-            (document.getElementById("roggerozijn_input").value) >= 0 && (document.getElementById("roggerozijn_input").value) <= 40 ||
-            (document.getElementById("haverpompoen_input").value) >= 0 && (document.getElementById("haverpompoen_input").value) <= 40) {
+            $("#leftoverbreadcantbeminuszero").slideDown(100);
 
-                $("#leftoverbreadcantbeminuszero").slideUp(100);
-                $("#leftoverbreadcantbehigher").slideUp(100);
-                $("#leftoverbreadshouldbevalue").slideUp(100);
-                $("#leftoverbreadinteger").slideUp(100);
-
-                $("#leftoverbreadforty").slideDown(100);
-                
         }
+
+        // Check if inputted values are between 0 and 40
+
+        else if ((document.getElementById("donkermeergranen_input").value) < 0 || (document.getElementById("donkermeergranen_input").value) > 40 ||
+            (document.getElementById("zonnevolkoren_input").value) < 0 || (document.getElementById("zonnevolkoren_input").value) > 40 ||
+            (document.getElementById("wit_input").value) < 0 || (document.getElementById("wit_input").value) > 40 ||
+            (document.getElementById("tarwe_input").value) < 0 || (document.getElementById("tarwe_input").value) > 40 ||
+            (document.getElementById("volkoren_input").value) < 0 || (document.getElementById("volkoren_input").value) > 40 ||
+            (document.getElementById("mais_input").value) < 0 || (document.getElementById("mais_input").value) > 40 ||
+            (document.getElementById("witmeerzaden_input").value) < 0 || (document.getElementById("witmeerzaden_input").value) > 40 ||
+            (document.getElementById("spelt_input").value) < 0 || (document.getElementById("spelt_input").value) > 40 ||
+            (document.getElementById("roggevijgen_input").value) < 0 || (document.getElementById("roggevijgen_input").value) > 40 ||
+            (document.getElementById("roggerozijn_input").value) < 0 || (document.getElementById("roggerozijn_input").value) > 40 ||
+            (document.getElementById("haverpompoen_input").value) < 0 || (document.getElementById("haverpompoen_input").value) > 40) {
+
+            $("#leftoverbreadcantbeminuszero").slideUp(100);
+            $("#leftoverbreadcantbehigher").slideUp(100);
+            $("#leftoverbreadshouldbevalue").slideUp(100);
+            $("#leftoverbreadinteger").slideUp(100);
+
+            $("#leftoverbreadforty").slideDown(100);
+
+        }
+
+        // Check if leftover bread is not more than baked bread
+
+        else if (checkcorrectvalues1 < 0 ||
+            checkcorrectvalues2 < 0 ||
+            checkcorrectvalues3 < 0 ||
+            checkcorrectvalues4 < 0 ||
+            checkcorrectvalues5 < 0 ||
+            checkcorrectvalues6 < 0 ||
+            checkcorrectvalues7 < 0 ||
+            checkcorrectvalues8 < 0 ||
+            checkcorrectvalues9 < 0 ||
+            checkcorrectvalues10 < 0 ||
+            checkcorrectvalues11 < 0) {
+
+            $("#leftoverbreadshouldbevalue").slideUp(100);
+            $("#leftoverbreadcantbeminuszero").slideUp(100);
+            $("#leftoverbreadinteger").slideUp(100);
+            $("#leftoverbreadforty").slideUp(100);
+
+            $("#leftoverbreadcantbehigher").slideDown(100);
+
+        }
+
 
         // Check if the user has already submitted data for this day today
 
@@ -794,14 +791,10 @@ $(document).ready(function () {
                 window.confirm("You have already submitted this data today!")
             }
             else {
-                var answer = window.confirm("Are you sure this data is correct? This can't be changed later!")
-                if (answer) {
-                    console.log("Juiste data ingevoerd")
-                    sendValidData()
-                }
-                else {
-
-                }
+                $('#myModal').modal()
+                // sendValidData()
+               
+               
 
             }
 

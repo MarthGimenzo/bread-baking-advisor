@@ -187,18 +187,41 @@
 	<div id="leftoverbreadcantbehigher" class="alert alert-warning" display="none">
 		<strong>Huh?</strong> Leftover bread can't be more than baked bread.
 	</div>
-    <div id="leftoverbreadcantbeminuszero" class="alert alert-warning" display="none">
-		<strong>Less than 0?</strong> At least 0 breads will have been leftover, right? Please check your inputted values.
+	<div id="leftoverbreadcantbeminuszero" class="alert alert-warning" display="none">
+		<strong>Less than 0?</strong> At least 0 breads will have been leftover, right? Please check your inputted
+		values.
 	</div>
-    <div id="leftoverbreadshouldbevalue" class="alert alert-warning" display="none">
-		<strong>Input a number!</strong> The Bread Baking Advisor needs numbers. Please check your inputted values for empty fields or letters.
+	<div id="leftoverbreadshouldbevalue" class="alert alert-warning" display="none">
+		<strong>Input a number!</strong> The Bread Baking Advisor needs numbers. Please check your inputted values for
+		empty fields or letters.
 	</div>
-    <div id="leftoverbreadinteger" class="alert alert-warning" display="none">
-		<strong>We don't do half breads!</strong> Please enter a full number, not halves or something in between. Please check your inputted values.
+	<div id="leftoverbreadinteger" class="alert alert-warning" display="none">
+		<strong>We don't do half breads!</strong> Please enter a full number, not halves or something in between. Please
+		check your inputted values.
 	</div>
-    <div id="leftoverbreadforty" class="alert alert-warning" display="none">
+	<div id="leftoverbreadforty" class="alert alert-warning" display="none">
 		<strong>That much?</strong> The Bread Baking Advisor only accepts values 0 to 40. No need to exaggerate.
 	</div>
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Hey!</h5>
+					
+				</div>
+				<div class="modal-body">
+					Are you sure this data is correct?
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Let me check..</button>
+					<button type="button" class="btn btn-primary">Yes! Save it!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 
 	<footer>
 		<button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit for today!</button>
