@@ -206,6 +206,10 @@ button {
     display: none;
 }
 
+#leftoverbreadforty {
+    display: none;
+}
+
 
 
 @media screen and (min-width: 992px) {
