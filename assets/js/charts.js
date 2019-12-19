@@ -1,5 +1,90 @@
 $(document).ready(function () {
 
+    // ------------------------------------------------------------------
+    //  horizontal_bar_chart.js
+    //
+    //                      Jun/02/2017
+    //
+    // ------------------------------------------------------------------
+    const file_json = "data2.json"
+
+    jQuery.getJSON(file_json, function (data) {
+        horizontal_bar_chart_proc(data)
+    })
+
+    // ------------------------------------------------------------------
+    function horizontal_bar_chart_proc(data) {
+        // set the dimensions and margins of the graph
+        const margin = { top: 0, right: 5, bottom: 30, left: 110 }
+        const width = 340 - margin.left - margin.right
+        const height = 250 - margin.top - margin.bottom
+
+        // set the ranges
+        const y = d3.scaleBand()
+            .range([height, 0])
+            .padding(0.1);
+
+        const x = d3.scaleLinear()
+            .range([0, width]);
+
+        // append the svg object to the body of the page
+        // append a 'group' element to 'svg'
+        // moves the 'group' element to the top left margin
+        var svg = d3.select("#Dash").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform",
+                "translate(" + margin.left + "," + margin.top + ")")
+
+
+        // format the data
+        data.forEach(function (d) {
+            d.amount = +d.amount;
+        });
+
+        // Scale the range of the data in the domains
+        x.domain([0, d3.max(data, function (d) { return d.amount; })])
+        y.domain(data.map(function (d) { return d.bread; }));
+        //y.domain([0, d3.max(data, function(d) { return d.amount; })]);
+
+        // append the rectangles for the bar chart
+        svg.selectAll(".bar")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "bar")
+            //.attr("x", function(d) { return x(d.amount); })
+            
+            .attr("width", 0)//this is the initial value
+            .transition()
+            .duration(300)
+            .delay(function(d,i){ return i*50})
+            .attr("width", function (d) { return x(d.amount); })
+            
+            .attr("y", function (d) { return y(d.bread); })
+            .attr("height", y.bandwidth())
+
+        // add the x Axis
+        svg.append("g")
+            .attr("transform", "translate(0," + height + ")")
+            .call(d3.axisBottom(x));
+
+        // add the y Axis
+        svg.append("g")
+            .call(d3.axisLeft(y));
+    }
+
+    // ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
     // Load data from API
     let breadData
     let weekData
@@ -58,10 +143,6 @@ $(document).ready(function () {
 
         console.log(breadData);
         console.log(d3);
-        const svg = d3.select('svg');
-        svg.style('background-color', 'red');
-        const width = +svg.attr('width');
-        const height = +svg.attr('height');
 
 
 

@@ -203,24 +203,57 @@
 		<strong>That much?</strong> The Bread Baking Advisor only accepts values 0 to 40. No need to exaggerate.
 	</div>
 
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+	<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 		aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Hey!</h5>
-					
+					<h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+                    <h5 class="modal-title" id="savingheader">Saving...</h5>
+                    <h5 class="modal-title" id="savedheader">Saved!</h5>
 				</div>
-				<div class="modal-body">
-					Are you sure this data is correct?
+                
+				<div id="modalbodytext" class="modal-body">
+					Is all data correct?
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Let me check..</button>
-					<button type="button" class="btn btn-primary">Yes! Save it!</button>
+				<div id="spinner" class="spinner-border" role="status">
+					<span class="sr-only">Loading...</span>
 				</div>
+                <div id="datastored" class="modal-body">
+					Data succesfully stored! :)
+				</div>
+				<div id="dismisssavebutton" class="modal-footer">
+					<button id="closebutton" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button id="savedata" type="button" class="btn btn-primary">Yes! Save it!</button>
+				</div>
+                
 			</div>
 		</div>
 	</div>
+    
+    <div class="modal fade" id="alreadySaved" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Whoops!</h5>
+                    
+				</div>
+                
+				<div id="modalbodytext" class="modal-body">
+					It looks like you have already saved this data today. Currently it is not possible to edit saved data but in the future this function will be implemented. You can add new data tomorrow.
+				</div>
+				
+                
+				<div id="dismisssavebutton" class="modal-footer">
+					<button id="closebutton" type="button" class="btn btn-secondary" data-dismiss="modal">Ok!</button>
+					
+				</div>
+                
+			</div>
+		</div>
+	</div>
+    
 
 
 	<footer>

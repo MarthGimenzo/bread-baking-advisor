@@ -210,6 +210,25 @@ button {
     display: none;
 }
 
+#savingheader {
+    display: none;
+}
+
+#savedheader {
+    display: none;
+}
+
+#datastored {
+    display: none;
+}
+
+#spinner {
+    display: none;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 
 
 @media screen and (min-width: 992px) {
@@ -238,8 +257,21 @@ button {
   }
 }
 
+.bar { 
+    fill: #e68a2b; 
+    
+    }
 
+text {
+    font-family: 'traveling__typewriterregular', Arial, sans-serif;
+    font-weight: bold;
+}
 
+svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* Activate dropdown menu */
 
 .active {

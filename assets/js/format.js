@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     // Define BaseUrl to API
 
-    const baseURL = "https://api.myjson.com/bins/1gyuy4";
+    const baseURL = "https://api.myjson.com/bins/1emo30";
 
     // Define global variables
 
@@ -641,16 +641,9 @@ $(document).ready(function () {
     })
 
 
-
+    // Check if inputted data is valid
 
     function checkIfDataIsValid() {
-        randomVar = document.getElementById("donkermeergranen_input").value
-        console.log(randomVar)
-        console.log(Number.isInteger(randomVar))
-        console.log(typeof document.getElementById("donkermeergranen_input").value)
-
-
-        // Check if Data is Valid
 
         checkcorrectvalues1 = (document.getElementById("donkermeergranen_tobe_baked").value) - (document.getElementById("donkermeergranen_input").value);
         checkcorrectvalues2 = (document.getElementById("zonnevolkoren_tobe_baked").value) - (document.getElementById("zonnevolkoren_input").value);
@@ -788,18 +781,31 @@ $(document).ready(function () {
 
         else {
             if (areadySubmitted == true) {
-                window.confirm("You have already submitted this data today!")
+                $('#alreadySaved').modal()
             }
             else {
-                $('#myModal').modal()
-                // sendValidData()
-               
-               
+                $('#confirmModal').modal()
+
+
+
 
             }
 
         };
     }
+
+    $("#savedata").on("click", function () {
+        $("#spinner").show();
+        $("#modalbodytext").hide();
+        $("#closebutton").hide();
+        $("#savedata").hide();
+        $("#exampleModalLabel").hide();
+        $("#savingheader").show();
+
+        console.log("Data sent!")
+        sendValidData();
+
+    })
 
     // Define Valid Data to be sent
 
@@ -1288,8 +1294,15 @@ $(document).ready(function () {
                 newData = JSON.parse(newData)
                 console.log(newData.breadtypes[0].saveDateWednesday)
                 console.log(newData)
-                alert("Data succesfully stored! :)")
-                // window.location.href = 'index.html'
+                $("#spinner").hide();
+                $("#modalbodytext").hide();
+                $("#closebutton").show();
+                $("#savedata").hide();
+                $("#exampleModalLabel").hide();
+                $("#datastored").show();
+
+                setTimeout(function(){ window.location.href = 'index.html'; }, 2000);
+                
             }
 
         }
