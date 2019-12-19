@@ -194,6 +194,18 @@ button {
     display: none;
 }
 
+#leftoverbreadcantbeminuszero {
+    display: none;
+}
+
+#leftoverbreadshouldbevalue {
+    display: none;
+}
+
+#leftoverbreadinteger {
+    display: none;
+}
+
 
 
 @media screen and (min-width: 992px) {

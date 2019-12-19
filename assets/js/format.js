@@ -640,9 +640,17 @@ $(document).ready(function () {
 
     })
 
-    // Check if Data is Valid
+
+
 
     function checkIfDataIsValid() {
+        randomVar = document.getElementById("donkermeergranen_input").value
+        console.log(randomVar)
+        console.log(Number.isInteger(randomVar))
+        console.log(typeof document.getElementById("donkermeergranen_input").value)
+
+        
+        // Check if Data is Valid
 
         checkcorrectvalues1 = (document.getElementById("donkermeergranen_tobe_baked").value) - (document.getElementById("donkermeergranen_input").value);
         checkcorrectvalues2 = (document.getElementById("zonnevolkoren_tobe_baked").value) - (document.getElementById("zonnevolkoren_input").value);
@@ -656,22 +664,83 @@ $(document).ready(function () {
         checkcorrectvalues10 = (document.getElementById("roggerozijn_tobe_baked").value) - (document.getElementById("roggerozijn_input").value);
         checkcorrectvalues11 = (document.getElementById("haverpompoen_tobe_baked").value) - (document.getElementById("haverpompoen_input").value);
 
+        
+
+        console.log(checkcorrectvalues1)
+        console.log(typeof checkcorrectvalues1)
+
+        // Check if leftover bread is not more than baked bread
 
         if (checkcorrectvalues1 < 0 || checkcorrectvalues2 < 0 || checkcorrectvalues3 < 0 || checkcorrectvalues4 < 0 || checkcorrectvalues5 < 0 || checkcorrectvalues6 < 0 || checkcorrectvalues7 < 0 || checkcorrectvalues8 < 0 || checkcorrectvalues9 < 0 || checkcorrectvalues10 < 0 || checkcorrectvalues11 < 0) {
+            $("#leftoverbreadshouldbevalue").slideUp(100);
+            $("#leftoverbreadcantbeminuszero").slideUp(100);
+            $("#leftoverbreadinteger").slideUp(100);
             $("#leftoverbreadcantbehigher").slideDown(100);
-            
+
         }
+
+        // Check if leftover bread is not -0
+
         else if ((document.getElementById("donkermeergranen_input").value) < 0 || (document.getElementById("zonnevolkoren_input").value) < 0 || (document.getElementById("wit_input").value) < 0 ||
             (document.getElementById("tarwe_input").value) < 0 || (document.getElementById("volkoren_input").value) < 0 || (document.getElementById("mais_input").value) < 0 || (document.getElementById("witmeerzaden_input").value) < 0 ||
             (document.getElementById("spelt_input").value) < 0 || (document.getElementById("roggevijgen_input").value) < 0 || (document.getElementById("roggerozijn_input").value) < 0 || (document.getElementById("haverpompoen_input").value) < 0) {
-            $("#leftoverbreadcantbeminuszero").slideDown(100);
             console.log("Left over bread minus 0 warning")
+            $("#leftoverbreadshouldbevalue").slideUp(100);
+            $("#leftoverbreadcantbehigher").slideUp(100);
+            $("#leftoverbreadinteger").slideUp(100);
+            $("#leftoverbreadcantbeminuszero").slideDown(100);
+
         }
+
+        // Check if leftover bread is not empty
+
         else if ((document.getElementById("donkermeergranen_input").value) === "" || (document.getElementById("zonnevolkoren_input").value) === "" || (document.getElementById("wit_input").value) === "" ||
             (document.getElementById("tarwe_input").value) === "" || (document.getElementById("volkoren_input").value) === "" || (document.getElementById("mais_input").value) === "" || (document.getElementById("witmeerzaden_input").value) === "" ||
             (document.getElementById("spelt_input").value) === "" || (document.getElementById("roggevijgen_input").value) === "" || (document.getElementById("roggerozijn_input").value) === "" || (document.getElementById("haverpompoen_input").value) === "") {
-            alert("The value of leftover bread should contain a value")
+            $("#leftoverbreadcantbeminuszero").slideUp(100);
+            $("#leftoverbreadcantbehigher").slideUp(100);
+            $("#leftoverbreadinteger").slideUp(100);
+            $("#leftoverbreadshouldbevalue").slideDown(100);
+
         }
+
+        // Check if leftover bread is an integer
+
+        
+
+        else if (Number.isInteger(checkcorrectvalues1) === false ||
+        (Number.isInteger(checkcorrectvalues2) === false) ||
+        (Number.isInteger(checkcorrectvalues3) === false) ||
+        (Number.isInteger(checkcorrectvalues4) === false) ||
+        (Number.isInteger(checkcorrectvalues5) === false) ||
+        (Number.isInteger(checkcorrectvalues6) === false) ||
+        (Number.isInteger(checkcorrectvalues7) === false) ||
+        (Number.isInteger(checkcorrectvalues8) === false) ||
+        (Number.isInteger(checkcorrectvalues9) === false) ||
+        (Number.isInteger(checkcorrectvalues10) === false) ||
+        (Number.isInteger(checkcorrectvalues11) === false)) {
+            console.log("Dit is dus geen integer! Lul")
+            $("#leftoverbreadcantbeminuszero").slideUp(100);
+            $("#leftoverbreadcantbehigher").slideUp(100);
+            $("#leftoverbreadshouldbevalue").slideUp(100);
+            $("#leftoverbreadinteger").slideDown(100);
+        }
+
+
+
+        // Check if leftover bread is between 0 and 40
+
+        else if ((document.getElementById("donkermeergranen_input").value) === "" || (document.getElementById("zonnevolkoren_input").value) === "" || (document.getElementById("wit_input").value) === "" ||
+            (document.getElementById("tarwe_input").value) === "" || (document.getElementById("volkoren_input").value) === "" || (document.getElementById("mais_input").value) === "" || (document.getElementById("witmeerzaden_input").value) === "" ||
+            (document.getElementById("spelt_input").value) === "" || (document.getElementById("roggevijgen_input").value) === "" || (document.getElementById("roggerozijn_input").value) === "" || (document.getElementById("haverpompoen_input").value) === "") {
+            $("#leftoverbreadcantbeminuszero").slideUp(100);
+            $("#leftoverbreadcantbehigher").slideUp(100);
+            $("#leftoverbreadshouldbevalue").slideDown(100);
+
+        }
+
+        // Check if the user has already submitted data for this day today
+
         else {
             if (areadySubmitted == true) {
                 window.confirm("You have already submitted this data today!")
