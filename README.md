@@ -26,7 +26,7 @@ The bread wagons are taken out of the freezer and semi-defrosted so that they ca
 
 The bread wagons are taken out of the proofing unit and are ready to be baked. They will be placed into the oven. As for the use of the Bread Baking Advicer, this would be the moment to input the amount of bread that will be baked that day.
 
-## User Stories
+### User Stories
 
 1.	Bakery employees want to check advice on how many bread pieces should be placed on the bread wagon at day 1, so that they can bake a sufficient amount of bread pieces on day 3.
 2.	Bakery employees want to check if the amount of bread that should be baked that day is correct.
@@ -35,6 +35,8 @@ The bread wagons are taken out of the proofing unit and are ready to be baked. T
 5.	Bakery employees want to see an overview of the average amount of bread that is baked every week so that they can adjust their weekly order of bread pieces.
 
 ### Mockups
+
+- [Home](https://github.com/MarthGimenzo/fleetwoodmacsite/blob/master/assets/images/Mockups/Home.png)
 
 
 ### Design
