@@ -144,7 +144,7 @@ $(document).ready(function () {
                 .data(weekData)
                 .enter().append("rect")
                 .attr("class", "bar")
-                //.attr("x", function(d) { return x(d.amount); })
+                
 
                 .attr("width", 0)//this is the initial value
                 .transition()
@@ -159,15 +159,14 @@ $(document).ready(function () {
             svg.append("g")
                 .attr("transform", "translate(0," + height + ")")
                 .call(d3.axisBottom(x))
-                
+
 
             // add the y Axis
             svg.append("g")
                 .call(d3.axisLeft(y))
-                
-                
 
-            
+           
+
         }
 
         // ------------------------------------------------------------------
