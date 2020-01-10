@@ -1,4 +1,5 @@
-Bread Baking Adviser
+# Bread Baking Adviser
+
 The Bread Baking Advisers is a tool that can be used by bakers to carefully calculate the amount of bread that should be baked per day. Because a bakery needs to provide fresh bread every day, and therefore limit loss, it will always want to bake an amount of bread that is most sufficient. But at every bakery, it’s always a challenge to estimate how much bread will be sold every day. 
 The Bread Baking Adviser is a tool that can be used by bakers to calculate the most sufficient amount of bread every day. It works fairly simple: Every day, the baker needs to input the amount of every type of bread that was baked, into the tool. At the end of the day, the baker inputs the amount of every type of bread that is left over. The more data has been inputted over time, the better the advice the tool will give. This way, a baker can get a good overview of how much they sell and how much bread they should prepare to bake every day. This will allow the baker to produce more efficiently and decrease loss.
 UX
