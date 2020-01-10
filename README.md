@@ -36,6 +36,8 @@ The bread wagons are taken out of the proofing unit and are ready to be baked. T
 
 ### Mockups
 
+Even though it is possible to view the website on a desktop computer, it is designed to be used on mobile devices only. Therefore, only mockups for a mobile first version were created.
+
 - [Home](https://github.com/MarthGimenzo/bread-baking-advisor/blob/master/assets/mockups/Home.png)
 - [Input](https://github.com/MarthGimenzo/bread-baking-advisor/blob/master/assets/mockups/Input.png)
 - [Overview](https://github.com/MarthGimenzo/bread-baking-advisor/blob/master/assets/mockups/Overview.png)
