@@ -12,17 +12,17 @@ Since the goal of the app is fairly simple, the tool will be developed as a webs
 
 To simplify the initial development process, the tool will be designed for a specific bakery called The Bakery Café that is located in Groningen, the Netherlands. In a later stadium, the functionalities of the tool will be extended so that it can be used by all bakeries.
 
-## The Bakery Café baking process
+### The Bakery Café baking process
 
 To make sense of the user stories in the next section, it should be mentioned that the bread baking process can be divided into three days at The Bakery Café and is as followed:
 
-### Day 1
+#### Day 1
 The right amount of bread is placed on several bread wagons. There is a max of 40 pieces of bread per bread wagon. The bread wagons are then placed in the freezer until the next day. As for the use of the Bread Baking Advicer, this would be the moment to check for advice on the right amount of bread that should be placed on the bread wagons.
 
-### Day 2
+#### Day 2
 The bread wagons are taken out of the freezer and semi-defrosted so that they can be decorated. After that, the bread wagons will be placed into the proofing unit.
 
-### Day 3
+#### Day 3
 
 The bread wagons are taken out of the proofing unit and are ready to be baked. They will be placed into the oven. As for the use of the Bread Baking Advicer, this would be the moment to input the amount of bread that will be baked that day.
 
@@ -34,18 +34,21 @@ The bread wagons are taken out of the proofing unit and are ready to be baked. T
 4.	Bakery employees want to input the amount of bread pieces that are left at the end of the day into the Bread Baking Advicer tool so that the tool will take this into its calculation.
 5.	Bakery employees want to see an overview of the average amount of bread that is baked every week so that they can adjust their weekly order of bread pieces.
 
-## Mockups
+### Mockups
 
 
-## Design
+### Design
 
 •	Primary colours were derived from the colours of The Bakery Café website and corporate identity. 
+
 •	The font that is used for the website is called ‘Traveling Typewriter’. It is the corporate identity font of the Bakery Café.
+
 •	The ‘Bread Baking Adviser’ logo has been created in InDesign using the Bakery Café logo on the website, combined with the Traveling Typewriter font.
-Features
+
+## Features
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
-## Existing Features
+### Existing Features
 •	A tab at the top of the website with 3 clickable tabs.
 •	
 •	...
