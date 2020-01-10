@@ -36,7 +36,9 @@ The bread wagons are taken out of the proofing unit and are ready to be baked. T
 
 ### Mockups
 
-- [Home](https://github.com/MarthGimenzo/fleetwoodmacsite/blob/master/assets/images/Mockups/Home.png)
+- [Home](https://github.com/MarthGimenzo/bread-baking-advisor/blob/master/assets/mockups/Home.png)
+- [Input](https://github.com/MarthGimenzo/bread-baking-advisor/blob/master/assets/mockups/Input.png)
+- [Overview](https://github.com/MarthGimenzo/bread-baking-advisor/blob/master/assets/mockups/Overview.png)
 
 
 ### Design
