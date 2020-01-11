@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     let breadData
     let weekData
+    let fourweeksData
 
     let totDonkermeergranen
     let totZonnevolkoren
@@ -58,12 +59,13 @@ $(document).ready(function () {
 
         $("#donkermeergranen_tobe_ordered").val(DonkermeergranenBoxes);
 
-        
+
     }
 
     function defineData() {
 
-        // Define amount of total bread last week and create jSON file.
+        // Define amount of total bread last week
+
         totDonkermeergranen = breadData.breadtypes[0].inputWeek4Tuesday + breadData.breadtypes[0].inputWeek4Wednesday + breadData.breadtypes[0].inputWeek4Thursday + breadData.breadtypes[0].inputWeek4Friday + breadData.breadtypes[0].inputWeek4Saturday + breadData.breadtypes[0].inputWeek4Sunday
         totZonnevolkoren = breadData.breadtypes[1].inputWeek4Tuesday + breadData.breadtypes[1].inputWeek4Wednesday + breadData.breadtypes[1].inputWeek4Thursday + breadData.breadtypes[1].inputWeek4Friday + breadData.breadtypes[1].inputWeek4Saturday + breadData.breadtypes[1].inputWeek4Sunday
         totWit = breadData.breadtypes[2].inputWeek4Tuesday + breadData.breadtypes[2].inputWeek4Wednesday + breadData.breadtypes[2].inputWeek4Thursday + breadData.breadtypes[2].inputWeek4Friday + breadData.breadtypes[2].inputWeek4Saturday + breadData.breadtypes[2].inputWeek4Sunday
@@ -75,6 +77,8 @@ $(document).ready(function () {
         totRoggevijgen = breadData.breadtypes[8].inputWeek4Tuesday + breadData.breadtypes[8].inputWeek4Wednesday + breadData.breadtypes[8].inputWeek4Thursday + breadData.breadtypes[8].inputWeek4Friday + breadData.breadtypes[8].inputWeek4Saturday + breadData.breadtypes[8].inputWeek4Sunday
         totRoggerozijn = breadData.breadtypes[9].inputWeek4Tuesday + breadData.breadtypes[9].inputWeek4Wednesday + breadData.breadtypes[9].inputWeek4Thursday + breadData.breadtypes[9].inputWeek4Friday + breadData.breadtypes[9].inputWeek4Saturday + breadData.breadtypes[9].inputWeek4Sunday
         totHaverpompoen = breadData.breadtypes[10].inputWeek4Tuesday + breadData.breadtypes[10].inputWeek4Wednesday + breadData.breadtypes[10].inputWeek4Thursday + breadData.breadtypes[10].inputWeek4Friday + breadData.breadtypes[10].inputWeek4Saturday + breadData.breadtypes[10].inputWeek4Sunday
+
+        // Create valid data file for chart rendering
 
         weekData = [{ "bread": "Haver Pompoen", "amount": totHaverpompoen },
         { "bread": "Rogge Rozijn", "amount": totRoggerozijn },
@@ -102,7 +106,6 @@ $(document).ready(function () {
         roggerozijnBoxes = (Math.ceil(totRoggerozijn / 13));
         haverpompoenBoxes = (Math.ceil(totHaverpompoen / 13));
 
-
         $("#donkermeergranen_tobe_ordered").val(donkermeergranenBoxes);
         $("#zonnevolkoren_tobe_ordered").val(zonnevolkorenBoxes);
         $("#wit_tobe_ordered").val(witBoxes);
@@ -118,8 +121,10 @@ $(document).ready(function () {
 
         console.log(weekData)
         weekData = JSON.stringify(weekData)
+        fourweeksData = weekData
         console.log(weekData)
-        renderChart()
+        renderChartWeek()
+        renderChart4Weeks()
 
 
 
@@ -132,7 +137,7 @@ $(document).ready(function () {
 
     });
 
-    function renderChart() {
+    function renderChartWeek() {
 
         // ------------------------------------------------------------------
         //  horizontal_bar_chart.js
@@ -143,9 +148,6 @@ $(document).ready(function () {
         weekData = JSON.parse(weekData)
         console.log(weekData)
 
-        const file_json = "data2.json"
-
-        console.log(file_json)
 
 
         horizontal_bar_chart_proc(weekData)
@@ -169,7 +171,7 @@ $(document).ready(function () {
             // append the svg object to the body of the page
             // append a 'group' element to 'svg'
             // moves the 'group' element to the top left margin
-            var svg = d3.select("#Dash").append("svg")
+            var svg = d3.select("#lastweek").append("svg")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
                 .append("g")
@@ -192,7 +194,7 @@ $(document).ready(function () {
                 .data(weekData)
                 .enter().append("rect")
                 .attr("class", "bar")
-                
+
 
                 .attr("width", 0)//this is the initial value
                 .transition()
@@ -213,25 +215,101 @@ $(document).ready(function () {
             svg.append("g")
                 .call(d3.axisLeft(y))
 
-           
+
 
         }
 
         // ------------------------------------------------------------------
     }
+    function renderChart4Weeks() {
+
+        // ------------------------------------------------------------------
+        //  horizontal_bar_chart.js
+        //
+        //                      Jun/02/2017
+        //
+        // ------------------------------------------------------------------
+        weekData = JSON.parse(fourweeksData)
+        console.log(fourweeksData)
+
+
+        
+
+
+        horizontal_bar_chart_proc(fourweeksData)
+
+
+        // ------------------------------------------------------------------
+        function horizontal_bar_chart_proc(fourweeksData) {
+            // set the dimensions and margins of the graph
+            const margin = { top: 0, right: 5, bottom: 30, left: 110 }
+            const width = 340 - margin.left - margin.right
+            const height = 250 - margin.top - margin.bottom
+
+            // set the ranges
+            const y = d3.scaleBand()
+                .range([height, 0])
+                .padding(0.1);
+
+            const x = d3.scaleLinear()
+                .range([0, width]);
+
+            // append the svg object to the body of the page
+            // append a 'group' element to 'svg'
+            // moves the 'group' element to the top left margin
+            var svg = d3.select("#last4weeks").append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                .attr("transform",
+                    "translate(" + margin.left + "," + margin.top + ")")
+
+
+            // format the data
+            console.log(typeof fourweeksData)
+            fourweeksData = JSON.parse(fourweeksData)
+
+            fourweeksData.forEach(function (d) {
+                d.amount = +d.amount;
+            });
+
+            // Scale the range of the data in the domains
+            x.domain([0, d3.max(fourweeksData, function (d) { return d.amount; })])
+            y.domain(fourweeksData.map(function (d) { return d.bread; }));
+            //y.domain([0, d3.max(data, function(d) { return d.amount; })]);
+
+            // append the rectangles for the bar chart
+            svg.selectAll(".bar")
+                .data(fourweeksData)
+                .enter().append("rect")
+                .attr("class", "bar")
+
+
+                .attr("width", 0)//this is the initial value
+                .transition()
+                .duration(300)
+                .delay(function (d, i) { return i * 50 })
+                .attr("width", function (d) { return x(d.amount); })
+
+                .attr("y", function (d) { return y(d.bread); })
+                .attr("height", y.bandwidth())
+
+            // add the x Axis
+            svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x))
+
+
+            // add the y Axis
+            svg.append("g")
+                .call(d3.axisLeft(y))
 
 
 
+        }
 
-
-
-
-
-
-
-
-
-
+        // ------------------------------------------------------------------
+    }
 
 
 

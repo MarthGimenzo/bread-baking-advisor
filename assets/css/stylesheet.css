@@ -69,10 +69,6 @@ th {
   font-size: 3.1vw;
   text-align: center;
   margin: auto;
-  
-  
-  
-  
 }
 
 td {
@@ -105,6 +101,10 @@ input {
 
 #totallong_tobe_baked {
     color: red;
+}
+
+.boxestobeordered {
+    font-size: 4vw;
 }
 
 .nav-link {
