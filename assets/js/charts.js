@@ -30,6 +30,18 @@ $(document).ready(function () {
     let roggerozijnBoxes
     let haverpompoenBoxes
 
+    let tot4weekDonkermeergranen
+    let tot4weekZonnevolkoren
+    let tot4weekWit
+    let tot4weekTarwe
+    let tot4weekVolkoren
+    let tot4weekMais
+    let tot4weekWitmeerzaden
+    let tot4weekSpelt
+    let tot4weekRoggevijgen
+    let tot4weekRoggerozijn
+    let tot4weekHaverpompoen
+
     // Load data from API
 
 
@@ -54,13 +66,6 @@ $(document).ready(function () {
         };
     }
 
-    function boxAmount() {
-
-
-        $("#donkermeergranen_tobe_ordered").val(DonkermeergranenBoxes);
-
-
-    }
 
     function defineData() {
 
@@ -78,7 +83,7 @@ $(document).ready(function () {
         totRoggerozijn = breadData.breadtypes[9].inputWeek4Tuesday + breadData.breadtypes[9].inputWeek4Wednesday + breadData.breadtypes[9].inputWeek4Thursday + breadData.breadtypes[9].inputWeek4Friday + breadData.breadtypes[9].inputWeek4Saturday + breadData.breadtypes[9].inputWeek4Sunday
         totHaverpompoen = breadData.breadtypes[10].inputWeek4Tuesday + breadData.breadtypes[10].inputWeek4Wednesday + breadData.breadtypes[10].inputWeek4Thursday + breadData.breadtypes[10].inputWeek4Friday + breadData.breadtypes[10].inputWeek4Saturday + breadData.breadtypes[10].inputWeek4Sunday
 
-        // Create valid data file for chart rendering
+        // Create valid data file for last week chart rendering
 
         weekData = [{ "bread": "Haver Pompoen", "amount": totHaverpompoen },
         { "bread": "Rogge Rozijn", "amount": totRoggerozijn },
@@ -91,6 +96,79 @@ $(document).ready(function () {
         { "bread": "Wit", "amount": totWit },
         { "bread": "Zonne Volkoren", "amount": totZonnevolkoren },
         { "bread": "Donker Meergranen", "amount": totDonkermeergranen }]
+
+        // Define amount of total bread last 4 weeks
+
+        tot4weekDonkermeergranen = breadData.breadtypes[0].inputWeek4Tuesday + breadData.breadtypes[0].inputWeek4Wednesday + breadData.breadtypes[0].inputWeek4Thursday + breadData.breadtypes[0].inputWeek4Friday + breadData.breadtypes[0].inputWeek4Saturday + breadData.breadtypes[0].inputWeek4Sunday + 
+        breadData.breadtypes[0].inputWeek3Tuesday + breadData.breadtypes[0].inputWeek3Wednesday + breadData.breadtypes[0].inputWeek3Thursday + breadData.breadtypes[0].inputWeek3Friday + breadData.breadtypes[0].inputWeek3Saturday + breadData.breadtypes[0].inputWeek3Sunday + 
+        breadData.breadtypes[0].inputWeek2Tuesday + breadData.breadtypes[0].inputWeek2Wednesday + breadData.breadtypes[0].inputWeek2Thursday + breadData.breadtypes[0].inputWeek2Friday + breadData.breadtypes[0].inputWeek2Saturday + breadData.breadtypes[0].inputWeek2Sunday + 
+        breadData.breadtypes[0].inputWeek1Tuesday + breadData.breadtypes[0].inputWeek1Wednesday + breadData.breadtypes[0].inputWeek1Thursday + breadData.breadtypes[0].inputWeek1Friday + breadData.breadtypes[0].inputWeek1Saturday + breadData.breadtypes[0].inputWeek1Sunday;
+
+        tot4weekZonnevolkoren = breadData.breadtypes[1].inputWeek4Tuesday + breadData.breadtypes[1].inputWeek4Wednesday + breadData.breadtypes[1].inputWeek4Thursday + breadData.breadtypes[1].inputWeek4Friday + breadData.breadtypes[1].inputWeek4Saturday + breadData.breadtypes[1].inputWeek4Sunday + 
+        breadData.breadtypes[1].inputWeek3Tuesday + breadData.breadtypes[1].inputWeek3Wednesday + breadData.breadtypes[1].inputWeek3Thursday + breadData.breadtypes[1].inputWeek3Friday + breadData.breadtypes[1].inputWeek3Saturday + breadData.breadtypes[1].inputWeek3Sunday + 
+        breadData.breadtypes[1].inputWeek2Tuesday + breadData.breadtypes[1].inputWeek2Wednesday + breadData.breadtypes[1].inputWeek2Thursday + breadData.breadtypes[1].inputWeek2Friday + breadData.breadtypes[1].inputWeek2Saturday + breadData.breadtypes[1].inputWeek2Sunday + 
+        breadData.breadtypes[1].inputWeek1Tuesday + breadData.breadtypes[1].inputWeek1Wednesday + breadData.breadtypes[1].inputWeek1Thursday + breadData.breadtypes[1].inputWeek1Friday + breadData.breadtypes[1].inputWeek1Saturday + breadData.breadtypes[1].inputWeek1Sunday;
+        
+        tot4weekWit = breadData.breadtypes[2].inputWeek4Tuesday + breadData.breadtypes[2].inputWeek4Wednesday + breadData.breadtypes[2].inputWeek4Thursday + breadData.breadtypes[2].inputWeek4Friday + breadData.breadtypes[2].inputWeek4Saturday + breadData.breadtypes[2].inputWeek4Sunday + 
+        breadData.breadtypes[2].inputWeek3Tuesday + breadData.breadtypes[2].inputWeek3Wednesday + breadData.breadtypes[2].inputWeek3Thursday + breadData.breadtypes[2].inputWeek3Friday + breadData.breadtypes[2].inputWeek3Saturday + breadData.breadtypes[2].inputWeek3Sunday + 
+        breadData.breadtypes[2].inputWeek2Tuesday + breadData.breadtypes[2].inputWeek2Wednesday + breadData.breadtypes[2].inputWeek2Thursday + breadData.breadtypes[2].inputWeek2Friday + breadData.breadtypes[2].inputWeek2Saturday + breadData.breadtypes[2].inputWeek2Sunday + 
+        breadData.breadtypes[2].inputWeek1Tuesday + breadData.breadtypes[2].inputWeek1Wednesday + breadData.breadtypes[2].inputWeek1Thursday + breadData.breadtypes[2].inputWeek1Friday + breadData.breadtypes[2].inputWeek1Saturday + breadData.breadtypes[2].inputWeek1Sunday;
+        
+        tot4weekTarwe = breadData.breadtypes[3].inputWeek4Tuesday + breadData.breadtypes[3].inputWeek4Wednesday + breadData.breadtypes[3].inputWeek4Thursday + breadData.breadtypes[3].inputWeek4Friday + breadData.breadtypes[3].inputWeek4Saturday + breadData.breadtypes[3].inputWeek4Sunday + 
+        breadData.breadtypes[0].inputWeek3Tuesday + breadData.breadtypes[3].inputWeek3Wednesday + breadData.breadtypes[3].inputWeek3Thursday + breadData.breadtypes[3].inputWeek3Friday + breadData.breadtypes[3].inputWeek3Saturday + breadData.breadtypes[3].inputWeek3Sunday + 
+        breadData.breadtypes[0].inputWeek2Tuesday + breadData.breadtypes[3].inputWeek2Wednesday + breadData.breadtypes[3].inputWeek2Thursday + breadData.breadtypes[3].inputWeek2Friday + breadData.breadtypes[3].inputWeek2Saturday + breadData.breadtypes[3].inputWeek2Sunday + 
+        breadData.breadtypes[0].inputWeek1Tuesday + breadData.breadtypes[3].inputWeek1Wednesday + breadData.breadtypes[3].inputWeek1Thursday + breadData.breadtypes[3].inputWeek1Friday + breadData.breadtypes[3].inputWeek1Saturday + breadData.breadtypes[3].inputWeek1Sunday;
+
+        tot4weekVolkoren = breadData.breadtypes[4].inputWeek4Tuesday + breadData.breadtypes[4].inputWeek4Wednesday + breadData.breadtypes[4].inputWeek4Thursday + breadData.breadtypes[4].inputWeek4Friday + breadData.breadtypes[4].inputWeek4Saturday + breadData.breadtypes[4].inputWeek4Sunday + 
+        breadData.breadtypes[4].inputWeek3Tuesday + breadData.breadtypes[4].inputWeek3Wednesday + breadData.breadtypes[4].inputWeek3Thursday + breadData.breadtypes[4].inputWeek3Friday + breadData.breadtypes[4].inputWeek3Saturday + breadData.breadtypes[4].inputWeek3Sunday + 
+        breadData.breadtypes[4].inputWeek2Tuesday + breadData.breadtypes[4].inputWeek2Wednesday + breadData.breadtypes[4].inputWeek2Thursday + breadData.breadtypes[4].inputWeek2Friday + breadData.breadtypes[4].inputWeek2Saturday + breadData.breadtypes[4].inputWeek2Sunday + 
+        breadData.breadtypes[4].inputWeek1Tuesday + breadData.breadtypes[4].inputWeek1Wednesday + breadData.breadtypes[4].inputWeek1Thursday + breadData.breadtypes[4].inputWeek1Friday + breadData.breadtypes[4].inputWeek1Saturday + breadData.breadtypes[4].inputWeek1Sunday;
+
+        tot4weekMais = breadData.breadtypes[5].inputWeek4Tuesday + breadData.breadtypes[5].inputWeek4Wednesday + breadData.breadtypes[5].inputWeek4Thursday + breadData.breadtypes[5].inputWeek4Friday + breadData.breadtypes[5].inputWeek4Saturday + breadData.breadtypes[5].inputWeek4Sunday + 
+        breadData.breadtypes[5].inputWeek3Tuesday + breadData.breadtypes[5].inputWeek3Wednesday + breadData.breadtypes[5].inputWeek3Thursday + breadData.breadtypes[5].inputWeek3Friday + breadData.breadtypes[5].inputWeek3Saturday + breadData.breadtypes[5].inputWeek3Sunday + 
+        breadData.breadtypes[5].inputWeek2Tuesday + breadData.breadtypes[5].inputWeek2Wednesday + breadData.breadtypes[5].inputWeek2Thursday + breadData.breadtypes[5].inputWeek2Friday + breadData.breadtypes[5].inputWeek2Saturday + breadData.breadtypes[5].inputWeek2Sunday + 
+        breadData.breadtypes[5].inputWeek1Tuesday + breadData.breadtypes[5].inputWeek1Wednesday + breadData.breadtypes[5].inputWeek1Thursday + breadData.breadtypes[5].inputWeek1Friday + breadData.breadtypes[5].inputWeek1Saturday + breadData.breadtypes[5].inputWeek1Sunday;
+
+        tot4weekWitmeerzaden = breadData.breadtypes[6].inputWeek4Tuesday + breadData.breadtypes[6].inputWeek4Wednesday + breadData.breadtypes[6].inputWeek4Thursday + breadData.breadtypes[6].inputWeek4Friday + breadData.breadtypes[6].inputWeek4Saturday + breadData.breadtypes[6].inputWeek4Sunday + 
+        breadData.breadtypes[6].inputWeek3Tuesday + breadData.breadtypes[6].inputWeek3Wednesday + breadData.breadtypes[6].inputWeek3Thursday + breadData.breadtypes[6].inputWeek3Friday + breadData.breadtypes[6].inputWeek3Saturday + breadData.breadtypes[6].inputWeek3Sunday + 
+        breadData.breadtypes[6].inputWeek2Tuesday + breadData.breadtypes[6].inputWeek2Wednesday + breadData.breadtypes[6].inputWeek2Thursday + breadData.breadtypes[6].inputWeek2Friday + breadData.breadtypes[6].inputWeek2Saturday + breadData.breadtypes[6].inputWeek2Sunday + 
+        breadData.breadtypes[6].inputWeek1Tuesday + breadData.breadtypes[6].inputWeek1Wednesday + breadData.breadtypes[6].inputWeek1Thursday + breadData.breadtypes[6].inputWeek1Friday + breadData.breadtypes[6].inputWeek1Saturday + breadData.breadtypes[6].inputWeek1Sunday;
+
+        tot4weekSpelt = breadData.breadtypes[7].inputWeek4Tuesday + breadData.breadtypes[7].inputWeek4Wednesday + breadData.breadtypes[7].inputWeek4Thursday + breadData.breadtypes[7].inputWeek4Friday + breadData.breadtypes[7].inputWeek4Saturday + breadData.breadtypes[7].inputWeek4Sunday + 
+        breadData.breadtypes[7].inputWeek3Tuesday + breadData.breadtypes[7].inputWeek3Wednesday + breadData.breadtypes[7].inputWeek3Thursday + breadData.breadtypes[7].inputWeek3Friday + breadData.breadtypes[7].inputWeek3Saturday + breadData.breadtypes[7].inputWeek3Sunday + 
+        breadData.breadtypes[7].inputWeek2Tuesday + breadData.breadtypes[7].inputWeek2Wednesday + breadData.breadtypes[7].inputWeek2Thursday + breadData.breadtypes[7].inputWeek2Friday + breadData.breadtypes[7].inputWeek2Saturday + breadData.breadtypes[7].inputWeek2Sunday + 
+        breadData.breadtypes[7].inputWeek1Tuesday + breadData.breadtypes[7].inputWeek1Wednesday + breadData.breadtypes[7].inputWeek1Thursday + breadData.breadtypes[7].inputWeek1Friday + breadData.breadtypes[7].inputWeek1Saturday + breadData.breadtypes[7].inputWeek1Sunday;
+
+        tot4weekRoggevijgen = breadData.breadtypes[8].inputWeek4Tuesday + breadData.breadtypes[8].inputWeek4Wednesday + breadData.breadtypes[8].inputWeek4Thursday + breadData.breadtypes[8].inputWeek4Friday + breadData.breadtypes[8].inputWeek4Saturday + breadData.breadtypes[8].inputWeek4Sunday + 
+        breadData.breadtypes[8].inputWeek3Tuesday + breadData.breadtypes[8].inputWeek3Wednesday + breadData.breadtypes[8].inputWeek3Thursday + breadData.breadtypes[8].inputWeek3Friday + breadData.breadtypes[8].inputWeek3Saturday + breadData.breadtypes[8].inputWeek3Sunday + 
+        breadData.breadtypes[8].inputWeek2Tuesday + breadData.breadtypes[8].inputWeek2Wednesday + breadData.breadtypes[8].inputWeek2Thursday + breadData.breadtypes[8].inputWeek2Friday + breadData.breadtypes[8].inputWeek2Saturday + breadData.breadtypes[8].inputWeek2Sunday + 
+        breadData.breadtypes[8].inputWeek1Tuesday + breadData.breadtypes[8].inputWeek1Wednesday + breadData.breadtypes[8].inputWeek1Thursday + breadData.breadtypes[8].inputWeek1Friday + breadData.breadtypes[8].inputWeek1Saturday + breadData.breadtypes[8].inputWeek1Sunday;
+
+        tot4weekRoggerozijn = breadData.breadtypes[9].inputWeek4Tuesday + breadData.breadtypes[9].inputWeek4Wednesday + breadData.breadtypes[9].inputWeek4Thursday + breadData.breadtypes[9].inputWeek4Friday + breadData.breadtypes[9].inputWeek4Saturday + breadData.breadtypes[9].inputWeek4Sunday + 
+        breadData.breadtypes[9].inputWeek3Tuesday + breadData.breadtypes[9].inputWeek3Wednesday + breadData.breadtypes[9].inputWeek3Thursday + breadData.breadtypes[9].inputWeek3Friday + breadData.breadtypes[9].inputWeek3Saturday + breadData.breadtypes[9].inputWeek3Sunday + 
+        breadData.breadtypes[9].inputWeek2Tuesday + breadData.breadtypes[9].inputWeek2Wednesday + breadData.breadtypes[9].inputWeek2Thursday + breadData.breadtypes[9].inputWeek2Friday + breadData.breadtypes[9].inputWeek2Saturday + breadData.breadtypes[9].inputWeek2Sunday + 
+        breadData.breadtypes[9].inputWeek1Tuesday + breadData.breadtypes[9].inputWeek1Wednesday + breadData.breadtypes[9].inputWeek1Thursday + breadData.breadtypes[9].inputWeek1Friday + breadData.breadtypes[9].inputWeek1Saturday + breadData.breadtypes[9].inputWeek1Sunday;
+
+        tot4weekHaverpompoen = breadData.breadtypes[10].inputWeek4Tuesday + breadData.breadtypes[10].inputWeek4Wednesday + breadData.breadtypes[10].inputWeek4Thursday + breadData.breadtypes[10].inputWeek4Friday + breadData.breadtypes[10].inputWeek4Saturday + breadData.breadtypes[10].inputWeek4Sunday + 
+        breadData.breadtypes[10].inputWeek3Tuesday + breadData.breadtypes[10].inputWeek3Wednesday + breadData.breadtypes[10].inputWeek3Thursday + breadData.breadtypes[10].inputWeek3Friday + breadData.breadtypes[10].inputWeek3Saturday + breadData.breadtypes[10].inputWeek3Sunday + 
+        breadData.breadtypes[10].inputWeek2Tuesday + breadData.breadtypes[10].inputWeek2Wednesday + breadData.breadtypes[10].inputWeek2Thursday + breadData.breadtypes[10].inputWeek2Friday + breadData.breadtypes[10].inputWeek2Saturday + breadData.breadtypes[10].inputWeek2Sunday + 
+        breadData.breadtypes[10].inputWeek1Tuesday + breadData.breadtypes[10].inputWeek1Wednesday + breadData.breadtypes[10].inputWeek1Thursday + breadData.breadtypes[10].inputWeek1Friday + breadData.breadtypes[10].inputWeek1Saturday + breadData.breadtypes[10].inputWeek1Sunday;
+
+
+
+        // Create valid data file for last 4 weeks chart rendering
+
+        fourweeksData = [{ "bread": "Haver Pompoen", "amount": tot4weekHaverpompoen },
+        { "bread": "Rogge Rozijn", "amount": tot4weekRoggerozijn },
+        { "bread": "Rogge Vijgen", "amount": tot4weekRoggevijgen },
+        { "bread": "Spelt", "amount": tot4weekSpelt },
+        { "bread": "Wit Meerzaden", "amount": tot4weekWitmeerzaden },
+        { "bread": "Mais", "amount": tot4weekMais },
+        { "bread": "Volkoren", "amount": tot4weekVolkoren },
+        { "bread": "Tarwe", "amount": tot4weekTarwe },
+        { "bread": "Wit", "amount": tot4weekWit },
+        { "bread": "Zonne Volkoren", "amount": tot4weekZonnevolkoren },
+        { "bread": "Donker Meergranen", "amount": tot4weekDonkermeergranen }]
 
         // Count amount of boxes and view them
 
@@ -121,7 +199,7 @@ $(document).ready(function () {
 
         console.log(weekData)
         weekData = JSON.stringify(weekData)
-        fourweeksData = weekData
+        fourweeksData = JSON.stringify(fourweeksData)
         console.log(weekData)
         renderChartWeek()
         renderChart4Weeks()
