@@ -17,6 +17,18 @@ $(document).ready(function () {
     let totRoggerozijn
     let totHaverpompoen
 
+    let donkermeergranenBoxes
+    let zonnevolkorenBoxes
+    let witBoxes
+    let tarweBoxes
+    let volkorenBoxes
+    let maisBoxes
+    let witmeerzadenBoxes
+    let speltBoxes
+    let roggevijgenBoxes
+    let roggerozijnBoxes
+    let haverpompoenBoxes
+
     // Load data from API
 
 
@@ -41,9 +53,17 @@ $(document).ready(function () {
         };
     }
 
+    function boxAmount() {
+
+
+        $("#donkermeergranen_tobe_ordered").val(DonkermeergranenBoxes);
+
+        
+    }
 
     function defineData() {
 
+        // Define amount of total bread last week and create jSON file.
         totDonkermeergranen = breadData.breadtypes[0].inputWeek4Tuesday + breadData.breadtypes[0].inputWeek4Wednesday + breadData.breadtypes[0].inputWeek4Thursday + breadData.breadtypes[0].inputWeek4Friday + breadData.breadtypes[0].inputWeek4Saturday + breadData.breadtypes[0].inputWeek4Sunday
         totZonnevolkoren = breadData.breadtypes[1].inputWeek4Tuesday + breadData.breadtypes[1].inputWeek4Wednesday + breadData.breadtypes[1].inputWeek4Thursday + breadData.breadtypes[1].inputWeek4Friday + breadData.breadtypes[1].inputWeek4Saturday + breadData.breadtypes[1].inputWeek4Sunday
         totWit = breadData.breadtypes[2].inputWeek4Tuesday + breadData.breadtypes[2].inputWeek4Wednesday + breadData.breadtypes[2].inputWeek4Thursday + breadData.breadtypes[2].inputWeek4Friday + breadData.breadtypes[2].inputWeek4Saturday + breadData.breadtypes[2].inputWeek4Sunday
@@ -67,6 +87,34 @@ $(document).ready(function () {
         { "bread": "Wit", "amount": totWit },
         { "bread": "Zonne Volkoren", "amount": totZonnevolkoren },
         { "bread": "Donker Meergranen", "amount": totDonkermeergranen }]
+
+        // Count amount of boxes and view them
+
+        donkermeergranenBoxes = (Math.ceil(totDonkermeergranen / 12));
+        zonnevolkorenBoxes = (Math.ceil(totZonnevolkoren / 12));
+        witBoxes = (Math.ceil(totWit / 12));
+        tarweBoxes = (Math.ceil(totTarwe / 12));
+        volkorenBoxes = (Math.ceil(totVolkoren / 12));
+        maisBoxes = (Math.ceil(totMais / 12));
+        witmeerzadenBoxes = (Math.ceil(totWitmeerzaden / 12));
+        speltBoxes = (Math.ceil(totSpelt / 12));
+        roggevijgenBoxes = (Math.ceil(totRoggevijgen / 13));
+        roggerozijnBoxes = (Math.ceil(totRoggerozijn / 13));
+        haverpompoenBoxes = (Math.ceil(totHaverpompoen / 13));
+
+
+        $("#donkermeergranen_tobe_ordered").val(donkermeergranenBoxes);
+        $("#zonnevolkoren_tobe_ordered").val(zonnevolkorenBoxes);
+        $("#wit_tobe_ordered").val(witBoxes);
+        $("#tarwe_tobe_ordered").val(tarweBoxes);
+        $("#volkoren_tobe_ordered").val(volkorenBoxes);
+        $("#mais_tobe_ordered").val(maisBoxes);
+        $("#witmeerzaden_tobe_ordered").val(witmeerzadenBoxes);
+        $("#spelt_tobe_ordered").val(speltBoxes);
+        $("#roggevijgen_tobe_ordered").val(roggevijgenBoxes);
+        $("#roggerozijn_tobe_ordered").val(roggerozijnBoxes);
+        $("#haverpompoen_tobe_ordered").val(haverpompoenBoxes);
+
 
         console.log(weekData)
         weekData = JSON.stringify(weekData)
