@@ -17,189 +17,192 @@
 	<title>Bread Baking Advisor</title>
 </head>
 
-<body>
+    <header>
+        <img id="logo" src="/assets/images/Breadbakingadvisor.png" alt="Bread Baking Advisor">
+    </header>
 
-	<img id="logo" src="/assets/images/Breadbakingadvisor.png" alt="Bread Baking Advisor">
-	<div class="container-fluid">
-		<ul class="nav nav-tabs nav-fill">
-			<li class="nav-item">
-				<a class="nav-link active" href="#">ADVICE</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="input.html">INPUT</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="overview.html">OVERVIEW</a>
-			</li>
-		</ul>
-	</div>
-
-	<div id="backgroundcolor">
-		<h2>What's the day of the week?</h2>
+	<body>
 		<div class="container-fluid">
-			<div class="dropdown">
-				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a id="tuesday" class="dropdown-item" href="#">Tuesday</a>
-					<a id="wednesday" class="dropdown-item" href="#">Wednesday</a>
-					<a id="thursday" class="dropdown-item" href="#">Thursday</a>
-					<a id="friday" class="dropdown-item" href="#">Friday</a>
-					<a id="saturday" class="dropdown-item" href="#">Saturday</a>
-					<a id="sunday" class="dropdown-item" href="#">Sunday</a>
+			<ul class="nav nav-tabs nav-fill">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">ADVICE</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="input.html">INPUT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="overview.html">OVERVIEW</a>
+				</li>
+			</ul>
+		</div>
+
+		<div id="backgroundcolor">
+			<h2>What's the day of the week?</h2>
+			<div class="container-fluid">
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<a id="tuesday" class="dropdown-item" href="#">Tuesday</a>
+						<a id="wednesday" class="dropdown-item" href="#">Wednesday</a>
+						<a id="thursday" class="dropdown-item" href="#">Thursday</a>
+						<a id="friday" class="dropdown-item" href="#">Friday</a>
+						<a id="saturday" class="dropdown-item" href="#">Saturday</a>
+						<a id="sunday" class="dropdown-item" href="#">Sunday</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="container-fluid">
-			<table class="table table-sm">
-				<thead>
-					<tr>
-						<th scope="col"></th>
-						<th scope="col">Amount of pieces <br>to be placed:</th>
-						<th scope="col">Amount of pieces <br>to be baked today:</th>
 
-					</tr>
-				</thead>
-				<tbody>
-					<form action="/action_page.php">
+			<div class="container-fluid">
+				<table class="table table-sm">
+					<thead>
 						<tr>
-							<th scope="row">Donker Meergranen</th>
-							<td>
-								<input id="donkermeergranen_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="donkermeergranen_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Zonne Volkoren</th>
-							<td>
-								<input id="zonnevolkoren_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="zonnevolkoren_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Wit</th>
-							<td>
-								<input id="wit_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="wit_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Tarwe</th>
-							<td>
-								<input id="tarwe_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="tarwe_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Volkoren</th>
-							<td>
-								<input id="volkoren_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="volkoren_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Mais</th>
-							<td>
-								<input id="mais_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="mais_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Wit Meerzaden</th>
-							<td>
-								<input id="witmeerzaden_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="witmeerzaden_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th class="total" scope="row">Long Bread <br>Total</th>
-							<td>
-								<input id="totallong_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="totallong_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Spelt</th>
-							<td>
-								<input id="spelt_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="spelt_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Rogge Vijgen</th>
-							<td>
-								<input id="roggevijgen_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="roggevijgen_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Rogge Rozijn</th>
-							<td>
-								<input id="roggerozijn_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="roggerozijn_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th scope="row">Haver Pompoen</th>
-							<td>
-								<input id="haverpompoen_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="haverpompoen_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-						<tr>
-							<th class="total" scope="row">Bol Bread <br> Total</th>
-							<td>
-								<input id="totalbol_placed" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-							<td>
-								<input id="totalbol_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
-                        </td>
-						</tr>
-					</form>
-				</tbody>
-			</table>
-		</div>
-		<div>
-</body>
+							<th scope="col"></th>
+							<th scope="col">Amount of pieces <br>to be placed:</th>
+							<th scope="col">Amount of pieces <br>to be baked today:</th>
 
-<footer>
-	<button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location.href='overview.html'">Weekly Overview</button>
-</footer>
+						</tr>
+					</thead>
+					<tbody>
+						<form action="/action_page.php">
+							<tr>
+								<th scope="row">Donker Meergranen</th>
+								<td>
+									<input id="donkermeergranen_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="donkermeergranen_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Zonne Volkoren</th>
+								<td>
+									<input id="zonnevolkoren_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="zonnevolkoren_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Wit</th>
+								<td>
+									<input id="wit_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="wit_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Tarwe</th>
+								<td>
+									<input id="tarwe_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="tarwe_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Volkoren</th>
+								<td>
+									<input id="volkoren_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="volkoren_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Mais</th>
+								<td>
+									<input id="mais_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="mais_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Wit Meerzaden</th>
+								<td>
+									<input id="witmeerzaden_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="witmeerzaden_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th class="total" scope="row">Long Bread <br>Total</th>
+								<td>
+									<input id="totallong_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="totallong_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Spelt</th>
+								<td>
+									<input id="spelt_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="spelt_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Rogge Vijgen</th>
+								<td>
+									<input id="roggevijgen_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="roggevijgen_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Rogge Rozijn</th>
+								<td>
+									<input id="roggerozijn_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="roggerozijn_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th scope="row">Haver Pompoen</th>
+								<td>
+									<input id="haverpompoen_tobe_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="haverpompoen_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+							<tr>
+								<th class="total" scope="row">Bol Bread <br> Total</th>
+								<td>
+									<input id="totalbol_placed" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+								<td>
+									<input id="totalbol_tobe_baked" class="breadamountview" type="text" value="0" readonly="readonly">
+                        </td>
+							</tr>
+						</form>
+					</tbody>
+				</table>
+			</div>
+			<div>
+	</body>
 
-<!-- JavaScript -->
+	<footer>
+		<button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location.href='overview.html'">Weekly Overview</button>
+	</footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-</script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-</script>
-<script type="text/javascript" src="assets/js/format.js"></script>
+	<!-- JavaScript -->
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
+	<script type="text/javascript" src="assets/js/format.js"></script>
 
 </html>
