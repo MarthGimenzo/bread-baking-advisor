@@ -114,36 +114,35 @@ $(document).ready(function () {
 
                 cb(JSON.parse(this.responseText));
                 newData = JSON.parse(this.responseText);
-                console.log("Data is loaded and newData is defined");
+
+                // Data is loaded and newData is defined
+
                 countAverage();
                 defineDate();
 
-            }
+            };
         };
-    }
+    };
 
     // Define Date
 
     function defineDate() {
 
-
-        viewDateTuesday = newData.breadtypes[0].saveDateTuesday
-        viewDateWednesday = newData.breadtypes[0].saveDateWednesday
-        viewDateThursday = newData.breadtypes[0].saveDateThursday
-        viewDateFriday = newData.breadtypes[0].saveDateFriday
-        viewDateSaturday = newData.breadtypes[0].saveDateSaturday
-        viewDateSunday = newData.breadtypes[0].saveDateSunday
+        viewDateTuesday = newData.breadtypes[0].saveDateTuesday;
+        viewDateWednesday = newData.breadtypes[0].saveDateWednesday;
+        viewDateThursday = newData.breadtypes[0].saveDateThursday;
+        viewDateFriday = newData.breadtypes[0].saveDateFriday;
+        viewDateSaturday = newData.breadtypes[0].saveDateSaturday;
+        viewDateSunday = newData.breadtypes[0].saveDateSunday;
 
         newToday = new Date();
-        newYear = newToday.getFullYear()
-        newMonth = newToday.getMonth() + 1
-        newDay = newToday.getDate()
-        newToday = newDay.toString() + " / " + newMonth.toString() + " / " + newYear.toString()
+        newYear = newToday.getFullYear();
+        newMonth = newToday.getMonth() + 1;
+        newDay = newToday.getDate();
+        newToday = newDay.toString() + " / " + newMonth.toString() + " / " + newYear.toString();
 
-        console.log("Dates are loaded")
-        console.log(newToday)
-        changeActiveDay()
-    }
+        changeActiveDay();
+    };
 
     // Count averages
 
@@ -220,15 +219,17 @@ $(document).ready(function () {
         adviceSundayRoggevijgen = Math.round((newData.breadtypes[8].adviceWeek1Sunday + newData.breadtypes[8].adviceWeek2Sunday + newData.breadtypes[8].adviceWeek3Sunday + newData.breadtypes[8].adviceWeek4Sunday) / 4);
         adviceSundayRoggerozijn = Math.round((newData.breadtypes[9].adviceWeek1Sunday + newData.breadtypes[9].adviceWeek2Sunday + newData.breadtypes[9].adviceWeek3Sunday + newData.breadtypes[9].adviceWeek4Sunday) / 4);
         adviceSundayHaverpompoen = Math.round((newData.breadtypes[10].adviceWeek1Sunday + newData.breadtypes[10].adviceWeek2Sunday + newData.breadtypes[10].adviceWeek3Sunday + newData.breadtypes[10].adviceWeek4Sunday) / 4);
-        console.log("Averages are counted")
+        
+        
+
 
 
     }
 
     getData(function (data) {
-        console.log("changeActiveDay is invoked")
+        
         changeActiveDay();
-    })
+    });
 
     // Determine day of the week
 
@@ -245,57 +246,55 @@ $(document).ready(function () {
         weekday[6] = "Saturday";
 
         var today = weekday[d.getDay()];
-        console.log("Current day is determined")
-        console.log(weekday)
-        console.log(today)
 
         // Change active Dropdown Menu Item to current day of the week
+
         if (today == "Monday") {
             $("#tuesday").addClass("active");
             $("#wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 2;
-            $("#dropdownMenuButton").text("Tuesday")
+            $("#dropdownMenuButton").text("Tuesday");
         }
         if (today == "Tuesday") {
             $("#tuesday").addClass("active");
             $("#wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 2;
-            $("#dropdownMenuButton").text("Tuesday")
+            $("#dropdownMenuButton").text("Tuesday");
         }
         if (today == "Wednesday") {
             $("#wednesday").addClass("active");
             $("#tuesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 3;
-            $("#dropdownMenuButton").text("Wednesday")
+            $("#dropdownMenuButton").text("Wednesday");
         }
         if (today == "Thursday") {
             $("#thursday").addClass("active");
             $("#tuesday, #wednesday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 4;
-            $("#dropdownMenuButton").text("Thursday")
+            $("#dropdownMenuButton").text("Thursday");
         }
         if (today == "Friday") {
             $("#friday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #saturday, #sunday").removeClass("active");
             activeDay = 5;
-            $("#dropdownMenuButton").text("Friday")
+            $("#dropdownMenuButton").text("Friday");
         }
         if (today == "Saturday") {
             $("#saturday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #sunday").removeClass("active");
             activeDay = 6;
-            $("#dropdownMenuButton").text("Saturday")
+            $("#dropdownMenuButton").text("Saturday");
         }
         if (today == "Sunday") {
             $("#sunday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #saturday").removeClass("active");
             activeDay = 0;
-            $("#dropdownMenuButton").text("Sunday")
+            $("#dropdownMenuButton").text("Sunday");
         }
         if (today == "Monday") {
             $("#tuesday, #wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 1;
-            $("#dropdownMenuButton").text("Select a day")
+            $("#dropdownMenuButton").text("Select a day");
         }
 
         // Change active Dropdown Menu Item to selected day
@@ -304,59 +303,59 @@ $(document).ready(function () {
             $("#tuesday").addClass("active");
             $("#wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 2;
-            $("#dropdownMenuButton").text("Tuesday")
-            changeActiveDay()
+            $("#dropdownMenuButton").text("Tuesday");
+            changeActiveDay();
 
         })
         $("#wednesday").on("click", function () {
             $("#wednesday").addClass("active");
             $("#tuesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 3;
-            $("#dropdownMenuButton").text("Wednesday")
-            changeActiveDay()
+            $("#dropdownMenuButton").text("Wednesday");
+            changeActiveDay();
 
         })
         $("#thursday").on("click", function () {
             $("#thursday").addClass("active");
             $("#tuesday, #wednesday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 4;
-            $("#dropdownMenuButton").text("Thursday")
-            changeActiveDay()
+            $("#dropdownMenuButton").text("Thursday");
+            changeActiveDay();
         })
         $("#friday").on("click", function () {
             $("#friday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #saturday, #sunday").removeClass("active");
             activeDay = 5;
-            $("#dropdownMenuButton").text("Friday")
-            changeActiveDay()
+            $("#dropdownMenuButton").text("Friday");
+            changeActiveDay();
         })
         $("#saturday").on("click", function () {
             $("#saturday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #sunday").removeClass("active");
             activeDay = 6;
-            $("#dropdownMenuButton").text("Saturday")
-            changeActiveDay()
+            $("#dropdownMenuButton").text("Saturday");
+            changeActiveDay();
         })
         $("#sunday").on("click", function () {
             $("#sunday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #saturday").removeClass("active");
             activeDay = 0;
-            $("#dropdownMenuButton").text("Sunday")
-            changeActiveDay()
+            $("#dropdownMenuButton").text("Sunday");
+            changeActiveDay();
         })
     }
 
     // Show current bread advice
 
     function changeActiveDay() {
-        console.log("View right amounts")
-        areadySubmitted = false
+        
+        areadySubmitted = false;
         $("#submit").css("background-color", "#e68a2b").css("border-color", "#e68a2b").text("Submit for today!");
 
         if (activeDay == 2) {
-            $("#thisdate").text(viewDateTuesday)
+            $("#thisdate").text(viewDateTuesday);
             if (newToday == viewDateTuesday) {
-                areadySubmitted = true
+                areadySubmitted = true;
                 $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
@@ -400,9 +399,9 @@ $(document).ready(function () {
 
         }
         if (activeDay == 3) {
-            $("#thisdate").text(viewDateWednesday)
+            $("#thisdate").text(viewDateWednesday);
             if (newToday == viewDateWednesday) {
-                areadySubmitted = true
+                areadySubmitted = true;
                 $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
@@ -446,9 +445,9 @@ $(document).ready(function () {
 
         }
         if (activeDay == 4) {
-            $("#thisdate").text(viewDateThursday)
+            $("#thisdate").text(viewDateThursday);
             if (newToday == viewDateThursday) {
-                areadySubmitted = true
+                areadySubmitted = true;
                 $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
@@ -492,9 +491,9 @@ $(document).ready(function () {
 
         }
         if (activeDay == 5) {
-            $("#thisdate").text(viewDateFriday)
+            $("#thisdate").text(viewDateFriday);
             if (newToday == viewDateFriday) {
-                areadySubmitted = true
+                areadySubmitted = true;
                 $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
@@ -538,9 +537,9 @@ $(document).ready(function () {
 
         }
         if (activeDay == 6) {
-            $("#thisdate").text(viewDateSaturday)
+            $("#thisdate").text(viewDateSaturday);
             if (newToday == viewDateSaturday) {
-                areadySubmitted = true
+                areadySubmitted = true;
                 $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
@@ -584,9 +583,9 @@ $(document).ready(function () {
 
         }
         if (activeDay == 0) {
-            $("#thisdate").text(viewDateSunday)
+            $("#thisdate").text(viewDateSunday);
             if (newToday == viewDateSunday) {
-                areadySubmitted = true
+                areadySubmitted = true;
                 $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
             }
 
@@ -657,9 +656,6 @@ $(document).ready(function () {
         checkcorrectvalues10 = (document.getElementById("roggerozijn_tobe_baked").value) - (document.getElementById("roggerozijn_input").value);
         checkcorrectvalues11 = (document.getElementById("haverpompoen_tobe_baked").value) - (document.getElementById("haverpompoen_input").value);
 
-        leftInputDonkermeergranen = parseInt((document.getElementById("donkermeergranen_tobe_baked").value))
-
-
         // Check if leftover bread is not empty
 
         if ((document.getElementById("donkermeergranen_input").value) === "" ||
@@ -720,7 +716,6 @@ $(document).ready(function () {
             (document.getElementById("roggerozijn_input").value) < 0 ||
             (document.getElementById("haverpompoen_input").value) < 0) {
 
-            console.log("Left over bread minus 0 warning")
             $("#leftoverbreadshouldbevalue").slideUp(100);
             $("#leftoverbreadcantbehigher").slideUp(100);
             $("#leftoverbreadinteger").slideUp(100);
@@ -781,14 +776,10 @@ $(document).ready(function () {
 
         else {
             if (areadySubmitted == true) {
-                $('#alreadySaved').modal()
+                $('#alreadySaved').modal();
             }
             else {
-                $('#confirmModal').modal()
-
-
-
-
+                $('#confirmModal').modal();
             }
 
         };
@@ -802,21 +793,16 @@ $(document).ready(function () {
         $("#exampleModalLabel").hide();
         $("#savingheader").show();
 
-        console.log("Data sent!")
         sendValidData();
 
-    })
+    });
 
     // Define Valid Data to be sent
 
     function sendValidData() {
-        console.log("sendValidData function invoked")
-        console.log(activeDay)
-
-        console.log(typeof newData)
-
+        
         if (activeDay == 2) {
-            newData.breadtypes[0].saveDateTuesday = newToday
+            newData.breadtypes[0].saveDateTuesday = newToday;
 
             newData.breadtypes[0].newInputTuesday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
             newData.breadtypes[1].newInputTuesday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -841,59 +827,56 @@ $(document).ready(function () {
                 this.adviceWeek2Tuesday = this.adviceWeek3Tuesday;
                 this.adviceWeek3Tuesday = this.adviceWeek4Tuesday;
 
-
             });
 
             if (parseInt(document.getElementById("donkermeergranen_input").value) == 0) {
                 newData.breadtypes[0].adviceWeek4Tuesday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[0].adviceWeek4Tuesday = newData.breadtypes[0].newInputTuesday }
+            } else { newData.breadtypes[0].adviceWeek4Tuesday = newData.breadtypes[0].newInputTuesday };
 
             if (parseInt(document.getElementById("zonnevolkoren_input").value) == 0) {
                 newData.breadtypes[1].adviceWeek4Tuesday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[1].adviceWeek4Tuesday = newData.breadtypes[1].newInputTuesday }
+            } else { newData.breadtypes[1].adviceWeek4Tuesday = newData.breadtypes[1].newInputTuesday };
 
             if (parseInt(document.getElementById("wit_input").value) == 0) {
                 newData.breadtypes[2].adviceWeek4Tuesday = parseInt(document.getElementById("wit_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[2].adviceWeek4Tuesday = newData.breadtypes[2].newInputTuesday }
+            } else { newData.breadtypes[2].adviceWeek4Tuesday = newData.breadtypes[2].newInputTuesday };
 
             if (parseInt(document.getElementById("tarwe_input").value) == 0) {
                 newData.breadtypes[3].adviceWeek4Tuesday = parseInt(document.getElementById("tarwe_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[3].adviceWeek4Tuesday = newData.breadtypes[3].newInputTuesday }
+            } else { newData.breadtypes[3].adviceWeek4Tuesday = newData.breadtypes[3].newInputTuesday };
 
             if (parseInt(document.getElementById("volkoren_input").value) == 0) {
                 newData.breadtypes[4].adviceWeek4Tuesday = parseInt(document.getElementById("volkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[4].adviceWeek4Tuesday = newData.breadtypes[4].newInputTuesday }
+            } else { newData.breadtypes[4].adviceWeek4Tuesday = newData.breadtypes[4].newInputTuesday };
 
             if (parseInt(document.getElementById("mais_input").value) == 0) {
                 newData.breadtypes[5].adviceWeek4Tuesday = parseInt(document.getElementById("mais_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[5].adviceWeek4Tuesday = newData.breadtypes[5].newInputTuesday }
+            } else { newData.breadtypes[5].adviceWeek4Tuesday = newData.breadtypes[5].newInputTuesday };
 
             if (parseInt(document.getElementById("witmeerzaden_input").value) == 0) {
                 newData.breadtypes[6].adviceWeek4Tuesday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[6].adviceWeek4Tuesday = newData.breadtypes[6].newInputTuesday }
+            } else { newData.breadtypes[6].adviceWeek4Tuesday = newData.breadtypes[6].newInputTuesday };
 
             if (parseInt(document.getElementById("spelt_input").value) == 0) {
                 newData.breadtypes[7].adviceWeek4Tuesday = parseInt(document.getElementById("spelt_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[7].adviceWeek4Tuesday = newData.breadtypes[7].newInputTuesday }
+            } else { newData.breadtypes[7].adviceWeek4Tuesday = newData.breadtypes[7].newInputTuesday };
 
             if (parseInt(document.getElementById("roggevijgen_input").value) == 0) {
                 newData.breadtypes[8].adviceWeek4Tuesday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[8].adviceWeek4Tuesday = newData.breadtypes[8].newInputTuesday }
+            } else { newData.breadtypes[8].adviceWeek4Tuesday = newData.breadtypes[8].newInputTuesday };
 
             if (parseInt(document.getElementById("roggerozijn_input").value) == 0) {
                 newData.breadtypes[9].adviceWeek4Tuesday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[9].adviceWeek4Tuesday = newData.breadtypes[9].newInputTuesday }
+            } else { newData.breadtypes[9].adviceWeek4Tuesday = newData.breadtypes[9].newInputTuesday };
 
             if (parseInt(document.getElementById("haverpompoen_input").value) == 0) {
                 newData.breadtypes[10].adviceWeek4Tuesday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[10].adviceWeek4Tuesday = newData.breadtypes[10].newInputTuesday }
+            } else { newData.breadtypes[10].adviceWeek4Tuesday = newData.breadtypes[10].newInputTuesday };
 
-
-
-        }
+        };
 
         if (activeDay == 3) {
-            newData.breadtypes[0].saveDateWednesday = newToday
+            newData.breadtypes[0].saveDateWednesday = newToday;
 
             newData.breadtypes[0].newInputWednesday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
             newData.breadtypes[1].newInputWednesday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -922,53 +905,52 @@ $(document).ready(function () {
 
             if (parseInt(document.getElementById("donkermeergranen_input").value) == 0) {
                 newData.breadtypes[0].adviceWeek4Wednesday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[0].adviceWeek4Wednesday = newData.breadtypes[0].newInputWednesday }
+            } else { newData.breadtypes[0].adviceWeek4Wednesday = newData.breadtypes[0].newInputWednesday };
 
             if (parseInt(document.getElementById("zonnevolkoren_input").value) == 0) {
                 newData.breadtypes[1].adviceWeek4Wednesday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[1].adviceWeek4Wednesday = newData.breadtypes[1].newInputWednesday }
+            } else { newData.breadtypes[1].adviceWeek4Wednesday = newData.breadtypes[1].newInputWednesday };
 
             if (parseInt(document.getElementById("wit_input").value) == 0) {
                 newData.breadtypes[2].adviceWeek4Wednesday = parseInt(document.getElementById("wit_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[2].adviceWeek4Wednesday = newData.breadtypes[2].newInputWednesday }
+            } else { newData.breadtypes[2].adviceWeek4Wednesday = newData.breadtypes[2].newInputWednesday };
 
             if (parseInt(document.getElementById("tarwe_input").value) == 0) {
                 newData.breadtypes[3].adviceWeek4Wednesday = parseInt(document.getElementById("tarwe_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[3].adviceWeek4Wednesday = newData.breadtypes[3].newInputWednesday }
+            } else { newData.breadtypes[3].adviceWeek4Wednesday = newData.breadtypes[3].newInputWednesday };
 
             if (parseInt(document.getElementById("volkoren_input").value) == 0) {
                 newData.breadtypes[4].adviceWeek4Wednesday = parseInt(document.getElementById("volkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[4].adviceWeek4Wednesday = newData.breadtypes[4].newInputWednesday }
+            } else { newData.breadtypes[4].adviceWeek4Wednesday = newData.breadtypes[4].newInputWednesday };
 
             if (parseInt(document.getElementById("mais_input").value) == 0) {
                 newData.breadtypes[5].adviceWeek4Wednesday = parseInt(document.getElementById("mais_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[5].adviceWeek4Wednesday = newData.breadtypes[5].newInputWednesday }
+            } else { newData.breadtypes[5].adviceWeek4Wednesday = newData.breadtypes[5].newInputWednesday };
 
             if (parseInt(document.getElementById("witmeerzaden_input").value) == 0) {
                 newData.breadtypes[6].adviceWeek4Wednesday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[6].adviceWeek4Wednesday = newData.breadtypes[6].newInputWednesday }
+            } else { newData.breadtypes[6].adviceWeek4Wednesday = newData.breadtypes[6].newInputWednesday };
 
             if (parseInt(document.getElementById("spelt_input").value) == 0) {
                 newData.breadtypes[7].adviceWeek4Wednesday = parseInt(document.getElementById("spelt_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[7].adviceWeek4Wednesday = newData.breadtypes[7].newInputWednesday }
+            } else { newData.breadtypes[7].adviceWeek4Wednesday = newData.breadtypes[7].newInputWednesday };
 
             if (parseInt(document.getElementById("roggevijgen_input").value) == 0) {
                 newData.breadtypes[8].adviceWeek4Wednesday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[8].adviceWeek4Wednesday = newData.breadtypes[8].newInputWednesday }
+            } else { newData.breadtypes[8].adviceWeek4Wednesday = newData.breadtypes[8].newInputWednesday };
 
             if (parseInt(document.getElementById("roggerozijn_input").value) == 0) {
                 newData.breadtypes[9].adviceWeek4Wednesday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[9].adviceWeek4Wednesday = newData.breadtypes[9].newInputWednesday }
+            } else { newData.breadtypes[9].adviceWeek4Wednesday = newData.breadtypes[9].newInputWednesday };
 
             if (parseInt(document.getElementById("haverpompoen_input").value) == 0) {
                 newData.breadtypes[10].adviceWeek4Wednesday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[10].adviceWeek4Wednesday = newData.breadtypes[10].newInputWednesday }
+            } else { newData.breadtypes[10].adviceWeek4Wednesday = newData.breadtypes[10].newInputWednesday };
 
-
-        }
+        };
 
         if (activeDay == 4) {
-            newData.breadtypes[0].saveDateThursday = newToday
+            newData.breadtypes[0].saveDateThursday = newToday;
 
             newData.breadtypes[0].newInputThursday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
             newData.breadtypes[1].newInputThursday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -997,54 +979,52 @@ $(document).ready(function () {
 
             if (parseInt(document.getElementById("donkermeergranen_input").value) == 0) {
                 newData.breadtypes[0].adviceWeek4Thursday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[0].adviceWeek4Thursday = newData.breadtypes[0].newInputThursday }
+            } else { newData.breadtypes[0].adviceWeek4Thursday = newData.breadtypes[0].newInputThursday };
 
             if (parseInt(document.getElementById("zonnevolkoren_input").value) == 0) {
                 newData.breadtypes[1].adviceWeek4Thursday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[1].adviceWeek4Thursday = newData.breadtypes[1].newInputThursday }
+            } else { newData.breadtypes[1].adviceWeek4Thursday = newData.breadtypes[1].newInputThursday };
 
             if (parseInt(document.getElementById("wit_input").value) == 0) {
                 newData.breadtypes[2].adviceWeek4Thursday = parseInt(document.getElementById("wit_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[2].adviceWeek4Thursday = newData.breadtypes[2].newInputThursday }
+            } else { newData.breadtypes[2].adviceWeek4Thursday = newData.breadtypes[2].newInputThursday };
 
             if (parseInt(document.getElementById("tarwe_input").value) == 0) {
                 newData.breadtypes[3].adviceWeek4Thursday = parseInt(document.getElementById("tarwe_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[3].adviceWeek4Thursday = newData.breadtypes[3].newInputThursday }
+            } else { newData.breadtypes[3].adviceWeek4Thursday = newData.breadtypes[3].newInputThursday };
 
             if (parseInt(document.getElementById("volkoren_input").value) == 0) {
                 newData.breadtypes[4].adviceWeek4Thursday = parseInt(document.getElementById("volkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[4].adviceWeek4Thursday = newData.breadtypes[4].newInputThursday }
+            } else { newData.breadtypes[4].adviceWeek4Thursday = newData.breadtypes[4].newInputThursday };
 
             if (parseInt(document.getElementById("mais_input").value) == 0) {
                 newData.breadtypes[5].adviceWeek4Thursday = parseInt(document.getElementById("mais_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[5].adviceWeek4Thursday = newData.breadtypes[5].newInputThursday }
+            } else { newData.breadtypes[5].adviceWeek4Thursday = newData.breadtypes[5].newInputThursday };
 
             if (parseInt(document.getElementById("witmeerzaden_input").value) == 0) {
                 newData.breadtypes[6].adviceWeek4Thursday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[6].adviceWeek4Thursday = newData.breadtypes[6].newInputThursday }
+            } else { newData.breadtypes[6].adviceWeek4Thursday = newData.breadtypes[6].newInputThursday };
 
             if (parseInt(document.getElementById("spelt_input").value) == 0) {
                 newData.breadtypes[7].adviceWeek4Thursday = parseInt(document.getElementById("spelt_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[7].adviceWeek4Thursday = newData.breadtypes[7].newInputThursday }
+            } else { newData.breadtypes[7].adviceWeek4Thursday = newData.breadtypes[7].newInputThursday };
 
             if (parseInt(document.getElementById("roggevijgen_input").value) == 0) {
                 newData.breadtypes[8].adviceWeek4Thursday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[8].adviceWeek4Thursday = newData.breadtypes[8].newInputThursday }
+            } else { newData.breadtypes[8].adviceWeek4Thursday = newData.breadtypes[8].newInputThursday };
 
             if (parseInt(document.getElementById("roggerozijn_input").value) == 0) {
                 newData.breadtypes[9].adviceWeek4Thursday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[9].adviceWeek4Thursday = newData.breadtypes[9].newInputThursday }
+            } else { newData.breadtypes[9].adviceWeek4Thursday = newData.breadtypes[9].newInputThursday };
 
             if (parseInt(document.getElementById("haverpompoen_input").value) == 0) {
                 newData.breadtypes[10].adviceWeek4Thursday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[10].adviceWeek4Thursday = newData.breadtypes[10].newInputThursday }
+            } else { newData.breadtypes[10].adviceWeek4Thursday = newData.breadtypes[10].newInputThursday };
 
-
-
-        }
+        };
 
         if (activeDay == 5) {
-            newData.breadtypes[0].saveDateFriday = newToday
+            newData.breadtypes[0].saveDateFriday = newToday;
 
             newData.breadtypes[0].newInputFriday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
             newData.breadtypes[1].newInputFriday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -1073,54 +1053,52 @@ $(document).ready(function () {
 
             if (parseInt(document.getElementById("donkermeergranen_input").value) == 0) {
                 newData.breadtypes[0].adviceWeek4Friday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[0].adviceWeek4Friday = newData.breadtypes[0].newInputFriday }
+            } else { newData.breadtypes[0].adviceWeek4Friday = newData.breadtypes[0].newInputFriday };
 
             if (parseInt(document.getElementById("zonnevolkoren_input").value) == 0) {
                 newData.breadtypes[1].adviceWeek4Friday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[1].adviceWeek4Friday = newData.breadtypes[1].newInputFriday }
+            } else { newData.breadtypes[1].adviceWeek4Friday = newData.breadtypes[1].newInputFriday };
 
             if (parseInt(document.getElementById("wit_input").value) == 0) {
                 newData.breadtypes[2].adviceWeek4Friday = parseInt(document.getElementById("wit_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[2].adviceWeek4Friday = newData.breadtypes[2].newInputFriday }
+            } else { newData.breadtypes[2].adviceWeek4Friday = newData.breadtypes[2].newInputFriday };
 
             if (parseInt(document.getElementById("tarwe_input").value) == 0) {
                 newData.breadtypes[3].adviceWeek4Friday = parseInt(document.getElementById("tarwe_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[3].adviceWeek4Friday = newData.breadtypes[3].newInputFriday }
+            } else { newData.breadtypes[3].adviceWeek4Friday = newData.breadtypes[3].newInputFriday };
 
             if (parseInt(document.getElementById("volkoren_input").value) == 0) {
                 newData.breadtypes[4].adviceWeek4Friday = parseInt(document.getElementById("volkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[4].adviceWeek4Friday = newData.breadtypes[4].newInputFriday }
+            } else { newData.breadtypes[4].adviceWeek4Friday = newData.breadtypes[4].newInputFriday };
 
             if (parseInt(document.getElementById("mais_input").value) == 0) {
                 newData.breadtypes[5].adviceWeek4Friday = parseInt(document.getElementById("mais_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[5].adviceWeek4Friday = newData.breadtypes[5].newInputFriday }
+            } else { newData.breadtypes[5].adviceWeek4Friday = newData.breadtypes[5].newInputFriday };
 
             if (parseInt(document.getElementById("witmeerzaden_input").value) == 0) {
                 newData.breadtypes[6].adviceWeek4Friday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[6].adviceWeek4Friday = newData.breadtypes[6].newInputFriday }
+            } else { newData.breadtypes[6].adviceWeek4Friday = newData.breadtypes[6].newInputFriday };
 
             if (parseInt(document.getElementById("spelt_input").value) == 0) {
                 newData.breadtypes[7].adviceWeek4Friday = parseInt(document.getElementById("spelt_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[7].adviceWeek4Friday = newData.breadtypes[7].newInputFriday }
+            } else { newData.breadtypes[7].adviceWeek4Friday = newData.breadtypes[7].newInputFriday };
 
             if (parseInt(document.getElementById("roggevijgen_input").value) == 0) {
                 newData.breadtypes[8].adviceWeek4Friday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[8].adviceWeek4Friday = newData.breadtypes[8].newInputFriday }
+            } else { newData.breadtypes[8].adviceWeek4Friday = newData.breadtypes[8].newInputFriday };
 
             if (parseInt(document.getElementById("roggerozijn_input").value) == 0) {
                 newData.breadtypes[9].adviceWeek4Friday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[9].adviceWeek4Friday = newData.breadtypes[9].newInputFriday }
+            } else { newData.breadtypes[9].adviceWeek4Friday = newData.breadtypes[9].newInputFriday };
 
             if (parseInt(document.getElementById("haverpompoen_input").value) == 0) {
                 newData.breadtypes[10].adviceWeek4Friday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[10].adviceWeek4Friday = newData.breadtypes[10].newInputFriday }
+            } else { newData.breadtypes[10].adviceWeek4Friday = newData.breadtypes[10].newInputFriday };
 
-
-
-        }
+        };
 
         if (activeDay == 6) {
-            newData.breadtypes[0].saveDateSaturday = newToday
+            newData.breadtypes[0].saveDateSaturday = newToday;
 
             newData.breadtypes[0].newInputSaturday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
             newData.breadtypes[1].newInputSaturday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -1136,8 +1114,6 @@ $(document).ready(function () {
 
             $.each(newData.breadtypes, function (index, breadtype) {
 
-
-
                 this.inputWeek1Saturday = this.inputWeek2Saturday;
                 this.inputWeek2Saturday = this.inputWeek3Saturday;
                 this.inputWeek3Saturday = this.inputWeek4Saturday;
@@ -1151,58 +1127,53 @@ $(document).ready(function () {
 
             if (parseInt(document.getElementById("donkermeergranen_input").value) == 0) {
                 newData.breadtypes[0].adviceWeek4Saturday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[0].adviceWeek4Saturday = newData.breadtypes[0].newInputSaturday }
+            } else { newData.breadtypes[0].adviceWeek4Saturday = newData.breadtypes[0].newInputSaturday };
 
             if (parseInt(document.getElementById("zonnevolkoren_input").value) == 0) {
                 newData.breadtypes[1].adviceWeek4Saturday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[1].adviceWeek4Saturday = newData.breadtypes[1].newInputSaturday }
+            } else { newData.breadtypes[1].adviceWeek4Saturday = newData.breadtypes[1].newInputSaturday };
 
             if (parseInt(document.getElementById("wit_input").value) == 0) {
                 newData.breadtypes[2].adviceWeek4Saturday = parseInt(document.getElementById("wit_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[2].adviceWeek4Saturday = newData.breadtypes[2].newInputSaturday }
+            } else { newData.breadtypes[2].adviceWeek4Saturday = newData.breadtypes[2].newInputSaturday };
 
             if (parseInt(document.getElementById("tarwe_input").value) == 0) {
                 newData.breadtypes[3].adviceWeek4Saturday = parseInt(document.getElementById("tarwe_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[3].adviceWeek4Saturday = newData.breadtypes[3].newInputSaturday }
+            } else { newData.breadtypes[3].adviceWeek4Saturday = newData.breadtypes[3].newInputSaturday };
 
             if (parseInt(document.getElementById("volkoren_input").value) == 0) {
                 newData.breadtypes[4].adviceWeek4Saturday = parseInt(document.getElementById("volkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[4].adviceWeek4Saturday = newData.breadtypes[4].newInputSaturday }
+            } else { newData.breadtypes[4].adviceWeek4Saturday = newData.breadtypes[4].newInputSaturday };
 
             if (parseInt(document.getElementById("mais_input").value) == 0) {
                 newData.breadtypes[5].adviceWeek4Saturday = parseInt(document.getElementById("mais_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[5].adviceWeek4Saturday = newData.breadtypes[5].newInputSaturday }
+            } else { newData.breadtypes[5].adviceWeek4Saturday = newData.breadtypes[5].newInputSaturday };
 
             if (parseInt(document.getElementById("witmeerzaden_input").value) == 0) {
                 newData.breadtypes[6].adviceWeek4Saturday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[6].adviceWeek4Saturday = newData.breadtypes[6].newInputSaturday }
+            } else { newData.breadtypes[6].adviceWeek4Saturday = newData.breadtypes[6].newInputSaturday };
 
             if (parseInt(document.getElementById("spelt_input").value) == 0) {
                 newData.breadtypes[7].adviceWeek4Saturday = parseInt(document.getElementById("spelt_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[7].adviceWeek4Saturday = newData.breadtypes[7].newInputSaturday }
+            } else { newData.breadtypes[7].adviceWeek4Saturday = newData.breadtypes[7].newInputSaturday };
 
             if (parseInt(document.getElementById("roggevijgen_input").value) == 0) {
                 newData.breadtypes[8].adviceWeek4Saturday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[8].adviceWeek4Saturday = newData.breadtypes[8].newInputSaturday }
+            } else { newData.breadtypes[8].adviceWeek4Saturday = newData.breadtypes[8].newInputSaturday };
 
             if (parseInt(document.getElementById("roggerozijn_input").value) == 0) {
                 newData.breadtypes[9].adviceWeek4Saturday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[9].adviceWeek4Saturday = newData.breadtypes[9].newInputSaturday }
+            } else { newData.breadtypes[9].adviceWeek4Saturday = newData.breadtypes[9].newInputSaturday };
 
             if (parseInt(document.getElementById("haverpompoen_input").value) == 0) {
                 newData.breadtypes[10].adviceWeek4Saturday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[10].adviceWeek4Saturday = newData.breadtypes[10].newInputSaturday }
+            } else { newData.breadtypes[10].adviceWeek4Saturday = newData.breadtypes[10].newInputSaturday };
 
-
-
-
-
-
-        }
+        };
 
         if (activeDay == 0) {
-            console.log("Change Data")
-            newData.breadtypes[0].saveDateSunday = newToday
+            
+            newData.breadtypes[0].saveDateSunday = newToday;
 
             newData.breadtypes[0].newInputSunday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) - parseInt(document.getElementById("donkermeergranen_input").value);
             newData.breadtypes[1].newInputSunday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) - parseInt(document.getElementById("zonnevolkoren_input").value);
@@ -1226,56 +1197,54 @@ $(document).ready(function () {
                 this.adviceWeek1Sunday = this.adviceWeek2Sunday;
                 this.adviceWeek2Sunday = this.adviceWeek3Sunday;
                 this.adviceWeek3Sunday = this.adviceWeek4Sunday;
-                console.log("Weeks have shifted")
+                
             });
-            console.log("Check how much bread")
 
             if (parseInt(document.getElementById("donkermeergranen_input").value) == 0) {
                 newData.breadtypes[0].adviceWeek4Sunday = parseInt(document.getElementById("donkermeergranen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[0].adviceWeek4Sunday = newData.breadtypes[0].newInputSunday }
+            } else { newData.breadtypes[0].adviceWeek4Sunday = newData.breadtypes[0].newInputSunday };
 
             if (parseInt(document.getElementById("zonnevolkoren_input").value) == 0) {
                 newData.breadtypes[1].adviceWeek4Sunday = parseInt(document.getElementById("zonnevolkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[1].adviceWeek4Sunday = newData.breadtypes[1].newInputSunday }
+            } else { newData.breadtypes[1].adviceWeek4Sunday = newData.breadtypes[1].newInputSunday };
 
             if (parseInt(document.getElementById("wit_input").value) == 0) {
                 newData.breadtypes[2].adviceWeek4Sunday = parseInt(document.getElementById("wit_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[2].adviceWeek4Sunday = newData.breadtypes[2].newInputSunday }
+            } else { newData.breadtypes[2].adviceWeek4Sunday = newData.breadtypes[2].newInputSunday };
 
             if (parseInt(document.getElementById("tarwe_input").value) == 0) {
                 newData.breadtypes[3].adviceWeek4Sunday = parseInt(document.getElementById("tarwe_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[3].adviceWeek4Sunday = newData.breadtypes[3].newInputSunday }
+            } else { newData.breadtypes[3].adviceWeek4Sunday = newData.breadtypes[3].newInputSunday };
 
             if (parseInt(document.getElementById("volkoren_input").value) == 0) {
                 newData.breadtypes[4].adviceWeek4Sunday = parseInt(document.getElementById("volkoren_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[4].adviceWeek4Sunday = newData.breadtypes[4].newInputSunday }
+            } else { newData.breadtypes[4].adviceWeek4Sunday = newData.breadtypes[4].newInputSunday };
 
             if (parseInt(document.getElementById("mais_input").value) == 0) {
                 newData.breadtypes[5].adviceWeek4Sunday = parseInt(document.getElementById("mais_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[5].adviceWeek4Sunday = newData.breadtypes[5].newInputSunday }
+            } else { newData.breadtypes[5].adviceWeek4Sunday = newData.breadtypes[5].newInputSunday };
 
             if (parseInt(document.getElementById("witmeerzaden_input").value) == 0) {
                 newData.breadtypes[6].adviceWeek4Sunday = parseInt(document.getElementById("witmeerzaden_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[6].adviceWeek4Sunday = newData.breadtypes[6].newInputSunday }
+            } else { newData.breadtypes[6].adviceWeek4Sunday = newData.breadtypes[6].newInputSunday };
 
             if (parseInt(document.getElementById("spelt_input").value) == 0) {
                 newData.breadtypes[7].adviceWeek4Sunday = parseInt(document.getElementById("spelt_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[7].adviceWeek4Sunday = newData.breadtypes[7].newInputSunday }
+            } else { newData.breadtypes[7].adviceWeek4Sunday = newData.breadtypes[7].newInputSunday };
 
             if (parseInt(document.getElementById("roggevijgen_input").value) == 0) {
                 newData.breadtypes[8].adviceWeek4Sunday = parseInt(document.getElementById("roggevijgen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[8].adviceWeek4Sunday = newData.breadtypes[8].newInputSunday }
+            } else { newData.breadtypes[8].adviceWeek4Sunday = newData.breadtypes[8].newInputSunday };
 
             if (parseInt(document.getElementById("roggerozijn_input").value) == 0) {
                 newData.breadtypes[9].adviceWeek4Sunday = parseInt(document.getElementById("roggerozijn_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[9].adviceWeek4Sunday = newData.breadtypes[9].newInputSunday }
+            } else { newData.breadtypes[9].adviceWeek4Sunday = newData.breadtypes[9].newInputSunday };
 
             if (parseInt(document.getElementById("haverpompoen_input").value) == 0) {
                 newData.breadtypes[10].adviceWeek4Sunday = parseInt(document.getElementById("haverpompoen_tobe_baked").value) + constantAdder
-            } else { newData.breadtypes[10].adviceWeek4Sunday = newData.breadtypes[10].newInputSunday }
+            } else { newData.breadtypes[10].adviceWeek4Sunday = newData.breadtypes[10].newInputSunday };
 
-
-        }
+        };
 
         sendData();
 
@@ -1291,9 +1260,7 @@ $(document).ready(function () {
         xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xhr.onload = function () {
             if (this.readyState == 4 && this.status == 200) {
-                newData = JSON.parse(newData)
-                console.log(newData.breadtypes[0].saveDateWednesday)
-                console.log(newData)
+                newData = JSON.parse(newData);
                 $("#spinner").hide();
                 $("#modalbodytext").hide();
                 $("#closebutton").show();
