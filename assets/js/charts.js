@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     // Load data from API
 
-    const baseURL = "https://api.myjson.com/bins/qer70";
+    const baseURL = "https://api.myjson.com/bins/15jrkm";
 
     function getData(cb) {
 
@@ -101,6 +101,8 @@ $(document).ready(function () {
             breadData.breadtypes[0].inputWeek3Tuesday + breadData.breadtypes[0].inputWeek3Wednesday + breadData.breadtypes[0].inputWeek3Thursday + breadData.breadtypes[0].inputWeek3Friday + breadData.breadtypes[0].inputWeek3Saturday + breadData.breadtypes[0].inputWeek3Sunday +
             breadData.breadtypes[0].inputWeek2Tuesday + breadData.breadtypes[0].inputWeek2Wednesday + breadData.breadtypes[0].inputWeek2Thursday + breadData.breadtypes[0].inputWeek2Friday + breadData.breadtypes[0].inputWeek2Saturday + breadData.breadtypes[0].inputWeek2Sunday +
             breadData.breadtypes[0].inputWeek1Tuesday + breadData.breadtypes[0].inputWeek1Wednesday + breadData.breadtypes[0].inputWeek1Thursday + breadData.breadtypes[0].inputWeek1Friday + breadData.breadtypes[0].inputWeek1Saturday + breadData.breadtypes[0].inputWeek1Sunday;
+
+        
 
         tot4weekZonnevolkoren = breadData.breadtypes[1].inputWeek4Tuesday + breadData.breadtypes[1].inputWeek4Wednesday + breadData.breadtypes[1].inputWeek4Thursday + breadData.breadtypes[1].inputWeek4Friday + breadData.breadtypes[1].inputWeek4Saturday + breadData.breadtypes[1].inputWeek4Sunday +
             breadData.breadtypes[1].inputWeek3Tuesday + breadData.breadtypes[1].inputWeek3Wednesday + breadData.breadtypes[1].inputWeek3Thursday + breadData.breadtypes[1].inputWeek3Friday + breadData.breadtypes[1].inputWeek3Saturday + breadData.breadtypes[1].inputWeek3Sunday +
