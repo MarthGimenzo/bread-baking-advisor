@@ -6,21 +6,16 @@
   url('fonts/travelingtypewriter-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
 html {
   height: 100%;
-  
 }
 
 body {
   font-family: 'traveling__typewriterregular', Arial, sans-serif;
   background: url(/assets/images/backgroundbakingadvisor.png);
-  
   background-size: 30%;
-  
-  
 }
 
 #backgroundcolor {
@@ -35,7 +30,6 @@ body {
 a {
     color:;
     color: #6c757d;
-    
 }
 
 a:hover {
@@ -119,13 +113,10 @@ input {
   font-weight: bold;
 }
 
-
-
 .dropdown {
   font-size: 1vw;
   text-align: center;
   font-weight: bold;
-
 }
 
 .table-sm td,
@@ -134,14 +125,11 @@ input {
 }
 
 .table {
-    
     margin-bottom: 0;
-    
 }
 
 button {
   width: 90%;
-
 }
 
 .btn-primary {
@@ -175,13 +163,11 @@ button {
 }
 
 .breadamountview {
-  max-width: 50px;
+    max-width: 50px;
 }
 
 .alert {
-    
     margin-bottom: 0;
-    
 }
 
 .alert-warning {
@@ -229,7 +215,22 @@ button {
     margin-bottom: 15px;
 }
 
+.bar { 
+    fill: #e68a2b; 
+}
 
+text {
+    font-family: 'traveling__typewriterregular', Arial, sans-serif;
+    font-weight: bold;
+}
+
+svg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Media Queries */
 
 @media screen and (min-width: 992px) {
   h1 {
@@ -255,25 +256,4 @@ button {
     font-weight: bold;
 
   }
-}
-
-.bar { 
-    fill: #e68a2b; 
-    
-    }
-
-text {
-    font-family: 'traveling__typewriterregular', Arial, sans-serif;
-    font-weight: bold;
-}
-
-svg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-/* Activate dropdown menu */
-
-.active {
-  
 }
