@@ -220,9 +220,80 @@ $(document).ready(function () {
         adviceSundayRoggerozijn = Math.round((newData.breadtypes[9].adviceWeek1Sunday + newData.breadtypes[9].adviceWeek2Sunday + newData.breadtypes[9].adviceWeek3Sunday + newData.breadtypes[9].adviceWeek4Sunday) / 4);
         adviceSundayHaverpompoen = Math.round((newData.breadtypes[10].adviceWeek1Sunday + newData.breadtypes[10].adviceWeek2Sunday + newData.breadtypes[10].adviceWeek3Sunday + newData.breadtypes[10].adviceWeek4Sunday) / 4);
         
-        
+        // Check here if bread advice of certain type is 2 or less. Then change it to 3.
+        // The Bakery Cafe wants a minimum amount of bread baked of every type every day.
 
+        if (adviceTuesdayDonkermeergranen < 3) { adviceTuesdayDonkermeergranen = 3 };
+        if (adviceTuesdayZonnevolkoren < 3) { adviceTuesdayZonnevolkoren = 3 };
+        if (adviceTuesdayWit < 3) { adviceTuesdayWit = 3 };
+        if (adviceTuesdayTarwe < 3) { adviceTuesdayTarwe = 3 };
+        if (adviceTuesdayVolkoren < 3) { adviceTuesdayVolkoren = 3 };
+        if (adviceTuesdayMais < 3) { adviceTuesdayMais = 3 };
+        if (adviceTuesdayWitmeerzaden < 3) { adviceTuesdayWitmeerzaden = 3 };
+        if (adviceTuesdaySpelt < 3) { adviceTuesdaySpelt = 3 };
+        if (adviceTuesdayRoggevijgen < 3) { adviceTuesdayRoggevijgen = 3 };
+        if (adviceTuesdayRoggerozijn < 3) { adviceTuesdayRoggerozijn = 3 };
+        if (adviceTuesdayHaverpompoen < 3) { adviceTuesdayHaverpompoen = 3 };
 
+        if (adviceWednesdayDonkermeergranen < 3) { adviceWednesdayDonkermeergranen = 3 };
+        if (adviceWednesdayZonnevolkoren < 3) { adviceWednesdayZonnevolkoren = 3 };
+        if (adviceWednesdayWit < 3) { adviceWednesdayWit = 3 };
+        if (adviceWednesdayTarwe < 3) { adviceWednesdayTarwe = 3 };
+        if (adviceWednesdayVolkoren < 3) { adviceWednesdayVolkoren = 3 };
+        if (adviceWednesdayMais < 3) { adviceWednesdayMais = 3 };
+        if (adviceWednesdayWitmeerzaden < 3) { adviceWednesdayWitmeerzaden = 3 };
+        if (adviceWednesdaySpelt < 3) { adviceWednesdaySpelt = 3 };
+        if (adviceWednesdayRoggevijgen < 3) { adviceWednesdayRoggevijgen = 3 };
+        if (adviceWednesdayRoggerozijn < 3) { adviceWednesdayRoggerozijn = 3 };
+        if (adviceWednesdayHaverpompoen < 3) { adviceWednesdayHaverpompoen = 3 };
+
+        if (adviceThursdayDonkermeergranen < 3) { adviceThursdayDonkermeergranen = 3 };
+        if (adviceThursdayZonnevolkoren < 3) { adviceThursdayZonnevolkoren = 3 };
+        if (adviceThursdayWit < 3) { adviceThursdayWit = 3 };
+        if (adviceThursdayTarwe < 3) { adviceThursdayTarwe = 3 };
+        if (adviceThursdayVolkoren < 3) { adviceThursdayVolkoren = 3 };
+        if (adviceThursdayMais < 3) { adviceThursdayMais = 3 };
+        if (adviceThursdayWitmeerzaden < 3) { adviceThursdayWitmeerzaden = 3 };
+        if (adviceThursdaySpelt < 3) { adviceThursdaySpelt = 3 };
+        if (adviceThursdayRoggevijgen < 3) { adviceThursdayRoggevijgen = 3 };
+        if (adviceThursdayRoggerozijn < 3) { adviceThursdayRoggerozijn = 3 };
+        if (adviceThursdayHaverpompoen < 3) { adviceThursdayHaverpompoen = 3 };
+
+        if (adviceFridayDonkermeergranen < 3) { adviceFridayDonkermeergranen = 3 };
+        if (adviceFridayZonnevolkoren < 3) { adviceFridayZonnevolkoren = 3 };
+        if (adviceFridayWit < 3) { adviceFridayWit = 3 };
+        if (adviceFridayTarwe < 3) { adviceFridayTarwe = 3 };
+        if (adviceFridayVolkoren < 3) { adviceFridayVolkoren = 3 };
+        if (adviceFridayMais < 3) { adviceFridayMais = 3 };
+        if (adviceFridayWitmeerzaden < 3) { adviceFridayWitmeerzaden = 3 };
+        if (adviceFridaySpelt < 3) { adviceFridaySpelt = 3 };
+        if (adviceFridayRoggevijgen < 3) { adviceFridayRoggevijgen = 3 };
+        if (adviceFridayRoggerozijn < 3) { adviceFridayRoggerozijn = 3 };
+        if (adviceFridayHaverpompoen < 3) { adviceFridayHaverpompoen = 3 };
+
+        if (adviceSaturdayDonkermeergranen < 3) { adviceSaturdayDonkermeergranen = 3 };
+        if (adviceSaturdayZonnevolkoren < 3) { adviceSaturdayZonnevolkoren = 3 };
+        if (adviceSaturdayWit < 3) { adviceSaturdayWit = 3 };
+        if (adviceSaturdayTarwe < 3) { adviceSaturdayTarwe = 3 };
+        if (adviceSaturdayVolkoren < 3) { adviceSaturdayVolkoren = 3 };
+        if (adviceSaturdayMais < 3) { adviceSaturdayMais = 3 };
+        if (adviceSaturdayWitmeerzaden < 3) { adviceSaturdayWitmeerzaden = 3 };
+        if (adviceSaturdaySpelt < 3) { adviceSaturdaySpelt = 3 };
+        if (adviceSaturdayRoggevijgen < 3) { adviceSaturdayRoggevijgen = 3 };
+        if (adviceSaturdayRoggerozijn < 3) { adviceSaturdayRoggerozijn = 3 };
+        if (adviceSaturdayHaverpompoen < 3) { adviceSaturdayHaverpompoen = 3 };
+
+        if (adviceSundayDonkermeergranen < 3) { adviceSundayDonkermeergranen = 3 };
+        if (adviceSundayZonnevolkoren < 3) { adviceSundayZonnevolkoren = 3 };
+        if (adviceSundayWit < 3) { adviceSundayWit = 3 };
+        if (adviceSundayTarwe < 3) { adviceSundayTarwe = 3 };
+        if (adviceSundayVolkoren < 3) { adviceSundayVolkoren = 3 };
+        if (adviceSundayMais < 3) { adviceSundayMais = 3 };
+        if (adviceSundayWitmeerzaden < 3) { adviceSundayWitmeerzaden = 3 };
+        if (adviceSundaySpelt < 3) { adviceSundaySpelt = 3 };
+        if (adviceSundayRoggevijgen < 3) { adviceSundayRoggevijgen = 3 };
+        if (adviceSundayRoggerozijn < 3) { adviceSundayRoggerozijn = 3 };
+        if (adviceSundayHaverpompoen < 3) { adviceSundayHaverpompoen = 3 };
 
     }
 
