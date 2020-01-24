@@ -52,12 +52,15 @@ Even though it is possible to view the website on a desktop computer, it is desi
 •	The ‘Bread Baking Adviser’ logo has been created in InDesign using the Bakery Café logo on the website, combined with the Traveling Typewriter font.
 
 ## Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
 ### Existing Features
 •	A tab at the top of the website with 3 clickable tabs.
-•	
-•	...
+•	A dropdown button where the user can click on the day to be viewed.
+• The dropdown button automatically detects the current day of the week and adjusts itself.
+•	Advice section - This tab provides information about the amount of bread to be placed on the bread wagons and the amount of bread to baked that day. 
+• Input section - On this tab, the user is able to input and submit the amounts of bread that were baked and left ober on the selected day. It will check if the data is valid and then sends it to an external API.
+• Overview section - This tab provides two horizontal barcharts; one about the amount of bread that was consumed last week, and one about the amount of bread that was consumed last four weeks. This section also provides advice on how much boxes should be ordered weekly, based on the weekly bread consumption.
+
 
 ### Features Left to Implement
 
