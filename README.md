@@ -10,16 +10,18 @@ The main user type of the Bread Baking Advicer is bakers. It is developed for ba
 
 Since the goal of the app is fairly simple, the tool will be developed as a website that can be accessed easily by employees of the bakery and provide them with the needed advice as simple as possible. Therefore, the website will be developed as mobile first, so that users of the tool can access it easily when needed without the use of a computer. However, if needed the website can be accessed using a laptop or desktop computer as well. All data that will be input and viewed, should be displayed on one page as much as possible.
 
-To simplify the initial development process, the tool will be designed for a specific bakery called The Bakery Café that is located in Groningen, the Netherlands. In a later stadium, the functionalities of the tool will be extended so that it can be used by all bakeries.
+To simplify the initial development process, the tool will be designed for a specific bakery called The Bakery Café that is located in Groningen, the Netherlands. In a later stadium, the functionalities of the tool can be extended so that it can be used by all bakeries.
 
 ### The Bakery Café baking process
 
 To make sense of the user stories in the next section, it should be mentioned that the bread baking process can be divided into three days at The Bakery Café and is as followed:
 
 #### Day 1
+
 The right amount of bread is placed on several bread wagons. There is a max of 40 pieces of bread per bread wagon. The bread wagons are then placed in the freezer until the next day. As for the use of the Bread Baking Advicer, this would be the moment to check for advice on the right amount of bread that should be placed on the bread wagons.
 
 #### Day 2
+
 The bread wagons are taken out of the freezer and semi-defrosted so that they can be decorated. After that, the bread wagons will be placed into the proofing unit.
 
 #### Day 3
@@ -54,24 +56,49 @@ Even though it is possible to view the website on a desktop computer, it is desi
 ## Features
 
 ### Existing Features
-•	A tab at the top of the website with 3 clickable tabs.
-•	A dropdown button where the user can click on the day to be viewed.
-• The dropdown button automatically detects the current day of the week and adjusts itself.
-•	Advice section - This tab provides information about the amount of bread to be placed on the bread wagons and the amount of bread to baked that day. 
-• Input section - On this tab, the user is able to input and submit the amounts of bread that were baked and left ober on the selected day. It will check if the data is valid and then sends it to an external API.
-• Overview section - This tab provides two horizontal barcharts; one about the amount of bread that was consumed last week, and one about the amount of bread that was consumed last four weeks. This section also provides advice on how much boxes should be ordered weekly, based on the weekly bread consumption.
+•	A tab at the top of the website with 3 clickable tabs;
 
+•	A dropdown button where the user can click on the day to be viewed;
+
+• The dropdown button automatically detects the current day of the week and adjusts itself;
+
+•	Advice section - This tab provides information about the amount of bread to be placed on the bread wagons and the amount of bread to baked that day;
+
+• Input section - On this tab, the user is able to input and submit the amounts of bread that were baked and left ober on the selected day. It will check if the data is valid and then sends it to an external API;
+
+• Overview section - This tab provides two horizontal barcharts; one about the amount of bread that was consumed last week, and one about the amount of bread that was consumed last four weeks. This section also provides advice on how much boxes should be ordered weekly, based on the weekly bread consumption;
+
+• Documentation - The ReadMe file and Mockups;
+
+• Responsive design;
+
+• Accessibility - Simple transactions of information;
+
+• Branding;
+
+• Git Version Control;
+
+• Hosted on GitHub pages;
+
+• A Favicon icon.
 
 ### Features Left to Implement
 
-•	Another feature idea
+•	Submitted data cannot be edited or deleted. In the future, this feature will be implemented;
+
+• A feature that gives the user the ability to add or delete breadtypes, so it can be used by different bakeries;
+
+• A feature that gives the user the ability to indicate if a special event is taking place. Thus, more or less bread will be calculated based on this.
+
+• A feature that gives the user the ability to define how much bread should be added in the next calculation when a bread is sold out. For example, if a type of bread is sold out, the bread baking advisor will take into account that at least one more bread should be baked next time. In the future, the user can adjust this amount;
+
+• A feature that gives the user the ability to define how much bread should at least be baked. For example, if not more than two pieces of a type of bread were sold in four consecutive weeks, it will want to advice not to bake more than two. However the user will be able to define the minimum amount of bread that should be baked.
+
+• A feature to view graphs of specific types of bread. The user will be able to see a timeline of the consumption of a type of bread in the last 4 weeks for a specific day.
 
 ## Technologies Used
 
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
 
-•	JQuery
-o	The project uses JQuery to simplify DOM manipulation.
 
 ## Testing
 
