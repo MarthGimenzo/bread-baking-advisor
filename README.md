@@ -121,6 +121,11 @@ Even though it is possible to view the website on a desktop computer, it is desi
   
 - jQuery
   - The project uses jQuery to simplify DOM manipulation.
+ 
+- Popper
+  - Tooltip & popover positioning engine was used by Bootstrap.
+
+- 
 
 - Gitpod
   - The website was built in Gitpod.
