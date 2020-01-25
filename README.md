@@ -101,6 +101,45 @@ Even though it is possible to view the website on a desktop computer, it is desi
 - HTML
   - HTML for the structure of the website.
 
+- CSS
+  CSS for the styling of the website.
+
+- Javascript
+  Javascript was used for calculations and to make the website more interactive.
+  
+- Google Chrome
+  - Developer Tools.
+
+- Balsamiq
+  - Used for creating mockups.
+
+- Photoshop
+  - Used for editing the background and to create the logo.
+  
+- Bootstrap
+  - Used for frameworks.
+  
+- jQuery
+  - The project uses jQuery to simplify DOM manipulation.
+
+- Gitpod
+  - The website was built in Gitpod.
+
+- Git
+  - Git was used for version control.
+
+- GitHub
+  - The repository is hosted on GitHub.
+
+- GitHub Pages
+  - The website is hosted on GitHub pages.
+  
+- W3C Markup Validation Service
+  - Used to check the markup validity of the website.
+
+- Favicon
+  Favicon was used to replace the icon in the tab of the browser.
+
 
 ## Testing
 
