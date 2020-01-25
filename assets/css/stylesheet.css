@@ -230,6 +230,14 @@ svg {
     margin-right: auto;
 }
 
+#leftoverbreadcantbehigher, 
+#leftoverbreadcantbeminuszero, 
+#leftoverbreadshouldbevalue,
+#leftoverbreadinteger,
+#leftoverbreadforty {
+    display: none;
+}
+
 /* Media Queries */
 
 @media screen and (min-width: 992px) {

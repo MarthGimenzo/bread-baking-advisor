@@ -2,29 +2,18 @@
 <html lang="en">
 
 <head>
-
-	<!-- Required meta tags -->
-
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<!-- CSS -->
-
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" href="" type="text/css" />
-	<link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" charset="utf-8" />
-
+	<link rel="stylesheet" href="assets/css/stylesheet.css" type="text/css" />
 	<title>Bread Baking Advisor</title>
-
 </head>
 
-    <header>
-	<img id="logo" src="/assets/images/Breadbakingadvisor.png" alt="Bread Baking Advisor">
+<body>
+	<header>
+		<img id="logo" src="/assets/images/Breadbakingadvisor.png" alt="Bread Baking Advisor">
     </header>
-
-	<body>
-
 		<div class="container-fluid">
 			<ul class="nav nav-tabs nav-fill">
 				<li class="nav-item">
@@ -53,18 +42,18 @@
 					</div>
 				</div>
 			</div>
-			<div class="container-fluid">
-				<table class="table table-sm">
-					<thead>
-						<tr>
-							<th scope="col"></th>
-							<th scope="col">Amount of pieces <br>that were baked:</th>
-							<th scope="col">Amount of pieces <br>that were left:</th>
+			<form action="/action_page.php">
+				<div class="container-fluid">
+					<table class="table table-sm">
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">Amount of pieces <br>that were baked:</th>
+								<th scope="col">Amount of pieces <br>that were left:</th>
 
-						</tr>
-					</thead>
-					<tbody>
-						<form action="/action_page.php">
+							</tr>
+						</thead>
+						<tbody>
 							<tr>
 								<th scope="row">Donker Meergranen</th>
 								<td>
@@ -107,9 +96,9 @@
 									<input id="volkoren_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
                             </td>
 								<td>
-									<input id="volkoren_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0"
+									<input id="volkoren_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                             </tr>
-                        <tr>
+							<tr>
 								<th scope="row">Mais</th>
 								<td>
 									<input id="mais_tobe_baked" class="breadamountview" type="number" min="0" max="40" value="0" tabindex="-1">
@@ -163,10 +152,11 @@
 									<input id="haverpompoen_input" class="breadamountview" type="number" onfocus="this.value=''" min="0" max="40" value="0">
                             </td>
 							</tr>
-						</form>
-					</tbody>
-				</table>
-			</div>
+
+						</tbody>
+					</table>
+				</div>
+			</form>
 			<div class="container">
 				<div class="row">
 					<div class="col-2">
@@ -183,30 +173,27 @@
 					</div>
 				</div>
 			</div>
-
-
 		</div>
-		<div id="leftoverbreadcantbehigher" class="alert alert-warning" display="none">
+		<div id="leftoverbreadcantbehigher" class="alert alert-warning">
 			<strong>Huh?</strong> Leftover bread can't be more than baked bread.
 		</div>
-		<div id="leftoverbreadcantbeminuszero" class="alert alert-warning" display="none">
+		<div id="leftoverbreadcantbeminuszero" class="alert alert-warning">
 			<strong>Less than 0?</strong> At least 0 breads will have been leftover, right? Please check your inputted
 			values.
 		</div>
-		<div id="leftoverbreadshouldbevalue" class="alert alert-warning" display="none">
+		<div id="leftoverbreadshouldbevalue" class="alert alert-warning">
 			<strong>Input a number!</strong> The Bread Baking Advisor needs numbers. Please check your inputted values
 			for
 			empty fields or letters.
 		</div>
-		<div id="leftoverbreadinteger" class="alert alert-warning" display="none">
+		<div id="leftoverbreadinteger" class="alert alert-warning">
 			<strong>We don't do half breads!</strong> Please enter a full number, not halves or something in between.
 			Please
 			check your inputted values.
 		</div>
-		<div id="leftoverbreadforty" class="alert alert-warning" display="none">
+		<div id="leftoverbreadforty" class="alert alert-warning">
 			<strong>That much?</strong> The Bread Baking Advisor only accepts values 0 to 40. No need to exaggerate.
 		</div>
-
 		<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 			aria-hidden="true">
 			<div class="modal-dialog" role="document">
@@ -234,56 +221,45 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="modal fade" id="alreadySaved" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 			aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Whoops!</h5>
+						<h5 class="modal-title">Whoops!</h5>
 
 					</div>
 
-					<div id="modalbodytext" class="modal-body">
+					<div class="modal-body">
 						It looks like you have already saved this data today. Currently it is not possible to edit saved
 						data but in the future this function will be implemented. You can add new data tomorrow.
 					</div>
 
 
-					<div id="dismisssavebutton" class="modal-footer">
-						<button id="closebutton" type="button" class="btn btn-secondary" data-dismiss="modal">Ok!</button>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Ok!</button>
 
 					</div>
 
 				</div>
 			</div>
 		</div>
+		<footer>
+			<button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit for today!</button>
+		</footer>
 
+		<!-- JavaScript -->
 
-
-
-
-
-
-
-
-	</body>
-
-	<footer>
-		<button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit for today!</button>
-	</footer>
-
-	<!-- JavaScript -->
-
-	<script src="https://code.jquery.com/jquery-3.4.1.js" 
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
-    </script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-	</script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-	</script>
-	<script type="text/javascript" src="assets/js/format.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.js"
+			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+		</script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+		</script>
+		<script src="assets/js/format.js"></script>
+</body>
 
 </html>
