@@ -98,6 +98,8 @@ Even though it is possible to view the website on a desktop computer, it is desi
 
 ## Technologies Used
 
+- HTML
+  - HTML for the structure of the website.
 
 
 ## Testing
