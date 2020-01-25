@@ -135,10 +135,8 @@ Even though it is possible to view the website on a desktop computer, it is desi
   - DC was used to support Crossfilter and D3.
   
 - Queue.js
-  Queue.js was used to support DC, Crossfilter and D3.
+  - Queue.js was used to support DC, Crossfilter and D3.
   
-
-
 - Gitpod
   - The website was built in Gitpod.
 
