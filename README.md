@@ -125,7 +125,19 @@ Even though it is possible to view the website on a desktop computer, it is desi
 - Popper
   - Tooltip & popover positioning engine was used by Bootstrap.
 
-- 
+- D3
+  - D3 was used for manipulating documents based on the data in the API.
+  
+- Crossfilter
+  - Crossfilter was used to support D3.
+
+- DC
+  - DC was used to support Crossfilter and D3.
+  
+- Queue.js
+  Queue.js was used to support DC, Crossfilter and D3.
+  
+
 
 - Gitpod
   - The website was built in Gitpod.
