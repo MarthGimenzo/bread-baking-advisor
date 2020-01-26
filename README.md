@@ -160,29 +160,29 @@ Even though it is possible to view the website on a desktop computer, it is desi
 ### Advice section
 
 1. Users want to see how much bread they need to put on the bread wagon on the current day.
-  i. When the page is visited the current day is automatically viewed. This has been tested on all days of the week.
-  ii. When another day is selected, all data changes immediately according to the selected day.
-  iii. All viewed amounts of bread are checked with the API it is loaded from. All numbers are viewed at the correct spots.
-  iv. Different data files with different amounts were tested to see if all calculations are done correctly. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
-  v. The total amounts of bread are checked with different data values and are calculated correctly.
+  1. When the page is visited the current day is automatically viewed. This has been tested on all days of the week.
+  2. When another day is selected, all data changes immediately according to the selected day.
+  3. All viewed amounts of bread are checked with the API it is loaded from. All numbers are viewed at the correct spots.
+  4. Different data files with different amounts were tested to see if all calculations are done correctly. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
+  5. The total amounts of bread are checked with different data values and are calculated correctly.
 
 2. Users want to switch between the Advice, Input and Overview section.
-  i. When clicked on the tabs at the top of the page the user is redirected to the correct page.
-  ii. When clicked on the 'Overview' button at the bottom of the page, the user is redirected to the overview page immediately.
+  1. When clicked on the tabs at the top of the page the user is redirected to the correct page.
+  2. When clicked on the 'Overview' button at the bottom of the page, the user is redirected to the overview page immediately.
   
 ### Input section
 
 1. Users want to edit or input the amounts of bread.
-  i. When clicked on the input space, the space is automatically emptied for ease of use and to prevent the user from entering too many digits.
-  ii. The user is only able to enter a number between 0 and 40. This is defined in the form element. If the user does manage to enter a number that is not between 0 and 40 (for example by using copy-paste) and tries to submit it, an error message will pop up at the bottom of the page to point out that the user should input a number between 0 and 40.
-  iii. The user cannot submit an empty field. If the user uses backspace to delete the value in the form and leaves it empty when submitting, an error message will pop up at the bottom of the page to point out that all fields need to contain a value.
-  iv. The user cannot submit a letter or a float. When the user tries to submit this, an error message will pop up at the bottom of the page to point out that the user should input numerical value and that it should be an integer.
-  v. The user cannot submit a negative value. When the user tries to submit this, an error message will pop up at the bottom of the page to point out that the user should input a positive value.
-  vi. The user cannot submit more leftover bread than baked bread. In other words: if the value in the left column is lower than the corresponding value in the right column, an error message will pop up at the bottom of the page to point out that leftover bread cannot be higher than the amount of baked bread.
+  1. When clicked on the input space, the space is automatically emptied for ease of use and to prevent the user from entering too many digits.
+  2. The user is only able to enter a number between 0 and 40. This is defined in the form element. If the user does manage to enter a number that is not between 0 and 40 (for example by using copy-paste) and tries to submit it, an error message will pop up at the bottom of the page to point out that the user should input a number between 0 and 40.
+  3. The user cannot submit an empty field. If the user uses backspace to delete the value in the form and leaves it empty when submitting, an error message will pop up at the bottom of the page to point out that all fields need to contain a value.
+  4. The user cannot submit a letter or a float. When the user tries to submit this, an error message will pop up at the bottom of the page to point out that the user should input numerical value and that it should be an integer.
+  5. The user cannot submit a negative value. When the user tries to submit this, an error message will pop up at the bottom of the page to point out that the user should input a positive value.
+  6. The user cannot submit more leftover bread than baked bread. In other words: if the value in the left column is lower than the corresponding value in the right column, an error message will pop up at the bottom of the page to point out that leftover bread cannot be higher than the amount of baked bread.
 
 2. Users want to submit their inputted data.
-  i. When the inputted data is not valid according to the above described rules, the data won't be sent.
-  ii. When data has already been submitted for a certain day, the submit button will turn grey and displays the text: 'Already submitted'. This refreshes every day. For example, if a user enters data on a tuesday, for that tuesday, it can not be submitted again that tuesday. On wednesday, if needed, the user will be able to submit new data for tuesday. Because it is likely that several employees are at work on a certain day, it should be prevented that more than one user submits data for a certain day. 
+  1. When the inputted data is not valid according to the above described rules, the data won't be sent.
+  2. When data has already been submitted for a certain day, the submit button will turn grey and displays the text: 'Already submitted'. This refreshes every day. For example, if a user enters data on a tuesday, for that tuesday, it can not be submitted again that tuesday. On wednesday, if needed, the user will be able to submit new data for tuesday. Because it is likely that several employees are at work on a certain day, it should be prevented that more than one user submits data for a certain day. 
 
 *Note: The bread baking advisors remembers all the data for a specific day, for all types of bread, for a total of four weeks. When new data is submitted, it forgets the data of week 4 and replaces it with the data of week 3. Data of week 3 becomes data of week 2, and data of week 2 becomes data of week 1. The newly submitted data is stored in week 1. Should it happen that data is submitted for a certain day more than once, the weeks will shift according to this system and the total amounts for that day wont be as accurate anymore. To prevent this from happening, a date is viewed above the submit button so the user can see when the data for a specific data has been updated most recently. I am aware that this is not the most solid system, but at the point of developing it seemed to complex to change this system. As described in the 'Features left to implement', it is planned to develop a system for editing data to make the system more solid.*
 
