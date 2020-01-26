@@ -160,11 +160,11 @@ Even though it is possible to view the website on a desktop computer, it is desi
 ### Advice section
 
 1. Users want to see how much bread they need to put on the bread wagon on the current day.
-  1. When the page is visited the current day is automatically viewed. This has been tested on all days of the week.
-  2. When another day is selected, all data changes immediately according to the selected day.
-  3. All viewed amounts of bread are checked with the API it is loaded from. All numbers are viewed at the correct spots.
-  4. Different data files with different amounts were tested to see if all calculations are done correctly. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
-  5. The total amounts of bread are checked with different data values and are calculated correctly.
+    1. When the page is visited the current day is automatically viewed. This has been tested on all days of the week.
+    2. When another day is selected, all data changes immediately according to the selected day.
+    3. All viewed amounts of bread are checked with the API it is loaded from. All numbers are viewed at the correct spots.
+    4. Different data files with different amounts were tested to see if all calculations are done correctly. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
+    5. The total amounts of bread are checked with different data values and are calculated correctly.
 
 2. Users want to switch between the Advice, Input and Overview section.
   1. When clicked on the tabs at the top of the page the user is redirected to the correct page.
