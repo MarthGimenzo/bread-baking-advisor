@@ -201,13 +201,37 @@ Even though it is possible to view the website on a desktop computer, it is desi
 3. Users want to see how much bread was sold last four weeks.
     1. When chart data is loaded, amounts are viewed correctly in the second barchart. This has been tested by logging the used data and checking it with the API. Also, different types of data have been used. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
 
-#### Alternative testing
+#### Alternative testing concerning The Bakery Cafe's needs
 
 1. Adviced amounts should be correct according to the Bakery Cafe's needs.
     1. For two weeks long, the calculations of the app were tested by using their data and baking the amounts of bread adviced by the Bread Baking Adviser. All amounts seem to be correct. The Bakery Cafe was almost sold out every day.
     2. For two weeks long, the calculations of the app were tested by using their data and ordering the amount of boxes adviced by the Bread Baking Adviser. All amounts seem to be correct. There wasn't a shortage on any type of bread.
 
 ## Deployment
+
+#### Main process
+
+The project is hosted on GitHub Pages.
+
+- A project was started on AWS Cloud9;
+- A GitHub repository was created;
+- Filetypes were segregated into seperate folders;
+- Issues came up concerning correct previews, so the project was imported into GitPod;
+- The repository includes a README.md and index.html files;
+- The GitHub repository was moved to GitHub Pages;
+
+### The myJSON API
+
+Different sets of data were used for development and testing means. To test true values in the API, data of baked amounts of bread and leftover amounts of bread were collected by The Bakery Cafe employees every day, from week 39 to 51 in the year of 2019. These data were manually inputted into the API, and are used for deployment. 
+
+Employees of The Bakery Cafe will start using the app on the 4th of februari 2020. From that day the Bread Baking Adviser will collect its data through the input of the users. (The Bakery Cafe employees)
+
+The initial data used to start is based on data collected in week 47 to 50 of 2019.
+
+
+
+
+
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
 
