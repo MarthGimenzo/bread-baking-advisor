@@ -96,6 +96,8 @@ Even though it is possible to view the website on a desktop computer, it is desi
 
 • A feature to view graphs of specific types of bread. The user will be able to see a timeline of the consumption of a type of bread in the last 4 weeks for a specific day.
 
+• A feature to view the numbers inside the bars of the barcharts. This will make the barcharts more clear.
+
 ## Technologies Used
 
 - HTML
@@ -190,7 +192,14 @@ Even though it is possible to view the website on a desktop computer, it is desi
 
 ### Overview section
 
+1. Users want to see how much bread was sold relatively last week.
+    1. When chart data is loaded, amounts are viewed correctly in the first barchart. This has been tested by logging the used data and checking it with the API. Also, different types of data have been used. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
 
+2. Users want to see how much boxes of bread should be ordered for next week.
+    1. New orders of boxes are done every tuesday morning. The user can immediately see how much boxes should be ordered. Some boxes of certain breadtypes are packed with 12 pieces, others are packed with 13 pieces. The amount of consumed pieces of every breadtype are gathered correctly per breadtype. This has been tested by logging the console and checking it with the API. To make safe orders, the Math. ceil() function was used to always make sure an extra box is taken into account.
+
+3. Users want to see how much bread was sold last four weeks.
+    1. When chart data is loaded, amounts are viewed correctly in the second barchart. This has been tested by logging the used data and checking it with the API. Also, different types of data have been used. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
 
 ## Deployment
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
