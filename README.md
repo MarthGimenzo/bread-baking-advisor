@@ -263,13 +263,26 @@ The initial data used to start is based on data collected in week 47 to 50 of 20
 
 - The logo of The Bread Baking Advisor is based on the logo used on the official website of The Bakery Cafe [Het Bakkerscafe](https://www.hetbakkerscafe.nl/)
 - The background with yellow stripes is based on the background used on the official website of The Bakery Cafe [Het Bakkerscafe](https://www.hetbakkerscafe.nl/)
-- The font used is 'Traveling Typewriter'. It is a free to use fond found on [Dafont](https://www.dafont.com/traveling-typewriter.font)
+- The font used is 'Traveling Typewriter'. It is a free to use font found on [Dafont](https://www.dafont.com/traveling-typewriter.font)
+
+### Special acknowledgements to used technologies
+
+- To render the barcharts using D3 was hard for me to accomplish at first. Special thanks to [Qiita](https://qiita.com/ekzemplaro) for making me understand.
+
+*Yes, thank you very much!*
 
 ### Acknowledgements
 
-•	I received inspiration for this project from X
+I made the Bread Baking Advisor at first for my employer and colleagues at Het Bakkerscafe. I have been working there for 6 years and always enjoyed baking bread for, and with them. We baked so much bread. Sometimes too much. Even though it took a while to do it because of personal reasons, I managed to create a website that gives us the ability to bake what we need and it gives me a great feeling of accomplishment. Because of the education at Code Institute I have been able to learn a lot myself, and I was able to give my employer and colleagues a valuable tool as well. I truly hope I will see the Bakery Cafe make use of the Bread Baking Advisor. If I'm correct, it will surely limit any loss concerning the amounts of bread baked. :) 
 
+Thank you Code Institute and Borgesius!
 
+#### Special Thanks
 
-
-
+• Borgesius
+• Code Institute
+• Other students from Code Institute
+• Diederik de Bruin
+• Dietie Borgesius
+• Mariska Steege
+• Myself :)
