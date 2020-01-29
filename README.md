@@ -127,6 +127,9 @@ Even though it is possible to view the website on a desktop computer, it is desi
 - Popper
   - Tooltip & popover positioning engine was used by Bootstrap.
 
+- myJSON
+  - myJSON is used to store all submitted data.
+
 - D3
   - D3 was used for manipulating documents based on the data in the API.
   
@@ -153,6 +156,9 @@ Even though it is possible to view the website on a desktop computer, it is desi
   
 - W3C Markup Validation Service
   - Used to check the markup validity of the website.
+  
+- Responsitator
+  - Responsinator.com was used to check if The Bread Baking Adviser works on all mobile devices.
 
 - Favicon
   Favicon was used to replace the icon in the tab of the browser.
@@ -201,6 +207,18 @@ Even though it is possible to view the website on a desktop computer, it is desi
 3. Users want to see how much bread was sold last four weeks.
     1. When chart data is loaded, amounts are viewed correctly in the second barchart. This has been tested by logging the used data and checking it with the API. Also, different types of data have been used. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
 
+#### Different mobile devices
+
+1. The user wants to view the site on its preferred mobile device.
+    1. Responsinator.com was used to see if all data is viewed correctly on mobile devices. It has been confirmed that it does so.
+
+#### Different desktop browsers
+
+1. The user wants to view the site on a desktop.
+    1. As stated, the Bread Baking Advisor was not designed for use on desktops.
+    2. The Bread Baking Advisor is not viewed perfectly in FireFox; the barcharts on the overview page are not rendered within page view.
+    3. The Bread Baking Advisor is not viewed perfectly in Microsoft Explorer; the barcharts on the overview page are not rendered at all.
+
 #### Alternative testing concerning The Bakery Cafe's needs
 
 1. Adviced amounts should be correct according to the Bakery Cafe's needs.
@@ -228,28 +246,24 @@ Employees of The Bakery Cafe will start using the app on the 4th of februari 202
 
 The initial data used to start is based on data collected in week 47 to 50 of 2019.
 
+### Run locally
 
-
-
-
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
-
-•	Different values for environment variables (Heroku Config Vars)?
-•	Different configuration files?
-•	Separate git branch?
-
-In addition, if it is not obvious, you should also describe how to run your code locally.
+- On the GitHub repository of The Bread Baking Advisor, click 'Clone or download';
+- Click 'Download ZIP';
+- Unpack the downloaded ZIP file;
+- Open the Index.html file with your preferred browser.
 
 ## Credits
 
 ### Content
 
-•	The text for section Y was copied from the Wikipedia article Z
+- The names of the breadtypes were invented by Borgesius.
 
 ### Media
 
-•	The photos used in this site were obtained from ...
+- The logo of The Bread Baking Advisor is based on the logo used on the official website of The Bakery Cafe [Het Bakkerscafe](https://www.hetbakkerscafe.nl/)
+- The background with yellow stripes is based on the background used on the official website of The Bakery Cafe [Het Bakkerscafe](https://www.hetbakkerscafe.nl/)
+- The font used is 'Traveling Typewriter'. It is a free to use fond found on [Dafont](https://www.dafont.com/traveling-typewriter.font)
 
 ### Acknowledgements
 
