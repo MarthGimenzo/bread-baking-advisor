@@ -159,7 +159,7 @@ Even though it is possible to view the website on a desktop computer, it is desi
 
 ## Testing
 
-### Advice section
+#### Advice section
 
 1. Users want to see how much bread they need to put on the bread wagon on the current day.
     1. When the page is visited the current day is automatically viewed. This has been tested on all days of the week.
@@ -172,7 +172,7 @@ Even though it is possible to view the website on a desktop computer, it is desi
     1. When clicked on the tabs at the top of the page the user is redirected to the correct page.
     2. When clicked on the 'Overview' button at the bottom of the page, the user is redirected to the overview page immediately.
   
-### Input section
+#### Input section
 
 1. Users want to edit or input the amounts of bread.
     1. When clicked on the input space, the space is automatically emptied for ease of use and to prevent the user from entering too many digits.
@@ -190,7 +190,7 @@ Even though it is possible to view the website on a desktop computer, it is desi
     
 *Note: The bread baking advisors remembers all the data for a specific day, for all types of bread, for a total of four weeks. When new data is submitted, it forgets the data of week 4 and replaces it with the data of week 3. Data of week 3 becomes data of week 2, and data of week 2 becomes data of week 1. The newly submitted data is stored in week 1. Should it happen that data is submitted for a certain day more than once, the weeks will shift according to this system and the total amounts for that day wont be as accurate anymore. To prevent this from happening, a date is viewed above the submit button so the user can see when the data for a specific data has been updated most recently. I am aware that this is not the most solid system, but at the point of developing it seemed to complex to change this system. As described in the 'Features left to implement', it is planned to develop a system for editing data to make the system more solid.*
 
-### Overview section
+#### Overview section
 
 1. Users want to see how much bread was sold relatively last week.
     1. When chart data is loaded, amounts are viewed correctly in the first barchart. This has been tested by logging the used data and checking it with the API. Also, different types of data have been used. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
