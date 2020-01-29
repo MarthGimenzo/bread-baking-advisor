@@ -201,6 +201,12 @@ Even though it is possible to view the website on a desktop computer, it is desi
 3. Users want to see how much bread was sold last four weeks.
     1. When chart data is loaded, amounts are viewed correctly in the second barchart. This has been tested by logging the used data and checking it with the API. Also, different types of data have been used. For example, all values were set to 5. This way it is easy to spot if something is miscalculated and if the averages are correct.
 
+#### Alternative testing
+
+1. Adviced amounts should be correct according to the Bakery Cafe's needs.
+    1. For two weeks long, the calculations of the app were tested by using their data and baking the amounts of bread adviced by the Bread Baking Adviser. All amounts seem to be correct. The Bakery Cafe was almost sold out every day.
+    2. For two weeks long, the calculations of the app were tested by using their data and ordering the amount of boxes adviced by the Bread Baking Adviser. All amounts seem to be correct. There wasn't a shortage on any type of bread.
+
 ## Deployment
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
