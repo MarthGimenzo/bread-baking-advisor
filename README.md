@@ -1,6 +1,6 @@
-[Bread Baking Adviser](https://marthgimenzo.github.io/bread-baking-advisor/)
+Deployed site: [Bread Baking Adviser](https://marthgimenzo.github.io/bread-baking-advisor/)
 
-*Note: This site is meant to be viewed on mobile devices, please toggle it to mobile view in inspect mode for best quality *
+*Note: This site is meant to be viewed on mobile devices, please toggle it to mobile view in inspect mode for best quality.*
 
 # Bread Baking Adviser
 
