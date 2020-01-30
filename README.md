@@ -102,6 +102,8 @@ Even though it is possible to view the website on a desktop computer, it is desi
 
 • A feature to view the numbers inside the bars of the barcharts. This will make the barcharts more clear.
 
+*Note: The Bread Baking Adviser will be translated to Dutch when it has been fully assessed as it is only used by Dutch users.*
+
 ## Technologies Used
 
 - HTML
@@ -258,6 +260,14 @@ The initial data used to start is based on data collected in week 47 to 50 of 20
 - Click 'Download ZIP';
 - Unpack the downloaded ZIP file;
 - Open the Index.html file with your preferred browser.
+
+### Deployed version vs. development version
+
+The deployment version is the same as the development version. However, please take notice of the following:
+
+- Assesors are free to try submitting data for testing purposes, this will make the viewed data inaccurate.
+- When the Bread Baking Adviser has been assessed, it will be translated to Dutch as it is only used by Dutch users.
+- The Bread Baking Adviser won't be edited untill fully assessed.
 
 ## Credits
 
