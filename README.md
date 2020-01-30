@@ -268,6 +268,7 @@ The deployment version is the same as the development version. However, please t
 - Assesors are free to try submitting data for testing purposes, this will make the viewed data inaccurate.
 - When the Bread Baking Adviser has been assessed, it will be translated to Dutch as it is only used by Dutch users.
 - The Bread Baking Adviser won't be edited untill fully assessed.
+- The purpose of the JSON files stored in the assets/data folder are not used by the website and are only stored to be viewed by assessors. These are examples of different sets of data used for testing purposes. They will be deleted after the project has been assessed.
 
 ## Credits
 
