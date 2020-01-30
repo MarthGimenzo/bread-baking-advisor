@@ -246,6 +246,8 @@ Employees of The Bakery Cafe will start using the app on the 4th of februari 202
 
 The initial data used to start is based on data collected in week 47 to 50 of 2019.
 
+*Note: The data stored in the API could have been arranged more systematically. Instead of defining different properties for different weeks. Arrays could have been implemented into existing arrays to make the data more abstract. I am aware of this and will dedicate myself to do this in future projects.*
+
 ### Run locally
 
 - On the GitHub repository of The Bread Baking Advisor, click 'Clone or download';
