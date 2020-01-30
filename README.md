@@ -280,9 +280,15 @@ Thank you Code Institute and Borgesius!
 #### Special Thanks
 
 • Borgesius
+
 • Code Institute
+
 • Other students from Code Institute
+
 • Diederik de Bruin
+
 • Dietie Borgesius
+
 • Mariska Steege
+
 • Myself :)
