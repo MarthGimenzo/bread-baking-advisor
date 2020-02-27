@@ -20,28 +20,28 @@
 		<div class="container-fluid">
 			<ul class="nav nav-tabs nav-fill">
 				<li class="nav-item">
-					<a class="nav-link" href="index.html">ADVICE</a>
+					<a class="nav-link" href="index.html">ADVIES</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link active" href="#">INPUT</a>
+					<a class="nav-link active" href="#">INVOER</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="overview.html">OVERVIEW</a>
+					<a class="nav-link" href="overview.html">OVERZICHT</a>
 				</li>
 			</ul>
 		</div>
 		<div id="backgroundcolor">
-			<h2>What's the day of the week?</h2>
+			<h2>Wat voor dag is het vandaag?</h2>
 			<div class="container-fluid">
 				<div class="dropdown">
 					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<a id="tuesday" class="dropdown-item" href="#">Tuesday</a>
-						<a id="wednesday" class="dropdown-item" href="#">Wednesday</a>
-						<a id="thursday" class="dropdown-item" href="#">Thursday</a>
-						<a id="friday" class="dropdown-item" href="#">Friday</a>
-						<a id="saturday" class="dropdown-item" href="#">Saturday</a>
-						<a id="sunday" class="dropdown-item" href="#">Sunday</a>
+						<a id="tuesday" class="dropdown-item" href="#">Dinsdag</a>
+						<a id="wednesday" class="dropdown-item" href="#">Woensdag</a>
+						<a id="thursday" class="dropdown-item" href="#">Donderdag</a>
+						<a id="friday" class="dropdown-item" href="#">Vrijdag</a>
+						<a id="saturday" class="dropdown-item" href="#">Zaterdag</a>
+						<a id="sunday" class="dropdown-item" href="#">Zondag</a>
 					</div>
 				</div>
 			</div>
@@ -51,8 +51,8 @@
 						<thead>
 							<tr>
 								<th scope="col"></th>
-								<th scope="col">Amount of pieces <br>that were baked:</th>
-								<th scope="col">Amount of pieces <br>that were left:</th>
+								<th scope="col">Gebakken:</th>
+								<th scope="col">Over:</th>
 
 							</tr>
 						</thead>
@@ -166,10 +166,10 @@
 
 					</div>
 					<div class="col-4 datefont">
-						Last saved:
+						Laatst opgeslagen:
 					</div>
 					<div id="thisdate" class="col-4 datefont">
-						Loading...
+						Laden...
 					</div>
 					<div class="col-2">
 
@@ -178,47 +178,42 @@
 			</div>
 		</div>
 		<div id="leftoverbreadcantbehigher" class="alert alert-warning">
-			<strong>Huh?</strong> Leftover bread can't be more than baked bread.
+			<strong>Huh?</strong> Er kan toch niet meer brood over zijn dan dat er gebakken is? ;)
 		</div>
 		<div id="leftoverbreadcantbeminuszero" class="alert alert-warning">
-			<strong>Less than 0?</strong> At least 0 breads will have been leftover, right? Please check your inputted
-			values.
+			<strong>Minder dan 0?</strong> Er zullen toch op z'n minst 0 broden over zijn? Negatieve waarden doen we niet aan!
 		</div>
 		<div id="leftoverbreadshouldbevalue" class="alert alert-warning">
-			<strong>Input a number!</strong> The Bread Baking Advisor needs numbers. Please check your inputted values
-			for
-			empty fields or letters.
+			<strong>Voer geldig nummer in!</strong> Voer een cijfer in, geen letter. En controleer op lege velden.
 		</div>
 		<div id="leftoverbreadinteger" class="alert alert-warning">
-			<strong>We don't do half breads!</strong> Please enter a full number, not halves or something in between.
-			Please
-			check your inputted values.
+			<strong>We verkopen toch geen halve broden?</strong> Voer alleen volledige nummers in, zonder decimalen.
 		</div>
 		<div id="leftoverbreadforty" class="alert alert-warning">
-			<strong>That much?</strong> The Bread Baking Advisor only accepts values 0 to 40. No need to exaggerate.
+			<strong>Zoveel?!</strong> Overdrijf niet zo. Voer een nummer in tussen de 0 en de 40.
 		</div>
 		<div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
 			aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
-						<h5 class="modal-title" id="savingheader">Saving...</h5>
-						<h5 class="modal-title" id="savedheader">Saved!</h5>
+						<h5 class="modal-title" id="exampleModalLabel">Weet je het zeker?</h5>
+						<h5 class="modal-title" id="savingheader">Bezig met opslaan...</h5>
+						<h5 class="modal-title" id="savedheader">Opgeslagen!</h5>
 					</div>
 
 					<div id="modalbodytext" class="modal-body">
-						Is all data correct?
+						Klopt alle data? Je kunt dit later NIET aanpassen!
 					</div>
 					<div id="spinner" class="spinner-border" role="status">
-						<span class="sr-only">Loading...</span>
+						<span class="sr-only">Laden...</span>
 					</div>
 					<div id="datastored" class="modal-body">
-						Data succesfully stored! :)
+						Data succesvol opgeslagen :)
 					</div>
 					<div id="dismisssavebutton" class="modal-footer">
-						<button id="closebutton" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						<button id="savedata" type="button" class="btn btn-primary">Yes! Save it!</button>
+						<button id="closebutton" type="button" class="btn btn-secondary" data-dismiss="modal">Sluiten</button>
+						<button id="savedata" type="button" class="btn btn-primary">Ja! Sla op!</button>
 					</div>
 
 				</div>
@@ -229,13 +224,12 @@
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
 					<div class="modal-header">
-						<h5 class="modal-title">Whoops!</h5>
+						<h5 class="modal-title">Ja dat gaat dus niet hè..</h5>
 
 					</div>
 
 					<div class="modal-body">
-						It looks like you have already saved this data today. Currently it is not possible to edit saved
-						data but in the future this function will be implemented. You can add new data tomorrow.
+						Het lijkt erop dat er voor deze dag vandaag al data is opgeslagen. Op dit moment is het niet mogelijk deze data te wijzigen. Je kunt morgen pas nieuwe data toevoegen voor deze dag.
 					</div>
 
 
@@ -248,7 +242,7 @@
 			</div>
 		</div>
 		<footer>
-			<button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Submit for today!</button>
+			<button id="submit" type="button" class="btn btn-primary btn-lg btn-block">Opslaan voor deze dag!</button>
 		</footer>
 
 		<!-- JavaScript -->
