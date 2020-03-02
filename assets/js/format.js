@@ -308,64 +308,64 @@ $(document).ready(function () {
 
         var d = new Date();
         var weekday = new Array(7);
-        weekday[0] = "Sunday";
-        weekday[1] = "Monday";
-        weekday[2] = "Tuesday";
-        weekday[3] = "Wednesday";
-        weekday[4] = "Thursday";
-        weekday[5] = "Friday";
-        weekday[6] = "Saturday";
+        weekday[0] = "Zondag";
+        weekday[1] = "Maandag";
+        weekday[2] = "Dinsdag";
+        weekday[3] = "Woensdag";
+        weekday[4] = "Donderdag";
+        weekday[5] = "Vrijdag";
+        weekday[6] = "Zaterdag";
 
         var today = weekday[d.getDay()];
 
         // Change active Dropdown Menu Item to current day of the week
 
-        if (today == "Monday") {
+        if (today == "Maandag") {
             $("#tuesday").addClass("active");
             $("#wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 2;
-            $("#dropdownMenuButton").text("Tuesday");
+            $("#dropdownMenuButton").text("Dinsdag");
         }
-        if (today == "Tuesday") {
+        if (today == "Dinsdag") {
             $("#tuesday").addClass("active");
             $("#wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 2;
-            $("#dropdownMenuButton").text("Tuesday");
+            $("#dropdownMenuButton").text("Dinsdag");
         }
-        if (today == "Wednesday") {
+        if (today == "Woensdag") {
             $("#wednesday").addClass("active");
             $("#tuesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 3;
-            $("#dropdownMenuButton").text("Wednesday");
+            $("#dropdownMenuButton").text("Woensdag");
         }
-        if (today == "Thursday") {
+        if (today == "Donderdag") {
             $("#thursday").addClass("active");
             $("#tuesday, #wednesday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 4;
-            $("#dropdownMenuButton").text("Thursday");
+            $("#dropdownMenuButton").text("Donderdag");
         }
-        if (today == "Friday") {
+        if (today == "Vrijdag") {
             $("#friday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #saturday, #sunday").removeClass("active");
             activeDay = 5;
-            $("#dropdownMenuButton").text("Friday");
+            $("#dropdownMenuButton").text("Vrijdag");
         }
-        if (today == "Saturday") {
+        if (today == "Zaterdag") {
             $("#saturday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #sunday").removeClass("active");
             activeDay = 6;
-            $("#dropdownMenuButton").text("Saturday");
+            $("#dropdownMenuButton").text("Zaterdag");
         }
-        if (today == "Sunday") {
+        if (today == "Zondag") {
             $("#sunday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #saturday").removeClass("active");
             activeDay = 0;
-            $("#dropdownMenuButton").text("Sunday");
+            $("#dropdownMenuButton").text("Zondag");
         }
-        if (today == "Monday") {
+        if (today == "Maandag") {
             $("#tuesday, #wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 1;
-            $("#dropdownMenuButton").text("Select a day");
+            $("#dropdownMenuButton").text("Kies een dag!");
         }
 
         // Change active Dropdown Menu Item to selected day
@@ -374,7 +374,7 @@ $(document).ready(function () {
             $("#tuesday").addClass("active");
             $("#wednesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 2;
-            $("#dropdownMenuButton").text("Tuesday");
+            $("#dropdownMenuButton").text("Dinsdag");
             changeActiveDay();
 
         })
@@ -382,7 +382,7 @@ $(document).ready(function () {
             $("#wednesday").addClass("active");
             $("#tuesday, #thursday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 3;
-            $("#dropdownMenuButton").text("Wednesday");
+            $("#dropdownMenuButton").text("Woensdag");
             changeActiveDay();
 
         })
@@ -390,28 +390,28 @@ $(document).ready(function () {
             $("#thursday").addClass("active");
             $("#tuesday, #wednesday, #friday, #saturday, #sunday").removeClass("active");
             activeDay = 4;
-            $("#dropdownMenuButton").text("Thursday");
+            $("#dropdownMenuButton").text("Donderdag");
             changeActiveDay();
         })
         $("#friday").on("click", function () {
             $("#friday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #saturday, #sunday").removeClass("active");
             activeDay = 5;
-            $("#dropdownMenuButton").text("Friday");
+            $("#dropdownMenuButton").text("Vrijdag");
             changeActiveDay();
         })
         $("#saturday").on("click", function () {
             $("#saturday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #sunday").removeClass("active");
             activeDay = 6;
-            $("#dropdownMenuButton").text("Saturday");
+            $("#dropdownMenuButton").text("Zaterdag");
             changeActiveDay();
         })
         $("#sunday").on("click", function () {
             $("#sunday").addClass("active");
             $("#tuesday, #wednesday, #thursday, #friday, #saturday").removeClass("active");
             activeDay = 0;
-            $("#dropdownMenuButton").text("Sunday");
+            $("#dropdownMenuButton").text("Zondag");
             changeActiveDay();
         })
     }
@@ -421,13 +421,13 @@ $(document).ready(function () {
     function changeActiveDay() {
         
         areadySubmitted = false;
-        $("#submit").css("background-color", "#e68a2b").css("border-color", "#e68a2b").text("Submit for today!");
+        $("#submit").css("background-color", "#e68a2b").css("border-color", "#e68a2b").text("Gegevens versturen!");
 
         if (activeDay == 2) {
             $("#thisdate").text(viewDateTuesday);
             if (newToday == viewDateTuesday) {
                 areadySubmitted = true;
-                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Vandaag al doorgegeven!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceThursdayDonkermeergranen);
@@ -473,7 +473,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateWednesday);
             if (newToday == viewDateWednesday) {
                 areadySubmitted = true;
-                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Vandaag al doorgegeven!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceFridayDonkermeergranen);
@@ -519,7 +519,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateThursday);
             if (newToday == viewDateThursday) {
                 areadySubmitted = true;
-                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Vandaag al doorgegeven!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceSaturdayDonkermeergranen);
@@ -565,7 +565,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateFriday);
             if (newToday == viewDateFriday) {
                 areadySubmitted = true;
-                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Vandaag al doorgegeven!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceSundayDonkermeergranen);
@@ -611,7 +611,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateSaturday);
             if (newToday == viewDateSaturday) {
                 areadySubmitted = true;
-                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Vandaag al doorgegeven!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceTuesdayDonkermeergranen);
@@ -657,7 +657,7 @@ $(document).ready(function () {
             $("#thisdate").text(viewDateSunday);
             if (newToday == viewDateSunday) {
                 areadySubmitted = true;
-                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Already submitted today!");
+                $("#submit").css("background-color", "#6c757d").css("border-color", "#6c757d").text("Vandaag al doorgegeven!");
             }
 
             $("#donkermeergranen_tobe_placed").val(adviceWednesdayDonkermeergranen);
